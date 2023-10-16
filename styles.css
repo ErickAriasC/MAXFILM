@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.side2 > input, label{
+.side2 > input{
     height: 1.5rem;
     background-color: transparent;
     border: none;
