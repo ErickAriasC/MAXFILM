@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin:wght@100&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Libre Baskerville', serif;
+    font-family: Baskerv3;
     color: #D9D8D7;
 }
 
@@ -23,13 +22,19 @@ header{
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, #02537386, #00010D);    width: 91px;
+    padding-left: 7px;
+    padding-right: 7px;
+
 
 }
+
 
 .content-nav-bar img{
-    width: 55px;
-    height: 55px;
+    width: 43px;
+    height: 43px;
 }
+
+
 
 li{
     list-style: none;
@@ -37,8 +42,9 @@ li{
 
 .menu{
     margin-top: 2rem;
-    margin-bottom: 20rem;
+    margin-bottom: 35rem;
 }
+
 
 .content-nav-bar>li>a>img{
  margin-bottom: 10rem;
@@ -86,9 +92,13 @@ main{
     gap: 5rem;
     list-style: none;
     text-decoration: none;
-    color: #88B0BF;
+    color: #D9D8D7;
 }
 
+.side1 > ul img{
+    width: 30px;
+    height: 30px;
+}
 .side2{
     width: 40%;
     display: flex;
