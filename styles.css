@@ -1,0 +1,36 @@
+.sectionB{
+    display: flex;
+    height: auto;
+    background-color: #00010D;
+}
+
+.side1{
+    width: 60%;
+}
+
+.side1 > ul, a{
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+    text-decoration: none;
+    color: #88B0BF;
+}
+
+.side2{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.side2 > input, label{
+    height: 1.5rem;
+    background-color: transparent;
+    border: none;
+    color: #88B0BF;
+}
+
+.side2 > a{
+    height: 1.5rem;
+    padding-right: 1rem;
+}
