@@ -196,3 +196,11 @@ main{
     clear: both;
 }
 
+
+
+/* MEDIA PARA VERSION MOBILE */
+
+@media (max-width:480px) {
+
+    /* AGREGAR AQUI EL CODIGO */
+}
