@@ -202,5 +202,88 @@ main{
 
 @media (max-width:480px) {
 
-    /* AGREGAR AQUI EL CODIGO */
+    
+.sectionB{
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    display: flex;
+    padding-bottom:  1rem;
+    margin-top: 3rem;
+    border-bottom:2px solid #88B0BF;
+    flex-direction: column;
+    align-items: center;
+    /* outline: 2px solid red */
+    
 }
+
+
+.side1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* outline: 3px solid purple; */
+    margin-top: 1rem;
+}
+
+.side1 > ul, a{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    text-decoration: none;
+    color: #D9D8D7;
+    font-size: 15px;
+}
+
+
+.side2{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* outline: 3px solid green; */
+    background-color: rgba(136, 176, 191, 0.1);
+    border-radius: 20px;
+    padding-right: 1rem;
+    gap: 10px;
+}
+
+.side2 > input{
+    height: auto;
+    background-color: transparent;
+    border: none;
+    color: #88B0BF;
+    font-size: 16px;
+    width: 150px;
+    height: 33px;
+
+}
+
+input:focus {
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+  }
+
+.side2 > a , img{
+    width: 21px;
+    height: 21px;
+}
+
+.side2 > a{
+    height: 1.5rem;
+    padding-right: 1rem;
+}
+
+.ancla1{
+    display: none;
+}
+
+::placeholder {
+    text-align: center;
+    color: rgba(217, 216, 215, 0.5);
+    font-family: Baskerv1; 
+  }
+
+
+}
+
