@@ -196,10 +196,17 @@ main{
 
 }
 
+    
+input:focus {
+    outline: none; 
+  }
+
 .side2 > a{
     height: 1.5rem;
     padding-right: 1rem;
-}
+} 
+
+
 
 
 .section-D {
@@ -488,7 +495,7 @@ main{
 
     /* SECTION B */
     .sectionB{
-        width: 100%;
+        width: 85%;
         height: auto;
         font-size: 30px;
         display: flex;
@@ -497,7 +504,7 @@ main{
         border-bottom:none;
         flex-direction: column-reverse;
         align-items: center;
-    
+        border-bottom: 1px solid #88B0BF;
     }
     
     
@@ -505,22 +512,27 @@ main{
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
         margin-top: 1rem;
+        padding-right: 1rem;
     }
     
     .side1 > ul, a{
         display: flex;
-        gap: 1rem;
+        gap: 11px;
         list-style: none;
         text-decoration: none;
         color: #D9D8D7;
         font-size: 15px;
     }
+
+    .side1 > ul img{
+        height: 16px;
+        width: 16px
+    }
     
   
     .side2{
-        width: 60%;
+        width: 70%;
         display: flex;
         justify-content:space-around;
         align-items: center;
@@ -566,7 +578,7 @@ main{
       }
     
     
-    
+
     /* SECTION C */
     .sectionC {
         font-size: 14px; 
