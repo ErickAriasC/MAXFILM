@@ -1,4 +1,5 @@
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +7,9 @@
     color: #D9D8D7;
 }
 
+
 body {
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -14,7 +17,8 @@ body {
 
 }
 
-header {
+
+header{
     width: 80px;
     height: 100%;
     display: flex;
@@ -30,6 +34,7 @@ header {
 
 
 .content-nav-bar img {
+
     width: 43px;
     height: 43px;
 }
@@ -41,6 +46,7 @@ li {
 }
 
 .menu {
+
     margin-top: 2rem;
     margin-bottom: 35rem;
 }
@@ -51,6 +57,7 @@ li {
 }
 
 .content-page {
+
     display: flex;
     flex-direction: column;
 }
@@ -141,6 +148,7 @@ main {
 }
 
 .side1 {
+
     width: 60%;
     display: flex;
     justify-content: center;
@@ -150,6 +158,7 @@ main {
 
 .side1>ul,
 a {
+
     display: flex;
     gap: 5rem;
     list-style: none;
@@ -163,6 +172,7 @@ a {
 }
 
 .side2 {
+
     width: 40%;
     display: flex;
     justify-content: flex-end;
@@ -170,6 +180,7 @@ a {
 }
 
 .side2>input {
+
     height: auto;
     background-color: transparent;
     border: none;
@@ -180,6 +191,7 @@ a {
 }
 
 .side2>a {
+
     height: 1.5rem;
     padding-right: 1rem;
 }
@@ -193,12 +205,14 @@ a {
 }
 
 .line-1 {
+
     outline: 2px solid #88B0BF;
     width: 84%;
     height: 0;
 }
 
 .line-2 {
+
     outline: 2px solid #88B0BF;
     width: 5%;
     height: 0;
@@ -214,6 +228,7 @@ a {
 }
 
 .sectionC {
+
     width: 100%;
     height: 100%;
     padding-left: 3.5rem;
@@ -269,5 +284,5 @@ a {
         margin-top: 20rem;
     }
 
-    /* AGREGAR AQUI EL CODIGO */
+
 }
