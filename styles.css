@@ -495,16 +495,16 @@ input:focus {
 
     /* SECTION B */
     .sectionB{
-        width: 85%;
+        width: 90%;
         height: auto;
         font-size: 30px;
         display: flex;
         padding-bottom:  1rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         border-bottom:none;
         flex-direction: column-reverse;
         align-items: center;
-        border-bottom: 1px solid #88B0BF;
+        border-bottom: 2px solid #88B0BF;
     }
     
     
