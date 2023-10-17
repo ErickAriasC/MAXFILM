@@ -527,7 +527,7 @@ input:focus {
 
     .side1 > ul img{
         height: 16px;
-        width: 16px;
+        width: 16px
     }
     
   
@@ -578,6 +578,7 @@ input:focus {
       }
     
     
+
     /* SECTION C */
     .sectionC {
         font-size: 14px; 
