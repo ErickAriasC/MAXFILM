@@ -1,5 +1,4 @@
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +7,8 @@
 }
 
 
-body {
+body{
+
 
     width: 100%;
     height: 100%;
@@ -17,8 +17,8 @@ body {
 
 }
 
+.header {
 
-header{
     width: 80px;
     height: 100%;
     display: flex;
@@ -26,6 +26,29 @@ header{
     align-items: center;
     background: linear-gradient(180deg, #02537386, #00010D);
     width: 91px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.header>nav>img {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 20px;
+    height: 3px;
+    background-color: #d9d8d7;
+    margin: 5px 0;
+}
+
+.content-nav-bar img {
+    background: linear-gradient(180deg, #02537386, #00010D);    width: 91px;
+
     padding-left: 7px;
     padding-right: 7px;
 
@@ -37,6 +60,20 @@ header{
 
     width: 43px;
     height: 43px;
+}
+
+
+.home {
+    margin-top: 40rem;
+}
+
+li {
+    list-style: none;
+}
+
+
+.content-nav-bar>li>a>img {
+    margin-bottom: 10rem;
 }
 
 
@@ -62,19 +99,14 @@ li {
     flex-direction: column;
 }
 
-main {
+
+main{
+
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.sectionA {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 
@@ -120,6 +152,7 @@ main {
     margin-top: 25rem;
 }
 
+
 .sectionA .circle {
     border: 2px solid #D9D8D7;
     border-radius: 1rem;
@@ -148,11 +181,25 @@ main {
 }
 
 .side1 {
+    padding-bottom:  1rem;
+
+    margin-top: 3rem;
+    border-bottom: 4px solid #88B0BF;
+
+}
+
+.side1 {
 
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.side1>ul,
+a {
+    
 
 }
 
@@ -171,6 +218,13 @@ a {
     height: 30px;
 }
 
+
+.side1 > ul img{
+
+    width: 30px;
+    height: 30px;
+}
+
 .side2 {
 
     width: 40%;
@@ -179,7 +233,8 @@ a {
     align-items: center;
 }
 
-.side2>input {
+
+.side2 > input{
 
     height: auto;
     background-color: transparent;
@@ -190,7 +245,8 @@ a {
 
 }
 
-.side2>a {
+
+.side2 > a{
 
     height: 1.5rem;
     padding-right: 1rem;
@@ -204,14 +260,15 @@ a {
     align-items: center;
 }
 
-.line-1 {
+
+.line-1{
 
     outline: 2px solid #88B0BF;
     width: 84%;
     height: 0;
 }
 
-.line-2 {
+.line-2{
 
     outline: 2px solid #88B0BF;
     width: 5%;
@@ -227,7 +284,8 @@ a {
     margin: .4rem;
 }
 
-.sectionC {
+
+.sectionC{
 
     width: 100%;
     height: 100%;
@@ -284,5 +342,95 @@ a {
         margin-top: 20rem;
     }
 
+
+    body {
+        flex-direction: column;
+    }
+
+    /* HEADER */
+    .header {
+        width: 100%;
+        height: 64px;
+        background: linear-gradient(90deg, #02537386, #00010D);
+
+    }
+
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-bar>img {
+        width: 176px;
+        height: 32px;
+    }
+
+    .menu-button {
+        margin-left: 1rem;
+        margin-right: 2rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        background-color: #03738cee;
+        border-radius: 50%;
+        display: block;
+    }
+
+    .content-nav-bar {
+        display: none;
+        background-color: #333;
+        position: absolute;
+        top: 2.3rem;
+        right: 18.29rem;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .header>nav>img {
+        display: block;
+    }
+
+    .content-nav-bar li {
+        padding: 10px 0;
+    }
+
+    .content-nav-bar img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .content-nav-bar>li>a>img {
+        margin-bottom: 2rem;
+    }
+
+    .menu-button:checked + .content-nav-bar {
+        display: block;
+
+      }
+
+    .content-nav-bar.active {
+        background-color: #03738cee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5rem;
+        width: auto;
+        height: auto;
+        margin-top: 1rem;
+
+    }
+
+    .home {
+        margin-top: 2rem;
+    }
+
+    /* SECTION A */
+
+    /* SECTION B */
+
+    /* SECTION C */
 
 }
