@@ -365,6 +365,53 @@ input:focus {
     margin-bottom: 2rem;
 }
 
+.content-footer{
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-footer>h3{
+    width: auto;
+    height: auto;
+}
+
+.language{
+    width: auto;
+    height: auto;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #d9d8d7;
+    margin-bottom: 0.5rem;
+}
+
+.language>img{
+    width: auto;
+    height: 32px;
+}
+
+.options-language{
+    display: flex;
+}
+.options-language>h4{
+   text-align: center;
+   display: flex;
+   align-items: center;
+}
+.options-language>img{
+    width: 15px;
+    height: 15px;
+}
+
+.footer>h3{
+    font-size:1.5rem;
+    margin-bottom: 2rem;
+}
+
 /* MEDIA PARA VERSION MOBILE */
 
 @media (max-width:480px) {
@@ -597,6 +644,14 @@ input:focus {
     .container-card img {
         width: 90px; 
         height: auto;
+
+    }
+
+    h3 {
+        color: #D9D8D7;
+        margin: 22px;
+        height: 0px;
+        margin-left: 3px;
     }
 
 
@@ -612,7 +667,10 @@ input:focus {
         font-size: 6px;
         line-height: none;
 
+
     }
+
+    
 
     .arrow-left, .arrow-right20 {
         width: 50px; 
@@ -660,6 +718,60 @@ input:focus {
         margin-top: -25px; 
       }
     
+
+
+    /* SECTION D */
+    .line-1{
+        outline: 1px solid #88B0BF;
+        width: 60%;
+    }
+    .show-more{
+        font-size: 0.5rem;
+        width: 15%;
+    }
+    .line-2{
+        outline: 1px solid #88B0BF;
+        width: 10%;
+    }
+
+    /* FOOTER */
+    .footer{
+        font-size: 0.6rem;
+        margin-bottom: 1.5rem;
+    }  
+
+
+    .footer>.img-logo{
+        display: none;
+    }
+
+    .footer>.img-logo-m{
+        display: block;
+        width: 50px;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .content-footer{
+        width: auto;
+        justify-content: center;
+    }
+
+    .content-footer>h3{
+        margin:0px;        
+    }
+
+    .language{
+        padding: 2px;
+        margin-bottom: 0.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .language>img{
+        width: auto;
+        height: 18px;
+    }
 
 
     /* SECTION D */
