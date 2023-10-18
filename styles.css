@@ -11,7 +11,6 @@ body{
     height: 100%;
     display: flex;
     background-color: #00010d;
-
 }
 
 .header{
@@ -72,6 +71,11 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+main>img{
+    display: none;
 }
 
 /* SECTION A */
@@ -236,13 +240,21 @@ input:focus {
     margin: .4rem;
 }
 
-.sectionC{
+.sectionC-movies, .sectionC-series{
     width: 100%;
     height: 100%;
     padding-left: 3.5rem;
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+/* .series,
+.movies,
+button, .left, .right{
+    display: none;
+} */
 
 .container-card {
     width: auto;
@@ -250,12 +262,10 @@ input:focus {
     float: left;
 }
 
-
 .container-card img {
     width: 350px;
     height: 525px;
 }
-
 
 .container-card h2 {
     margin-top: 10px;
@@ -264,9 +274,7 @@ input:focus {
     line-height: 38.79px;
     text-align: center;
     color: #D9D8D7;
-
 }
-
 
 .container-card .description {
     font-size: 0.9em;
@@ -275,7 +283,6 @@ input:focus {
     line-height: 25.86px;
     size: 20px;
 }
-
 
 .sectionC::after {
     content: "";
@@ -627,18 +634,78 @@ input:focus {
     
 
     /* SECTION C */
-    .sectionC {
+    .sectionC-movies, .sectionC-series {
         font-size: 14px; 
         padding-left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    
+main>h3{
+    position: relative;
+    top: 0.5rem;
+    right: 8rem;
+    width: auto;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+}
+    #next-button-moviesRight{
+        position: absolute;
+        top: 24rem;
+        right: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
     }
 
+
+    #next-button-moviesLeft{
+        position: absolute;
+        top: 24rem;
+        left: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
+    }
+    #next-button-seriesRight{
+        position: absolute;
+        top: 37.5rem;
+        right: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
+    }
+
+    #next-button-seriesLeft{
+        position: absolute;
+        top: 37.5rem;
+        left: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
+    }
+
+
+    button>.right{
+        transform: rotate(-90deg);
+        width: 3rem;
+        height: auto;
+    }
+
+    button>.left{
+        transform: rotate(90deg);
+        width: 3rem;
+        height: auto;
+    }
     .container-card {
-        width: 90px; 
+        width: 90px;  
         margin: 3%; 
+     
     }
 
     .container-card img {
@@ -646,6 +713,11 @@ input:focus {
         height: auto;
 
     }
+
+    .container-card:nth-child(n+4) {
+        display: none;
+      }
+      
 
     h3 {
         color: #D9D8D7;
@@ -669,55 +741,6 @@ input:focus {
 
 
     }
-
-    
-
-    .arrow-left, .arrow-right20 {
-        width: 50px; 
-        height: 50px; 
-        position: absolute;
-        cursor: pointer;
-        top: 52%; 
-        transform: translateY(-50%); 
-        z-index: 1; 
-      }
-    
-      .arrow-left {
-        content: url('IMG/abajo_blancopng.png');
-        transform: rotate(90deg); 
-        left: 0; 
-      }
-    
-      .arrow-right20 {
-        content: url('IMG/abajo_blancopng.png');
-        transform: rotate(-90deg); 
-        right: 0; 
-      }
-
-      .arrow-left10, .arrow-right10 {
-        width: 50px; 
-        height: 50px; 
-        cursor: pointer;
-        position: absolute;
-        top: 111%; 
-      }
-    
-      .arrow-left10 {
-        content: url('IMG/abajo_blancopng.png');
-        transform: rotate(90deg); 
-        left: 0; 
-        transform-origin: 50% 50%; 
-        margin-top: -25px; 
-      }
-    
-      .arrow-right10 {
-        content: url('IMG/abajo_blancopng.png');
-        transform: rotate(-90deg);
-        right: 0; 
-        transform-origin: 50% 50%; 
-        margin-top: -25px; 
-      }
-    
 
 
     /* SECTION D */
@@ -833,5 +856,5 @@ input:focus {
         margin-top: 0.1rem;
     }
     
-}
+
 
