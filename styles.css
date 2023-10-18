@@ -376,6 +376,8 @@ main{
         width: 100%;
         height: 64px;
         background: linear-gradient(90deg, #02537386, #00010D);
+        position: fixed;
+        z-index: 1;
 
     }
 
@@ -442,11 +444,16 @@ main{
         width: auto;
         height: auto;
         margin-top: 1rem;
+        z-index: 1;
+
 
     }
 
     .home {
         margin-top: 2rem;
+    }
+    main{
+        margin-top: 4rem;
     }
 
      /* SECTION A */
