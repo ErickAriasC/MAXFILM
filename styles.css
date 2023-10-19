@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     color: #D9D8D7;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     display: flex;
@@ -14,7 +14,7 @@ body{
 
 }
 
-.header{
+.header {
     width: 80px;
     height: 100%;
     display: flex;
@@ -43,7 +43,7 @@ body{
     margin: 5px 0;
 }
 
-.content-nav-bar img{
+.content-nav-bar img {
     width: 35px;
     height: 35px;
 }
@@ -53,20 +53,20 @@ body{
 }
 
 
-li{
+li {
     list-style: none;
 }
 
-.content-nav-bar>li>a>img{
- margin-bottom: 10rem;
+.content-nav-bar>li>a>img {
+    margin-bottom: 10rem;
 }
 
-.content-page{
+.content-page {
     display: flex;
     flex-direction: column;
 }
 
-main{
+main {
     width: 100%;
     height: 100%;
     display: flex;
@@ -81,7 +81,7 @@ main{
     align-items: center;
 }
 
-.sectionA>.logo{
+.sectionA>.logo {
     width: 280px;
     position: absolute;
     top: 1rem;
@@ -115,7 +115,8 @@ main{
     font-size: 1.5rem;
 }
 
-.sectionA button, .icon-play {
+.sectionA button,
+.icon-play {
     position: absolute;
     display: flex;
     align-items: center;
@@ -138,7 +139,8 @@ main{
 
 
 }
-.sectionA .circle1{
+
+.sectionA .circle1 {
     border: 2px solid #D9D8D7;
     border-radius: 1rem;
     width: 1rem;
@@ -148,18 +150,18 @@ main{
 }
 
 /* SECTION B */
-.sectionB{
+.sectionB {
     width: 95%;
     height: auto;
     font-size: 30px;
     display: flex;
-    padding-bottom:  1rem;
+    padding-bottom: 1rem;
     margin-top: 3rem;
-    border-bottom:4px solid #88B0BF;
+    border-bottom: 4px solid #88B0BF;
 
 }
 
-.side1{
+.side1 {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -167,7 +169,8 @@ main{
 
 }
 
-.side1 > ul, a{
+.side1>ul,
+a {
     display: flex;
     gap: 5rem;
     list-style: none;
@@ -175,18 +178,19 @@ main{
     color: #D9D8D7;
 }
 
-.side1 > ul img{
+.side1>ul img {
     width: 30px;
     height: 30px;
 }
-.side2{
+
+.side2 {
     width: 40%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.side2 > input{
+.side2>input {
     height: auto;
     background-color: transparent;
     border: none;
@@ -196,7 +200,7 @@ main{
 
 }
 
-.side2 > a{
+.side2>a {
     height: 1.5rem;
     padding-right: 1rem;
 }
@@ -209,12 +213,13 @@ main{
     align-items: center;
 }
 
-.line-1{
+.line-1 {
     outline: 2px solid #88B0BF;
     width: 84%;
     height: 0;
 }
-.line-2{
+
+.line-2 {
     outline: 2px solid #88B0BF;
     width: 5%;
     height: 0;
@@ -229,13 +234,24 @@ main{
     margin: .4rem;
 }
 
-.sectionC{
+.sectionC-movies,
+.section-series {
     width: 100%;
     height: 100%;
     padding-left: 3.5rem;
     margin-top: 1rem;
 }
 
+.tittle-series,
+.tittle-movies,
+.left,
+.right,
+#next-button-moviesRight,
+#next-button-seriesRight,
+#next-button-moviesLeft,
+#next-button-seriesLeft {
+    display: none;
+}
 
 .container-card {
     width: auto;
@@ -276,42 +292,43 @@ main{
     clear: both;
 }
 
-    /* FOOTER */
+/* FOOTER */
 
-.footer{
+.footer {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
-    
+
 }
 
-.footer>.img-logo-m{
+.footer>.img-logo-m {
     display: none;
 }
-.footer>.img-logo{
+
+.footer>.img-logo {
     width: 287px;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-.footer>div{
+.footer>div {
     display: flex;
 }
 
-.footer>div>h3{
+.footer>div>h3 {
     width: auto;
     height: auto;
-    margin:0px;   
-    margin-left: 1rem;    
+    margin: 0px;
+    margin-left: 1rem;
     display: flex;
     align-items: center;
 }
 
 
-.content-footer{
+.content-footer {
     width: 200px;
     height: auto;
     display: flex;
@@ -319,12 +336,12 @@ main{
     align-items: center;
 }
 
-.content-footer>h3{
+.content-footer>h3 {
     width: auto;
     height: auto;
 }
 
-.language{
+.language {
     width: auto;
     height: auto;
     padding: 0.2rem;
@@ -335,43 +352,142 @@ main{
     margin-bottom: 0.5rem;
 }
 
-.language>img{
+.language>img {
     width: auto;
     height: 32px;
 }
 
-.options-language{
+.options-language {
     display: flex;
 }
-.options-language>h4{
-   text-align: center;
-   display: flex;
-   align-items: center;
+
+.options-language>h4 {
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
-.options-language>img{
+
+.options-language>img {
     width: 15px;
     height: 15px;
 }
 
-.footer>h3{
-    font-size:1.5rem;
+.footer>h3 {
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
 /* MEDIA PARA VERSION MOBILE */
+@media (max-width:1279px) {
+    /* HEADER  erick arias*/
+    /* no fue necesario agregar cambios en la seccion HEADER*/
+    /* SECTION A  andres facundo*/
+    
+    /* SECTION B  santiago aguirre*/
+    
+    /* SECTION C  david gaona*/
+    
+    /* SECTION D andres facundo */
+    
+    /* FOOTER  erick arias*/
+        /* no fue necesario agregar cambios en la seccion HEADER*/
 
+}
+
+@media (max-width:920px) {
+    
+    /* HEADER  erick arias*/
+        /* no fue necesario agregar cambios en la seccion HEADER*/
+
+    /* SECTION A  andres facundo*/
+    
+    /* SECTION B  santiago aguirre*/
+    
+    /* SECTION C  david gaona*/
+    
+    /* SECTION D  andres facundo*/
+    
+    /* FOOTER  erick arias*/
+        /* no fue necesario agregar cambios en la seccion HEADER*/
+
+}
+
+@media (max-width:768px) {
+    /* HEADER  erick arias*/
+    /* no fue necesario agregar cambios en la seccion HEADER*/
+
+    /* SECTION A  andres facundo*/
+
+    /* SECTION B  santiago aguirre*/
+
+    /* SECTION C  david gaona*/
+
+    /* SECTION D  andres facundo*/
+
+    /* FOOTER  erick arias*/
+     .footer {
+        font-size: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer>.img-logo {
+        display: none;
+    }
+
+    .footer>.img-logo-m {
+        display: block;
+        width: 50px;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-footer {
+        width: auto;
+        justify-content: center;
+    }
+
+    .content-footer>h3 {
+        margin: 0px;
+    }
+
+    .language {
+        padding: 2px;
+        margin-bottom: 0.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .language>img {
+        width: auto;
+        height: 18px;
+    }
+
+    .footer>h3 {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 0.1rem;
+    } 
+
+}
+
+
+/*se comenta este @media para que puedan visualizar 
+los cambios en el resto del responsive 
+NO HACER CAMBIOS AQUI
 @media (max-width:480px) {
 
     /* HEADER */
-    body {
+    /* body {
         flex-direction: column;
-    }
+    } */
 
     /* HEADER */
-    .header {
+    /* .header {
         width: 100%;
         height: 64px;
         background: linear-gradient(90deg, #02537386, #00010D);
+        position: fixed;
+        z-index: 1;
 
     }
 
@@ -398,7 +514,7 @@ main{
         border-radius: 50%;
     }
 
-    .bar{
+    .bar {
         width: 22px;
     }
 
@@ -438,6 +554,8 @@ main{
         width: auto;
         height: auto;
         margin-top: 1rem;
+        z-index: 1;
+
 
     }
 
@@ -445,71 +563,83 @@ main{
         margin-top: 2rem;
     }
 
-     /* SECTION A */
-     .sectionA{
+    main {
+        margin-top: 4rem;
+    } */
+
+    /* SECTION A */
+    /* .sectionA {
         width: 100%;
         height: auto;
-     }
+    }
 
-     .sectionA>img {
+    .sectionA>img {
         width: 100%;
-        height:100%;
-     }
+        height: 100%;
+    }
 
-     .text-iconsA{
+    .text-iconsA {
         top: 5rem;
         left: 1.5rem;
         line-height: 1.3rem;
-     }
-     .text-iconsA>h2{
+    }
+
+    .text-iconsA>h2 {
         font-size: 0.8rem;
-     }
-     .sectionA .div-A {
+    }
+
+    .sectionA .div-A {
         width: 4rem;
         border: 0.7px solid #88B0BF;
     }
+
     .sectionA h5 {
         font-size: 0.5rem;
     }
 
-    .sectionA button, .icon-play{
+    .sectionA button,
+    .icon-play {
         width: 2rem;
         height: auto;
     }
-     .sectionA .container-circle{
+
+    .sectionA .container-circle {
 
         margin-top: 6rem;
     }
-    .sectionA>.container-circle>div{
+
+    .sectionA>.container-circle>div {
         width: 0.5rem;
         height: 0.5rem;
         border: 1px solid #D9D8D7;
-    }
+    } */
 
     /* SECTION B */
-    .sectionB{
-        width: 100%;
+    /* .sectionB {
+        width: 90%;
         height: auto;
         font-size: 30px;
         display: flex;
-        padding-bottom:  1rem;
-        margin-top: 2rem;
-        border-bottom:none;
+        padding-bottom: 1rem;
+        margin-top: 1.5rem;
+        border-bottom: none;
         flex-direction: column-reverse;
         align-items: center;
-    
+        border-bottom: 2px solid #88B0BF;
+        margin-bottom: 0.5rem;
     }
-    
-    
-    .side1{
+
+
+    .side1 {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
     }
-    
-    .side1 > ul, a{
+
+    .side1>ul,
+    a {
         display: flex;
         gap: 1rem;
         list-style: none;
@@ -517,20 +647,20 @@ main{
         color: #D9D8D7;
         font-size: 15px;
     }
-    
-  
-    .side2{
+
+
+    .side2 {
         width: 60%;
         display: flex;
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
         background-color: rgba(136, 176, 191, 0.1);
         border-radius: 20px;
         padding-right: 1rem;
         gap: 10px;
     }
-    
-    .side2 > input{
+
+    .side2>input {
         height: auto;
         background-color: transparent;
         border: none;
@@ -538,52 +668,133 @@ main{
         font-size: 16px;
         width: 150px;
         height: 33px;
-    
+
     }
-    
+
     input:focus {
-        outline: none; 
-      }
-    
-    .side2 > a , img{
+        outline: none;
+    }
+
+    .side2>a,
+    img {
         width: 21px;
         height: 21px;
     }
-    
-    .side2 > a{
+
+    .side2>a {
         height: 1.5rem;
         padding-right: 1rem;
     }
-    
-    .ancla1{
+
+    .ancla1 {
         display: none;
     }
-    
+
     ::placeholder {
         text-align: center;
         color: rgba(217, 216, 215, 0.5);
-        font-family: Baskerv1; 
-      }
-    
-    
-    
+        font-family: Baskerv1;
+    }
+ */
+
+
     /* SECTION C */
-    .sectionC {
-        font-size: 14px; 
+    /* .sectionC-movies,
+    .sectionC-series {
+        font-size: 14px;
         padding-left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow: hidden;
     }
 
+    .sectionC-series {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    main>.tittle-movies,
+    .tittle-series {
+        display: block;
+        position: relative;
+        top: 0.5rem;
+        right: 8rem;
+        width: auto;
+        font-size: 1rem;
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+
+
+
+    #next-button-moviesRight {
+        position: absolute;
+        top: 24rem;
+        right: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
+    }
+
+
+    #next-button-moviesLeft {
+        position: absolute;
+        top: 24rem;
+        left: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
+    }
+
+    #next-button-seriesRight {
+        position: absolute;
+        top: 37.5rem;
+        right: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
+    }
+
+    #next-button-seriesLeft {
+        position: absolute;
+        top: 37.5rem;
+        left: 0.5rem;
+        display: block;
+        background-color: #d9d8d718;
+        border-style: none;
+    }
+
+
+    button>.right {
+        transform: rotate(-90deg);
+        width: 3rem;
+        height: auto;
+        display: block;
+
+    }
+
+    button>.left {
+        transform: rotate(90deg);
+        width: 3rem;
+        height: auto;
+        display: block;
+
+    }
+
+    .container-card:nth-child(n+4) {
+        display: none;
+    }
+
+
     .container-card {
-        width: 90px; 
-        margin: 3%; 
+        width: 90px;
+        margin: 3%;
     }
 
     .container-card img {
-        width: 90px; 
+        width: 90px;
         height: auto;
     }
 
@@ -608,105 +819,71 @@ main{
         line-height: none;
 
     }
+ */
 
-    .arrow-left {
-        width: 46px;
-        height: auto;
-        cursor: pointer;
-        transform: rotate(90deg);
-        position: relative;
-        top: 150px;
-        right: 20px;
-    }
-
-    .arrow-right {
-        width: 46px;
-        height: auto;
-        cursor: pointer;
-        transform: rotate(-90deg);
-        position: relative;
-        left: 306px;
-        top: -150px;
-    }
-
-    .arrow-right20{
-        width: 46px;
-        height: auto;
-        cursor: pointer;
-        transform: rotate(-90deg);
-        position: relative;
-        left: 256px;
-        top: 150px;
-    }
-
-    .arrow-left20 {
-        width: 46px;
-        height: auto;
-        cursor: pointer;
-        transform: rotate(90deg);
-        position: relative;
-        top: -150px;
-        right: 72px;
-    }
 
     /* SECTION D */
-    .line-1{
+    /* .line-1 {
         outline: 1px solid #88B0BF;
         width: 60%;
     }
-    .show-more{
+
+    .show-more {
         font-size: 0.5rem;
         width: 15%;
     }
-    .line-2{
+
+    .line-2 {
         outline: 1px solid #88B0BF;
         width: 10%;
     }
 
     /* FOOTER */
-    .footer{
+    /* .footer {
         font-size: 0.6rem;
         margin-bottom: 1.5rem;
-    }  
+    }
 
 
-    .footer>.img-logo{
+    .footer>.img-logo {
         display: none;
     }
 
-    .footer>.img-logo-m{
+    .footer>.img-logo-m {
         display: block;
         width: 50px;
         height: auto;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    
-    .content-footer{
+
+    .content-footer {
         width: auto;
         justify-content: center;
     }
 
-    .content-footer>h3{
-        margin:0px;        
+    .content-footer>h3 {
+        margin: 0px;
     }
 
-    .language{
+    .language {
         padding: 2px;
         margin-bottom: 0.2rem;
         margin-right: 0.5rem;
     }
 
-    .language>img{
+    .language>img {
         width: auto;
         height: 18px;
     }
 
-    .footer>h3{
-        font-size:1rem;
+    .footer>h3 {
+        font-size: 1rem;
         margin-bottom: 3rem;
         margin-top: 0.1rem;
-    }
-    
-}
+    } */
+
+   
+/* }  */
+
 
