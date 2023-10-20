@@ -176,7 +176,7 @@ main {
 .side1>ul,
 a {
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     list-style: none;
     text-decoration: none;
     color: #D9D8D7;
@@ -404,7 +404,56 @@ a {
 
     
     /* SECTION B  santiago aguirre*/
+    .sectionB{
+        display: flex;
+
+    }
+
+    .side1{
+        width: 65%;
+        padding-top: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .side1, ul,
+    a{
+        font-size: 23px;
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        text-decoration: none;
+        color: #D9D8D7;
+    }
+
+    .side2{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #88B0BF;
+        font-size: 26px;
+        width: 18rem;
     
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgba(217, 216, 215, 0.5);
+        font-family: Baskerv1;
+    }
+
+
     /* SECTION C  david gaona*/
     
     /* SECTION D andres facundo */
@@ -434,6 +483,43 @@ a {
     /* SECTION A  andres facundo*/
    
     /* SECTION B  santiago aguirre*/
+
+    .side1{
+        width: 65%;
+        padding-right: 3rem;
+    }
+
+    .side1, ul,
+    a{
+        font-size: 18px;
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        color: #D9D8D7;
+    }
+
+    .side1>ul img {
+        width: 25px;
+        height: 25px;
+    }
+
+
+
+    .side2{
+        width: 40%;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #88B0BF;
+        font-size: 20px;
+        width: 13rem;
+    
+    }
+
     
     /* SECTION C  david gaona*/
     
@@ -453,6 +539,39 @@ a {
     /* SECTION A  andres facundo*/
 
     /* SECTION B  santiago aguirre*/
+
+    .side1, ul,
+    a{
+        font-size: 17px;
+        display: flex;
+        gap: 1px;
+        list-style: none;
+        text-decoration: none;
+        color: #D9D8D7;
+    }
+
+    .side1{
+        width: 65%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .side1>ul img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #88B0BF;
+        font-size: 18px;
+        width: 10rem;
+    
+    }
+
 
 
     /* SECTION C  david gaona*/
@@ -502,6 +621,7 @@ a {
         margin-bottom: 3rem;
         margin-top: 0.1rem;
     } 
+
 
 }
 
@@ -823,6 +943,7 @@ NO HACER CAMBIOS AQUI
     .container-card:nth-child(n+4) {
         display: none;
     }
+
 
 
     .container-card {
