@@ -381,6 +381,7 @@ a {
 @media (max-width:1279px) {
     /* HEADER  erick arias*/
     /* no fue necesario agregar cambios en la seccion HEADER*/
+
     /* SECTION A  andres facundo*/
     
     /* SECTION B  santiago aguirre*/
@@ -392,12 +393,14 @@ a {
     /* FOOTER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
 
+
 }
 
 @media (max-width:920px) {
     
     /* HEADER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
+
 
     /* SECTION A  andres facundo*/
     
@@ -410,11 +413,13 @@ a {
     /* FOOTER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
 
+
 }
 
 @media (max-width:768px) {
     /* HEADER  erick arias*/
     /* no fue necesario agregar cambios en la seccion HEADER*/
+
 
     /* SECTION A  andres facundo*/
 
@@ -469,6 +474,7 @@ a {
     } 
 
 }
+
 
 
 /*se comenta este @media para que puedan visualizar 
@@ -756,6 +762,7 @@ NO HACER CAMBIOS AQUI
         background-color: #d9d8d718;
         border-style: none;
     }
+
 
     #next-button-seriesLeft {
         position: absolute;
