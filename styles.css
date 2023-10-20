@@ -455,7 +455,14 @@ a {
 
 
     /* SECTION C  david gaona*/
-    
+    .container-card img {
+        width: 178px;
+        height: auto;
+    }
+
+    section.sectionC-series {
+        margin-left: 10px;
+    }
     /* SECTION D andres facundo */
     .line-1{
         width:67%;
@@ -522,7 +529,14 @@ a {
 
     
     /* SECTION C  david gaona*/
-    
+    .container-card img {
+        width: 192px;
+        height: auto;
+    }
+
+    section.sectionC-series {
+        margin-left: 51px;
+    }
     /* SECTION D  andres facundo*/
     
     /* FOOTER  erick arias*/
@@ -575,7 +589,12 @@ a {
 
 
     /* SECTION C  david gaona*/
+    .container-card img {
+        width: 281px;
+        height: auto;
+    }
 
+    
     /* SECTION D  andres facundo*/
 
     /* FOOTER  erick arias*/
