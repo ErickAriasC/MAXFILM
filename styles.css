@@ -75,7 +75,8 @@ main {
 }
 
 /* SECTION A */
-.sectionA {
+ .sectionA {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +86,7 @@ main {
     width: 280px;
     position: absolute;
     top: 1rem;
-    right: 93rem;
+    left: 4rem;
 }
 
 .sectionA>img {
@@ -94,10 +95,12 @@ main {
 
 }
 
+
 .text-iconsA {
     position: absolute;
-    top: 18rem;
-    left: 14rem;
+    top: 14.5rem;
+    left: 12rem;
+
     font-size: 2rem;
     line-height: 4rem;
     width: auto;
@@ -128,7 +131,8 @@ main {
     position: absolute;
     display: flex;
     gap: 4px;
-    margin-top: 35rem;
+    margin-top: 32rem;
+
 }
 
 .sectionA .circle {
@@ -215,7 +219,7 @@ a {
 
 .line-1 {
     outline: 2px solid #88B0BF;
-    width: 84%;
+    width: 75%;
     height: 0;
 }
 
@@ -226,12 +230,13 @@ a {
 }
 
 .show-more {
-    width: 6%;
+    width: 10%;
     background-color: #025373;
     border: none;
     border-radius: 2rem;
     padding: .4rem;
     margin: .4rem;
+    font-size: 1.5rem;
 }
 
 .sectionC-movies,
@@ -314,6 +319,7 @@ a {
     margin-bottom: 1rem;
 }
 
+
 .footer>div {
     display: flex;
 }
@@ -383,12 +389,35 @@ a {
     /* no fue necesario agregar cambios en la seccion HEADER*/
 
     /* SECTION A  andres facundo*/
+    .text-iconsA{
+        font-size: 1.5rem;
+        top:12rem;
+        left: 6.5rem;
+    }
+    .sectionA .container-circle{
+        margin-top: 23rem;
+    }
+    .sectionA button,
+    .icon-play{
+        top: 6.5rem;
+    }
+
     
     /* SECTION B  santiago aguirre*/
     
     /* SECTION C  david gaona*/
     
     /* SECTION D andres facundo */
+    .line-1{
+        width:67%;
+    }
+    .show-more{
+        width:13%;  
+    }
+    .line-2{
+        width: 10%;
+    }
+
     
     /* FOOTER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
@@ -403,7 +432,7 @@ a {
 
 
     /* SECTION A  andres facundo*/
-    
+   
     /* SECTION B  santiago aguirre*/
     
     /* SECTION C  david gaona*/
@@ -424,6 +453,7 @@ a {
     /* SECTION A  andres facundo*/
 
     /* SECTION B  santiago aguirre*/
+
 
     /* SECTION C  david gaona*/
 
