@@ -433,6 +433,7 @@ a {
         font-family: Baskerv1;
     }
 
+
     /* SECTION C  david gaona*/
     
     /* SECTION D andres facundo */
@@ -484,6 +485,7 @@ a {
         width: 13rem;
     
     }
+
     
     /* SECTION C  david gaona*/
     
@@ -539,6 +541,7 @@ a {
     /* SECTION D  andres facundo*/
 
     /* FOOTER  erick arias*/
+
 
 }
 
@@ -858,6 +861,7 @@ NO HACER CAMBIOS AQUI
     .container-card:nth-child(n+4) {
         display: none;
     }
+
 
 
     .container-card {
