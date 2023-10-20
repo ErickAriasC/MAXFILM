@@ -547,8 +547,13 @@ a {
 
 @media (max-width:768px) {
     /* HEADER  erick arias*/
-    /* no fue necesario agregar cambios en la seccion HEADER*/
-
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .home{
+        margin-top: 30rem;
+    }
 
     /* SECTION A  andres facundo*/
 
@@ -589,9 +594,21 @@ a {
 
 
     /* SECTION C  david gaona*/
+    .container-card{
+        font-size: 10px;
+        margin: 10px;
+
+    }
     .container-card img {
-        width: 281px;
+        width: 170px;
         height: auto;
+    }
+
+    .sectionC-movies{
+        padding-left: 38px;
+    }
+    .sectionC-series{
+        margin-left: 38px;
     }
 
     
@@ -646,18 +663,15 @@ a {
 
 
 
-/*se comenta este @media para que puedan visualizar 
-los cambios en el resto del responsive 
-NO HACER CAMBIOS AQUI
 @media (max-width:480px) {
 
     /* HEADER */
-    /* body {
+     body {
         flex-direction: column;
-    } */
+    } 
 
-    /* HEADER */
-    /* .header {
+ 
+    .header {
         width: 100%;
         height: 64px;
         background: linear-gradient(90deg, #02537386, #00010D);
@@ -740,10 +754,10 @@ NO HACER CAMBIOS AQUI
 
     main {
         margin-top: 4rem;
-    } */
+    } 
 
     /* SECTION A */
-    /* .sectionA {
+    .sectionA {
         width: 100%;
         height: auto;
     }
@@ -787,10 +801,10 @@ NO HACER CAMBIOS AQUI
         width: 0.5rem;
         height: 0.5rem;
         border: 1px solid #D9D8D7;
-    } */
+    } 
 
     /* SECTION B */
-    /* .sectionB {
+    .sectionB {
         width: 90%;
         height: auto;
         font-size: 30px;
@@ -870,11 +884,11 @@ NO HACER CAMBIOS AQUI
         color: rgba(217, 216, 215, 0.5);
         font-family: Baskerv1;
     }
- */
+
 
 
     /* SECTION C */
-    /* .sectionC-movies,
+    .sectionC-movies,
     .sectionC-series {
         font-size: 14px;
         padding-left: 0;
@@ -883,11 +897,13 @@ NO HACER CAMBIOS AQUI
         justify-content: center;
         flex-wrap: nowrap;
         overflow: hidden;
+        margin: 0;
     }
 
     .sectionC-series {
         width: 100%;
         margin-top: 1rem;
+        
     }
 
     main>.tittle-movies,
@@ -996,11 +1012,11 @@ NO HACER CAMBIOS AQUI
         line-height: none;
 
     }
- */
+ 
 
 
     /* SECTION D */
-    /* .line-1 {
+    .line-1 {
         outline: 1px solid #88B0BF;
         width: 60%;
     }
@@ -1016,7 +1032,7 @@ NO HACER CAMBIOS AQUI
     }
 
     /* FOOTER */
-    /* .footer {
+    .footer {
         font-size: 0.6rem;
         margin-bottom: 1.5rem;
     }
@@ -1058,9 +1074,12 @@ NO HACER CAMBIOS AQUI
         font-size: 1rem;
         margin-bottom: 3rem;
         margin-top: 0.1rem;
-    } */
+    }
 
+    .sectionA>.logo {
+        display: none;
+    }
    
-/* }  */
+} 
 
 
