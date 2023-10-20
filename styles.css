@@ -76,6 +76,7 @@ main {
 
 /* SECTION A */
  .sectionA {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,6 +88,7 @@ main {
     top: 1rem;
     left: 4rem;
 }
+
 .sectionA>img {
     width: 100%;
     object-fit: contain;
@@ -98,6 +100,7 @@ main {
     position: absolute;
     top: 14.5rem;
     left: 12rem;
+
     font-size: 2rem;
     line-height: 4rem;
     width: auto;
@@ -129,6 +132,7 @@ main {
     display: flex;
     gap: 4px;
     margin-top: 32rem;
+
 }
 
 .sectionA .circle {
@@ -315,6 +319,7 @@ a {
     margin-bottom: 1rem;
 }
 
+
 .footer>div {
     display: flex;
 }
@@ -395,6 +400,7 @@ a {
     .icon-play{
         top: 6.5rem;
     }
+
     
     /* SECTION B  santiago aguirre*/
     
@@ -410,6 +416,7 @@ a {
     .line-2{
         width: 10%;
     }
+
     
     /* FOOTER  erick arias*/
     
@@ -437,6 +444,7 @@ a {
     /* SECTION A  andres facundo*/
 
     /* SECTION B  santiago aguirre*/
+
 
     /* SECTION C  david gaona*/
 
