@@ -75,7 +75,8 @@ main {
 }
 
 /* SECTION A */
-.sectionA {
+ .sectionA {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +86,7 @@ main {
     width: 280px;
     position: absolute;
     top: 1rem;
-    right: 93rem;
+    left: 4rem;
 }
 
 .sectionA>img {
@@ -94,10 +95,12 @@ main {
 
 }
 
+
 .text-iconsA {
     position: absolute;
-    top: 18rem;
-    left: 14rem;
+    top: 14.5rem;
+    left: 12rem;
+
     font-size: 2rem;
     line-height: 4rem;
     width: auto;
@@ -128,7 +131,8 @@ main {
     position: absolute;
     display: flex;
     gap: 4px;
-    margin-top: 35rem;
+    margin-top: 32rem;
+
 }
 
 .sectionA .circle {
@@ -215,7 +219,7 @@ a {
 
 .line-1 {
     outline: 2px solid #88B0BF;
-    width: 84%;
+    width: 75%;
     height: 0;
 }
 
@@ -226,12 +230,13 @@ a {
 }
 
 .show-more {
-    width: 6%;
+    width: 10%;
     background-color: #025373;
     border: none;
     border-radius: 2rem;
     padding: .4rem;
     margin: .4rem;
+    font-size: 1.5rem;
 }
 
 .sectionC-movies,
@@ -314,6 +319,7 @@ a {
     margin-bottom: 1rem;
 }
 
+
 .footer>div {
     display: flex;
 }
@@ -380,8 +386,22 @@ a {
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
     /* HEADER  erick arias*/
-    
+    /* no fue necesario agregar cambios en la seccion HEADER*/
+
     /* SECTION A  andres facundo*/
+    .text-iconsA{
+        font-size: 1.5rem;
+        top:12rem;
+        left: 6.5rem;
+    }
+    .sectionA .container-circle{
+        margin-top: 23rem;
+    }
+    .sectionA button,
+    .icon-play{
+        top: 6.5rem;
+    }
+
     
     /* SECTION B  santiago aguirre*/
     .sectionB{
@@ -437,17 +457,31 @@ a {
     /* SECTION C  david gaona*/
     
     /* SECTION D andres facundo */
+    .line-1{
+        width:67%;
+    }
+    .show-more{
+        width:13%;  
+    }
+    .line-2{
+        width: 10%;
+    }
+
     
     /* FOOTER  erick arias*/
-    
+        /* no fue necesario agregar cambios en la seccion HEADER*/
+
+
 }
 
 @media (max-width:920px) {
     
     /* HEADER  erick arias*/
-    
+        /* no fue necesario agregar cambios en la seccion HEADER*/
+
+
     /* SECTION A  andres facundo*/
-    
+   
     /* SECTION B  santiago aguirre*/
 
     .side1{
@@ -492,11 +526,15 @@ a {
     /* SECTION D  andres facundo*/
     
     /* FOOTER  erick arias*/
-    
+        /* no fue necesario agregar cambios en la seccion HEADER*/
+
+
 }
 
 @media (max-width:768px) {
     /* HEADER  erick arias*/
+    /* no fue necesario agregar cambios en la seccion HEADER*/
+
 
     /* SECTION A  andres facundo*/
 
@@ -541,9 +579,52 @@ a {
     /* SECTION D  andres facundo*/
 
     /* FOOTER  erick arias*/
+     .footer {
+        font-size: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer>.img-logo {
+        display: none;
+    }
+
+    .footer>.img-logo-m {
+        display: block;
+        width: 50px;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-footer {
+        width: auto;
+        justify-content: center;
+    }
+
+    .content-footer>h3 {
+        margin: 0px;
+    }
+
+    .language {
+        padding: 2px;
+        margin-bottom: 0.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .language>img {
+        width: auto;
+        height: 18px;
+    }
+
+    .footer>h3 {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 0.1rem;
+    } 
 
 
 }
+
 
 
 /*se comenta este @media para que puedan visualizar 
@@ -832,6 +913,7 @@ NO HACER CAMBIOS AQUI
         border-style: none;
     }
 
+
     #next-button-seriesLeft {
         position: absolute;
         top: 37.5rem;
@@ -961,4 +1043,5 @@ NO HACER CAMBIOS AQUI
 
    
 /* }  */
+
 
