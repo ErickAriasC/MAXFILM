@@ -386,9 +386,24 @@ a {
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
     /* HEADER  erick arias*/
-    /* no fue necesario agregar cambios en la seccion HEADER*/
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .home{
+        margin-top: 30rem;
+    }
+
+    .content-nav-bar img {
+        width: 28px;
+        height: 28px;
+    }
 
     /* SECTION A  andres facundo*/
+    .sectionA>.logo {
+    
+        left: 2rem;
+    }
     .text-iconsA{
         font-size: 1.5rem;
         top:12rem;
@@ -406,7 +421,6 @@ a {
     /* SECTION B  santiago aguirre*/
     .sectionB{
         display: flex;
-
     }
 
     .side1{
@@ -414,6 +428,7 @@ a {
         padding-top: 0.5rem;
         display: flex;
         justify-content: flex-start;
+        padding-left: 20px;
     }
 
     .side1, ul,
@@ -456,7 +471,7 @@ a {
 
     /* SECTION C  david gaona*/
     .container-card img {
-        width: 178px;
+        width: 225px;
         height: auto;
     }
 
@@ -467,7 +482,7 @@ a {
     .line-1{
         width:67%;
     }
-    .show-more{
+    .show-more{ 
         width:13%;  
     }
     .line-2{
@@ -488,29 +503,48 @@ a {
 
 
     /* SECTION A  andres facundo*/
-   
+    .sectionA button, .icon-play {
+        top: 4.5rem;
+        width: 3rem;
+    }
+
+    .sectionA .container-circle {
+        margin-top: 16rem;
+    }
+    .sectionA .div-A {
+        width: 8rem;
+    }
+    .sectionA h5 {
+        font-size: 0.8rem;
+        width: auto;
+        height: auto;
+    }
+
+    .text-iconsA {
+        font-size: 1.2rem;
+        top: 8rem;
+        left: 6.5rem;
+        line-height: 2.5rem;
+    }
+
     /* SECTION B  santiago aguirre*/
 
     .side1{
         width: 65%;
         padding-right: 3rem;
+        font-size: 0.2rem;
     }
 
-    .side1, ul,
-    a{
-        font-size: 18px;
-        display: flex;
-        list-style: none;
-        text-decoration: none;
-        color: #D9D8D7;
-    }
-
+ 
     .side1>ul img {
         width: 25px;
         height: 25px;
     }
 
-
+    .side1> ul, a {
+        font-size: 20px;
+        gap: 1.85rem;
+    }
 
     .side2{
         width: 40%;
@@ -530,15 +564,22 @@ a {
     
     /* SECTION C  david gaona*/
     .container-card img {
-        width: 192px;
+        width: 150px;
         height: auto;
     }
+    .container-card{
+        margin: 0;
+        font-size: 10px;
+        margin: 20px;
 
-    section.sectionC-series {
-        margin-left: 51px;
     }
+
+  
     /* SECTION D  andres facundo*/
-    
+    .show-more {
+        width: 13%;
+        font-size: 1rem;
+    }
     /* FOOTER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
 
@@ -552,68 +593,178 @@ a {
         flex-direction: column;
     }
     .home{
-        margin-top: 30rem;
+        margin-top: 20rem;
+    }
+    .content-nav-bar>li>a>img {
+        margin-bottom: 7rem;
     }
 
     /* SECTION A  andres facundo*/
+    .sectionA {
+        width: 100%;
+        height: auto;
+    }
+
+    .sectionA>img {
+        width: 100%;
+        height: 100%;
+    }
+    .sectionA>.logo {
+        width: 150px;
+        top: -22.5rem;
+        left: 2rem;
+    }
+    .text-iconsA {
+        top: 5rem;
+        left: 4rem;
+        line-height: 1.3rem;
+    }
+
+    .text-iconsA>h2 {
+        font-size: 0.8rem;
+    }
+
+    .sectionA .div-A {
+        width: 4rem;
+        border: 0.7px solid #88B0BF;
+    }
+
+    .sectionA h5 {
+        font-size: 0.5rem;
+    }
+
+    .sectionA 
+    .icon-play {
+        width: 1.8rem;
+        height: auto;
+        top: 0;
+        left: 0.5rem;
+    }
+
+    .sectionA .container-circle {
+
+        margin-top: 7rem;
+    }
+
+    .sectionA>.container-circle>div {
+        width: 0.5rem;
+        height: 0.5rem;
+        border: 1px solid #D9D8D7;
+    } 
 
     /* SECTION B  santiago aguirre*/
 
-    .side1, ul,
-    a{
-        font-size: 17px;
+    .sectionB {
+        width: 90%;
+        height: auto;
+        font-size: 30px;
         display: flex;
-        gap: 1px;
+        padding-bottom: 1rem;
+        margin-top: 1.5rem;
+        border-bottom: none;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-bottom: 2px solid #88B0BF;
+        margin-bottom: 0.5rem;
+    }
+
+
+    .side1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .side1>ul,
+    a {
+        display: flex;
+        gap: 1rem;
         list-style: none;
         text-decoration: none;
         color: #D9D8D7;
+        font-size: 15px;
     }
 
-    .side1{
-        width: 65%;
+
+    .side2 {
+        width: 60%;
         display: flex;
-        justify-content: flex-start;
-    }
-
-    .side1>ul img {
-        width: 20px;
-        height: 20px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(136, 176, 191, 0.1);
+        border-radius: 20px;
+        padding-right: 1rem;
+        gap: 10px;
     }
 
     .side2>input {
         height: auto;
         background-color: transparent;
         border: none;
-        border-radius: 10px;
         color: #88B0BF;
-        font-size: 18px;
-        width: 10rem;
-    
+        font-size: 16px;
+        width: 150px;
+        height: 33px;
+
     }
+
+    input:focus {
+        outline: none;
+    }
+
+    .side2>a,
+    img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .side2>a {
+        height: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .ancla1 {
+        display: none;
+    }
+
+    ::placeholder {
+        text-align: center;
+        color: rgba(217, 216, 215, 0.5);
+        font-family: Baskerv1;
+    }
+
 
 
 
     /* SECTION C  david gaona*/
     .container-card{
-        font-size: 10px;
-        margin: 10px;
+        font-size: 8px;
+        margin: 8px;
 
     }
     .container-card img {
-        width: 170px;
+        width: 115px;
         height: auto;
     }
 
     .sectionC-movies{
-        padding-left: 38px;
+        padding-left: 21px;
     }
     .sectionC-series{
-        margin-left: 38px;
+        margin-left: 5rem;
     }
 
     
     /* SECTION D  andres facundo*/
-
+    .show-more {
+        width: 20%;
+        font-size: 0.8rem;
+    }
+    .line-1 {
+        width: 60%;
+    }
     /* FOOTER  erick arias*/
      .footer {
         font-size: 0.6rem;
@@ -661,8 +812,6 @@ a {
 
 }
 
-
-
 @media (max-width:480px) {
 
     /* HEADER */
@@ -693,6 +842,7 @@ a {
     }
 
     .menu-button {
+        margin-left: 10px;
         margin-top: 0;
         margin-right: 2rem;
         padding-left: 0.7rem;
@@ -786,8 +936,8 @@ a {
         font-size: 0.5rem;
     }
 
-    .sectionA button,
-    .icon-play {
+    .sectionA .icon-play {
+        top: 2rem;
         width: 2rem;
         height: auto;
     }
