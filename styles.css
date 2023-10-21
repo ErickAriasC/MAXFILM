@@ -80,13 +80,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 
 .sectionA>.logo {
     width: 280px;
     position: absolute;
     top: 1rem;
-    left: 4rem;
+    left: 2rem;
 }
 
 .sectionA>img {
@@ -168,9 +168,8 @@ main {
 .side1 {
     width: 60%;
     display: flex;
-    justify-content: center;
     align-items: center;
-
+    padding-left: 2.5rem;
 }
 
 .side1>ul,
@@ -475,8 +474,8 @@ a {
         height: auto;
     }
 
-    section.sectionC-series {
-        margin-left: 10px;
+    .sectionC-movies{
+        padding-left: 2.5rem;
     }
     /* SECTION D andres facundo */
     .line-1{
@@ -543,7 +542,7 @@ a {
 
     .side1> ul, a {
         font-size: 20px;
-        gap: 1.85rem;
+        gap: 1.8rem;
     }
 
     .side2{
@@ -842,7 +841,7 @@ a {
     }
 
     .menu-button {
-        margin-left: 10px;
+        margin-left: 4px;
         margin-top: 0;
         margin-right: 2rem;
         padding-left: 0.7rem;
