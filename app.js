@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+
   let seriesData = [
     {
         "Title": "Black Mirror",
