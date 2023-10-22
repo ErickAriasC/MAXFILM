@@ -70,7 +70,7 @@ let seriesData = [
         description: "Un agente del FBI, experto en asesinos en serie, inventa técnicas de creación de perfiles mientras persigue a violadores y asesinos famosos.",
         creation_date: "13 de octubre de 2017 (Netflix)",
         director: "David Fincher",
-        category: "Drama",
+        category: "Misterio",
         seasons: 2,
         season_1: "10 capítulos",
         season_2: "9 capítulos",
@@ -100,7 +100,7 @@ let seriesData = [
         description: "En 1919, Thomas Shelby, un veterano de la Primera Guerra Mundial, regresa a Birmingham para hacerse cargo del negocio familiar. Thomas es un hombre inteligente y ambicioso, y está decidido a llevar a los Peaky Blinders a la cima del mundo criminal.",
         creation_date: "12 de septiembre de 2013 (Reino Unido)",
         director: "Steven Knight",
-        category: "Drama",
+        category: "Misterio",
         seasons: 6,
         season_1: "6 capítulos",
         season_2: "6 capítulos",
@@ -173,7 +173,7 @@ let seriesData = [
         description: "Narra las aventuras y desventuras de seis jóvenes de Nueva York. Rachel forman una unida pandilla de amigos que viven en Manhattan y que suelen reunirse en sus apartamentos o en su bar habitual, el Central Perk. A pesar de los numerosos cambios que se producen en sus vidas, su amistad es inquebrantable en la dura batalla por salir adelante en sus periplos profesionales y personales.",
         creation_date: "22 de septiembre de 1994 (Estados Unidos)",
         director: "Kevin S. Bright",
-        category: "Comedia",
+        category: "Comedy",
         seasons: 10,
         season_1: "24 capítulos",
         season_2: "22 capítulos",
@@ -195,7 +195,7 @@ let seriesData = [
         description: "La serie sigue las vidas y aventuras de los empleados de la sucursal de Scranton, Pensilvania, de la empresa de papel Dunder Mifflin.",
         creation_date: "24 de marzo de 2005 (Estados Unidos)",
         director: "Ken Kwapis",
-        category: "Comedia",
+        category: "Comedy",
         seasons: 9,
         season_1: "6 capítulos",
         season_2: "22 capítulos",
@@ -216,7 +216,7 @@ let seriesData = [
         description: "La serie sigue las vidas y aventuras de los detectives del Departamento de Policía de Nueva York en la comisaría 99 de Brooklyn. El equipo está liderado por el capitán Raymond Holt, un hombre serio y estricto que está decidido a hacer que su comisaría sea la mejor.",
         creation_date: "17 de septiembre de 2013 (Estados Unidos)",
         director: "Michael Schur",
-        category: "Comedia",
+        category: "Comedy",
         seasons: 8,
         season_1: "22 capítulos",
         season_2: "23 capítulos",
@@ -259,7 +259,7 @@ let seriesData = [
         description: "The Haunting of Hill House sigue la historia de los Crain, una familia que se muda a la mansión Hill para restaurarla y venderla. Sin embargo, pronto descubren que la casa está embrujada y que su presencia comienza a afectarlos de formas horribles.",
         creation_date: "10 de octubre de 2018 (Estados Unidos)",
         director: "Mike Flanagan",
-        category: "Ciencia ficción",
+        category: "Terror",
         seasons: 1,
         season_1: "10 capítulos",
         url: "https://www.youtube.com/watch?v=mTvNeafShH0"
@@ -472,3 +472,5 @@ let moviesData = [
         url: "https://youtu.be/emYLYfuZAbU?si=t-5ZEsIa9AeCANRN"
     }
 ]
+
+
