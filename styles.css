@@ -75,17 +75,18 @@ main {
 }
 
 /* SECTION A */
-.sectionA {
+ .sectionA {
+
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 
 .sectionA>.logo {
     width: 280px;
     position: absolute;
     top: 1rem;
-    right: 93rem;
+    left: 2rem;
 }
 
 .sectionA>img {
@@ -94,10 +95,12 @@ main {
 
 }
 
+
 .text-iconsA {
     position: absolute;
-    top: 18rem;
-    left: 14rem;
+    top: 14.5rem;
+    left: 12rem;
+
     font-size: 2rem;
     line-height: 4rem;
     width: auto;
@@ -128,7 +131,8 @@ main {
     position: absolute;
     display: flex;
     gap: 4px;
-    margin-top: 35rem;
+    margin-top: 32rem;
+
 }
 
 .sectionA .circle {
@@ -164,15 +168,14 @@ main {
 .side1 {
     width: 60%;
     display: flex;
-    justify-content: center;
     align-items: center;
-
+    padding-left: 2.5rem;
 }
 
 .side1>ul,
 a {
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     list-style: none;
     text-decoration: none;
     color: #D9D8D7;
@@ -215,7 +218,7 @@ a {
 
 .line-1 {
     outline: 2px solid #88B0BF;
-    width: 84%;
+    width: 75%;
     height: 0;
 }
 
@@ -226,12 +229,13 @@ a {
 }
 
 .show-more {
-    width: 6%;
+    width: 10%;
     background-color: #025373;
     border: none;
     border-radius: 2rem;
     padding: .4rem;
     margin: .4rem;
+    font-size: 1.5rem;
 }
 
 .sectionC-movies,
@@ -314,6 +318,7 @@ a {
     margin-bottom: 1rem;
 }
 
+
 .footer>div {
     display: flex;
 }
@@ -380,15 +385,109 @@ a {
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
     /* HEADER  erick arias*/
-    /* no fue necesario agregar cambios en la seccion HEADER*/
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .home{
+        margin-top: 30rem;
+    }
+
+    .content-nav-bar img {
+        width: 28px;
+        height: 28px;
+    }
 
     /* SECTION A  andres facundo*/
+    .sectionA>.logo {
+    
+        left: 2rem;
+    }
+    .text-iconsA{
+        font-size: 1.5rem;
+        top:12rem;
+        left: 6.5rem;
+    }
+    .sectionA .container-circle{
+        margin-top: 23rem;
+    }
+    .sectionA button,
+    .icon-play{
+        top: 6.5rem;
+    }
+
     
     /* SECTION B  santiago aguirre*/
+    .sectionB{
+        display: flex;
+    }
+
+    .side1{
+        width: 65%;
+        padding-top: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .side1, ul,
+    a{
+        font-size: 23px;
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        text-decoration: none;
+        color: #D9D8D7;
+    }
+
+    .side2{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #88B0BF;
+        font-size: 26px;
+        width: 18rem;
     
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgba(217, 216, 215, 0.5);
+        font-family: Baskerv1;
+    }
+
+
     /* SECTION C  david gaona*/
-    
+    .container-card img {
+        width: 225px;
+        height: auto;
+    }
+
+    .sectionC-movies{
+        padding-left: 2.5rem;
+    }
     /* SECTION D andres facundo */
+    .line-1{
+        width:67%;
+    }
+    .show-more{ 
+        width:13%;  
+    }
+    .line-2{
+        width: 10%;
+    }
+
     
     /* FOOTER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
@@ -403,13 +502,83 @@ a {
 
 
     /* SECTION A  andres facundo*/
-    
+    .sectionA button, .icon-play {
+        top: 4.5rem;
+        width: 3rem;
+    }
+
+    .sectionA .container-circle {
+        margin-top: 16rem;
+    }
+    .sectionA .div-A {
+        width: 8rem;
+    }
+    .sectionA h5 {
+        font-size: 0.8rem;
+        width: auto;
+        height: auto;
+    }
+
+    .text-iconsA {
+        font-size: 1.2rem;
+        top: 8rem;
+        left: 6.5rem;
+        line-height: 2.5rem;
+    }
+
     /* SECTION B  santiago aguirre*/
+
+    .side1{
+        width: 65%;
+        padding-right: 3rem;
+        font-size: 0.2rem;
+    }
+
+ 
+    .side1>ul img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .side1> ul, a {
+        font-size: 20px;
+        gap: 1.8rem;
+    }
+
+    .side2{
+        width: 40%;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #88B0BF;
+        font-size: 20px;
+        width: 13rem;
+    
+    }
+
     
     /* SECTION C  david gaona*/
-    
+    .container-card img {
+        width: 150px;
+        height: auto;
+    }
+    .container-card{
+        margin: 0;
+        font-size: 10px;
+        margin: 20px;
+
+    }
+
+  
     /* SECTION D  andres facundo*/
-    
+    .show-more {
+        width: 13%;
+        font-size: 1rem;
+    }
     /* FOOTER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
 
@@ -418,163 +587,19 @@ a {
 
 @media (max-width:768px) {
     /* HEADER  erick arias*/
-    /* no fue necesario agregar cambios en la seccion HEADER*/
-
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .home{
+        margin-top: 20rem;
+    }
+    .content-nav-bar>li>a>img {
+        margin-bottom: 7rem;
+    }
 
     /* SECTION A  andres facundo*/
-
-    /* SECTION B  santiago aguirre*/
-
-    /* SECTION C  david gaona*/
-
-    /* SECTION D  andres facundo*/
-
-    /* FOOTER  erick arias*/
-     .footer {
-        font-size: 0.6rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .footer>.img-logo {
-        display: none;
-    }
-
-    .footer>.img-logo-m {
-        display: block;
-        width: 50px;
-        height: auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .content-footer {
-        width: auto;
-        justify-content: center;
-    }
-
-    .content-footer>h3 {
-        margin: 0px;
-    }
-
-    .language {
-        padding: 2px;
-        margin-bottom: 0.2rem;
-        margin-right: 0.5rem;
-    }
-
-    .language>img {
-        width: auto;
-        height: 18px;
-    }
-
-    .footer>h3 {
-        font-size: 1rem;
-        margin-bottom: 3rem;
-        margin-top: 0.1rem;
-    } 
-
-}
-
-
-
-/*se comenta este @media para que puedan visualizar 
-los cambios en el resto del responsive 
-NO HACER CAMBIOS AQUI
-@media (max-width:480px) {
-
-    /* HEADER */
-    /* body {
-        flex-direction: column;
-    } */
-
-    /* HEADER */
-    /* .header {
-        width: 100%;
-        height: 64px;
-        background: linear-gradient(90deg, #02537386, #00010D);
-        position: fixed;
-        z-index: 1;
-
-    }
-
-    .nav-bar {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .nav-bar>img {
-        width: 176px;
-        height: 32px;
-    }
-
-    .menu-button {
-        margin-top: 0;
-        margin-right: 2rem;
-        padding-left: 0.7rem;
-        padding-right: 0.7rem;
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
-        background-color: #03738cee;
-        border-radius: 50%;
-    }
-
-    .bar {
-        width: 22px;
-    }
-
-    .content-nav-bar {
-        display: none;
-        background-color: #333;
-        position: absolute;
-        top: 2.3rem;
-        right: 19rem;
-        width: 200px;
-        padding: 10px;
-    }
-
-    .header>nav>img {
-        display: block;
-    }
-
-    .content-nav-bar li {
-        padding: 10px 0;
-    }
-
-    .content-nav-bar img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .content-nav-bar>li>a>img {
-        margin-bottom: 2rem;
-    }
-
-    .content-nav-bar.active {
-        background-color: #03738cee;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 5rem;
-        width: auto;
-        height: auto;
-        margin-top: 1rem;
-        z-index: 1;
-
-
-    }
-
-    .home {
-        margin-top: 2rem;
-    }
-
-    main {
-        margin-top: 4rem;
-    } */
-
-    /* SECTION A */
-    /* .sectionA {
+    .sectionA {
         width: 100%;
         height: auto;
     }
@@ -583,10 +608,14 @@ NO HACER CAMBIOS AQUI
         width: 100%;
         height: 100%;
     }
-
+    .sectionA>.logo {
+        width: 150px;
+        top: -22.5rem;
+        left: 2rem;
+    }
     .text-iconsA {
         top: 5rem;
-        left: 1.5rem;
+        left: 4rem;
         line-height: 1.3rem;
     }
 
@@ -603,25 +632,28 @@ NO HACER CAMBIOS AQUI
         font-size: 0.5rem;
     }
 
-    .sectionA button,
+    .sectionA 
     .icon-play {
-        width: 2rem;
+        width: 1.8rem;
         height: auto;
+        top: 0;
+        left: 0.5rem;
     }
 
     .sectionA .container-circle {
 
-        margin-top: 6rem;
+        margin-top: 7rem;
     }
 
     .sectionA>.container-circle>div {
         width: 0.5rem;
         height: 0.5rem;
         border: 1px solid #D9D8D7;
-    } */
+    } 
 
-    /* SECTION B */
-    /* .sectionB {
+    /* SECTION B  santiago aguirre*/
+
+    .sectionB {
         width: 90%;
         height: auto;
         font-size: 30px;
@@ -701,11 +733,311 @@ NO HACER CAMBIOS AQUI
         color: rgba(217, 216, 215, 0.5);
         font-family: Baskerv1;
     }
- */
+
+
+
+
+    /* SECTION C  david gaona*/
+    .container-card{
+        font-size: 8px;
+        margin: 8px;
+
+    }
+    .container-card img {
+        width: 115px;
+        height: auto;
+    }
+
+    .sectionC-movies{
+        padding-left: 21px;
+    }
+    .sectionC-series{
+        margin-left: 5rem;
+    }
+
+    
+    /* SECTION D  andres facundo*/
+    .show-more {
+        width: 20%;
+        font-size: 0.8rem;
+    }
+    .line-1 {
+        width: 60%;
+    }
+    /* FOOTER  erick arias*/
+     .footer {
+        font-size: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer>.img-logo {
+        display: none;
+    }
+
+    .footer>.img-logo-m {
+        display: block;
+        width: 50px;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-footer {
+        width: auto;
+        justify-content: center;
+    }
+
+    .content-footer>h3 {
+        margin: 0px;
+    }
+
+    .language {
+        padding: 2px;
+        margin-bottom: 0.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .language>img {
+        width: auto;
+        height: 18px;
+    }
+
+    .footer>h3 {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 0.1rem;
+    } 
+
+
+}
+
+@media (max-width:480px) {
+
+    /* HEADER */
+     body {
+        flex-direction: column;
+    } 
+
+ 
+    .header {
+        width: 100%;
+        height: 64px;
+        background: linear-gradient(90deg, #02537386, #00010D);
+        position: fixed;
+        z-index: 1;
+
+    }
+
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-bar>img {
+        width: 176px;
+        height: 32px;
+    }
+
+    .menu-button {
+        margin-left: 4px;
+        margin-top: 0;
+        margin-right: 2rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        background-color: #03738cee;
+        border-radius: 50%;
+    }
+
+    .bar {
+        width: 22px;
+    }
+
+    .content-nav-bar {
+        display: none;
+        background-color: #333;
+        position: absolute;
+        top: 2.3rem;
+        right: 19rem;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .header>nav>img {
+        display: block;
+    }
+
+    .content-nav-bar li {
+        padding: 10px 0;
+    }
+
+    .content-nav-bar img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .content-nav-bar>li>a>img {
+        margin-bottom: 2rem;
+    }
+
+    .content-nav-bar.active {
+        background-color: #03738cee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5rem;
+        width: auto;
+        height: auto;
+        margin-top: 1rem;
+        z-index: 1;
+
+
+    }
+
+    .home {
+        margin-top: 2rem;
+    }
+
+    main {
+        margin-top: 4rem;
+    } 
+
+    /* SECTION A */
+    .sectionA {
+        width: 100%;
+        height: auto;
+    }
+
+    .sectionA>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-iconsA {
+        top: 5rem;
+        left: 1.5rem;
+        line-height: 1.3rem;
+    }
+
+    .text-iconsA>h2 {
+        font-size: 0.8rem;
+    }
+
+    .sectionA .div-A {
+        width: 4rem;
+        border: 0.7px solid #88B0BF;
+    }
+
+    .sectionA h5 {
+        font-size: 0.5rem;
+    }
+
+    .sectionA .icon-play {
+        top: 2rem;
+        width: 2rem;
+        height: auto;
+    }
+
+    .sectionA .container-circle {
+
+        margin-top: 6rem;
+    }
+
+    .sectionA>.container-circle>div {
+        width: 0.5rem;
+        height: 0.5rem;
+        border: 1px solid #D9D8D7;
+    } 
+
+    /* SECTION B */
+    .sectionB {
+        width: 90%;
+        height: auto;
+        font-size: 30px;
+        display: flex;
+        padding-bottom: 1rem;
+        margin-top: 1.5rem;
+        border-bottom: none;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-bottom: 2px solid #88B0BF;
+        margin-bottom: 0.5rem;
+    }
+
+
+    .side1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .side1>ul,
+    a {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        text-decoration: none;
+        color: #D9D8D7;
+        font-size: 15px;
+    }
+
+
+    .side2 {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(136, 176, 191, 0.1);
+        border-radius: 20px;
+        padding-right: 1rem;
+        gap: 10px;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        color: #88B0BF;
+        font-size: 16px;
+        width: 150px;
+        height: 33px;
+
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .side2>a,
+    img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .side2>a {
+        height: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .ancla1 {
+        display: none;
+    }
+
+    ::placeholder {
+        text-align: center;
+        color: rgba(217, 216, 215, 0.5);
+        font-family: Baskerv1;
+    }
+
 
 
     /* SECTION C */
-    /* .sectionC-movies,
+    .sectionC-movies,
     .sectionC-series {
         font-size: 14px;
         padding-left: 0;
@@ -714,11 +1046,13 @@ NO HACER CAMBIOS AQUI
         justify-content: center;
         flex-wrap: nowrap;
         overflow: hidden;
+        margin: 0;
     }
 
     .sectionC-series {
         width: 100%;
         margin-top: 1rem;
+        
     }
 
     main>.tittle-movies,
@@ -795,6 +1129,7 @@ NO HACER CAMBIOS AQUI
     }
 
 
+
     .container-card {
         width: 90px;
         margin: 3%;
@@ -826,11 +1161,11 @@ NO HACER CAMBIOS AQUI
         line-height: none;
 
     }
- */
+ 
 
 
     /* SECTION D */
-    /* .line-1 {
+    .line-1 {
         outline: 1px solid #88B0BF;
         width: 60%;
     }
@@ -846,7 +1181,7 @@ NO HACER CAMBIOS AQUI
     }
 
     /* FOOTER */
-    /* .footer {
+    .footer {
         font-size: 0.6rem;
         margin-bottom: 1.5rem;
     }
@@ -888,9 +1223,12 @@ NO HACER CAMBIOS AQUI
         font-size: 1rem;
         margin-bottom: 3rem;
         margin-top: 0.1rem;
-    } */
+    }
 
+    .sectionA>.logo {
+        display: none;
+    }
    
-/* }  */
+} 
 
 
