@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
     const navBar = document.querySelector(".content-nav-bar");
-    
+
     menuButton.addEventListener("click", function () {
         navBar.classList.toggle("active");
     });
@@ -11,10 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 //BD- PARA MOVIES Y SERIES
-
-
 
 const sectionMovies=document.querySelector(".sectionC-movies")
 
@@ -237,6 +234,7 @@ window.addEventListener('DOMContentLoaded', generateMovies)
 
 //SERIES
 const sectionSeries=document.querySelector(".sectionC-series")
+
 
 //SERIES
 let seriesData = [
@@ -516,7 +514,7 @@ let seriesData = [
     }
 ]
 
-//generador de cartas para MOVIES
+//generador de cartas para Series
 const generateSeries=()=>{
     seriesData.forEach(seriesData=>createSectionSeries(seriesData))
 }
@@ -547,3 +545,4 @@ const createSectionSeries=(seriesData)=>{
 }
 
 window.addEventListener('DOMContentLoaded', generateSeries)
+
