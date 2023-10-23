@@ -10,7 +10,232 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 //BD- PARA MOVIES Y SERIES
+
+const sectionMovies=document.querySelector(".sectionC-movies")
+
+//MOVIES
+const moviesData = [
+    {
+        id: 1,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/jurassic park 2.jpg",
+        horizontal_cover: " ",
+        tittle: "Jurassic Park",
+        description: "Un parque temático de dinosaurios se convierte en un peligroso caos cuando los depredadores prehistóricos quedan libres. Los visitantes deben unirse para sobrevivir y escapar de la isla. Jurassic Park es conocida por sus efectos especiales innovadores y tensión palpable, convirtiéndose en un clásico del cine con varias secuelas.",
+        director: "Steven Spielberg",
+        category: "Adventure",
+        year: 1993,
+        duration: "2h",
+        url: "https://youtu.be/lc0UehYemQA?si=w3MNNxcoaO_z8oBt"
+    },
+    {
+        id: 2,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/indiana jones.jpg",
+        horizontal_cover: " ",
+        tittle: "Indiana Jones",
+        description: "Indiana Jones se embarca en una misión durante la Guerra Fría para encontrar una misteriosa Calavera de Cristal con poderes extraterrestres. Con nuevos aliados y enfrentando enemigos, enfrenta peligros y resuelve enigmas en su búsqueda.",
+        director: "Steven Spielberg",
+        category: "Adventure",
+        year: 2008,
+        duration: "2h",
+        url: "https://youtu.be/s942xnT-Lhs?si=lsQskM69t9iUJEgG"
+    },
+    {
+        id: 3,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/señor de los anillos.jpg",
+        horizontal_cover: " ",
+        tittle: "The Lord of the Rings",
+        description: "Frodo Baggins emprende una peligrosa misión para destruir el Anillo Único y evitar que caiga en manos del malvado Sauron. Con la ayuda de la Comunidad del Anillo, enfrentan desafíos y peligros en la Tierra Media en su camino hacia el Monte del Destino. La película destaca por su impresionante paisaje visual y efectos especiales, junto con una narrativa envolvente.",
+        director: "Peter Jackson",
+        category: "Adventure",
+        year: 2001,
+        duration: "2h 58min",
+        url: "https://youtu.be/1YjXoRqUgVk?si=8ry9wa9KG9fOFxFF"
+    },
+    {
+        id: 4,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/que paso ayer.jpg",
+        horizontal_cover: " ",
+        tittle: "The Hangover",
+        description: "Cuatro amigos se despiertan en Las Vegas sin recordar lo ocurrido en su despedida de soltero. Deben seguir pistas para encontrar al novio desaparecido antes de que sea demasiado tarde. En el camino, enfrentan situaciones cómicas y surrealistas en una noche llena de excesos y sorpresas.",
+        director: "Todd Phillips",
+        category: "Comedy",
+        year: 2009,
+        duration: "1h 40min",
+        url: "https://youtu.be/wnNgGp1KVWQ?si=SgeMFHFsbMREPxA7"
+    },
+    {
+        id: 5,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/son como niños.jpg",
+        horizontal_cover: " ",
+        tittle: "Grown Ups",
+        description: "Un grupo de amigos de la infancia se reúne para homenajear a su fallecido entrenador de baloncesto. Pasan el fin de semana cerca de un lago, reviviendo viejas rivalidades y bromas. La película muestra las situaciones hilarantes que surgen entre estos adultos que a veces actúan como niños.",
+        director: "Dennis Dugan",
+        category: "Comedy",
+        year: 2010,
+        duration: "1h 42min",
+        url: "https://youtu.be/yMEDiKD7cyE?si=gC4Rqz3vCknFLDdC"
+    },
+    {
+        id: 6,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/y donde estan las rubias.jpg",
+        horizontal_cover: " ",
+        tittle: "White Chicks",
+        description: "Dos agentes del FBI, los hermanos Marcus, se disfrazan como herederas millonarias rubias para protegerlas de un complot criminal. Se enfrentan a hilarantes situaciones mientras intentan mantener la fachada y resolver el caso.",
+        director: "Keenen Ivory Wayans",
+        category: "Comedy",
+        year: 2004,
+        duration: "1h 49min",
+        url: "https://youtu.be/UxER50XHW-I?si=MleGYXF8R_eF8cEH"
+    },
+    {
+        id: 7,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/El Exorcista 1.jpg",
+        horizontal_cover: " ",
+        tittle: "The Exorcist",
+        description: "El Exorcista sigue a Chris MacNeil y su hija Regan, quienes enfrentan fenómenos aterradores en su casa. A medida que Regan muestra comportamientos perturbadores, Chris busca ayuda y descubre que su hija podría estar poseída por una entidad demoníaca. El Padre Damien Karras, un sacerdote con dudas sobre su fe se convierte en el principal exorcista encargado de enfrentar el mal que posee a Regan.",
+        director: "William Friedkin",
+        category: "Terror",
+        year: 1973,
+        duration: "2h",
+        url: "https://youtu.be/opBpPS-n30s?si=hL0ZtN0QeGqIcF_l"
+    },
+    {
+        id: 8,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/la monja.jpg",
+        horizontal_cover: " ",
+        tittle: "La Monja",
+        description: "Un sacerdote con un pasado oscuro y una novicia enviada por el Vaticano investigan el suicidio de una monja en una abadía en Rumania. Descubren la presencia de una malévola entidad conocida como La Monja, que amenaza la vida espiritual y física de todos. Juntos, deben enfrentarse a fuerzas oscuras y desentrañar el misterio detrás de la entidad antes de que sea demasiado tarde.",
+        director: "Corin Hardy",
+        category: "Terror",
+        year: 2018,
+        duration: "1h 36min",
+        url: "https://youtu.be/eqVjGwYFVqQ?si=DsUAhUCQLGPC4tOg"
+    },
+    {
+        id: 9,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el resplandor 2.jpg",
+        horizontal_cover: " ",
+        tittle: "El Resplandor",
+        description: "Jack Torrance se convierte en el cuidador de un hotel aislado con su familia durante el invierno. Su hijo, Danny, posee una habilidad psíquica llamada el resplandor. Con el tiempo, fuerzas malignas del hotel afectan a Jack, poniendo en peligro a su familia.",
+        director: "Stanley Kubrick",
+        category: "Terror",
+        year: 1980,
+        duration: "2h 26min",
+        url: "https://youtu.be/A3q03BBwMp4?si=zcK1vS0D2xvWob1a"
+    },
+    {
+        id: 10,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/the truman show.jpg",
+        horizontal_cover: " ",
+        tittle: "The Truman Show: Historia De Una Vida",
+        description: "Truman Burbank es el protagonista sin saberlo de un programa de televisión de realidad totalitaria. Vive en un mundo artificial y empieza a sospechar de su realidad. Busca descubrir la verdad y escapar de su vida controlada en el set de televisión.",
+        director: "Peter Weir",
+        category: "Drama",
+        year: 1998,
+        duration: "1h 43min",
+        url: "https://youtu.be/U6jYmOnnImI?si=SGKpZB5hwYlCoxds"
+    },
+    {
+        id: 11,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el  padrino.jpg",
+        horizontal_cover: " ",
+        tittle: "El Padrino",
+        description: "La trama sigue a la familia Corleone, una influyente familia de la mafia en Nueva York, liderada por Vito Corleone. La historia aborda conflictos, traiciones y luchas por el poder en el mundo del crimen organizado a lo largo de varias décadas. La película explora temas de lealtad y venganza en un entorno brutal y complejo.",
+        director: "Francis Ford Coppola",
+        category: "Drama",
+        year: 1972,
+        duration: "2h 55min",
+        url: "https://youtu.be/iOyQx7MXaz0?si=X5YTJIX_FaOcWJbW"
+    },
+    {
+        id: 12,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/titanic 1.jpg",
+        horizontal_cover: " ",
+        tittle: "Titanic",
+        description: "narra la apasionada historia de amor entre Jack, un artista sin recursos, y Rose, una joven aristócrata comprometida. Su romance se ve amenazado por el desastre inminente cuando el Titanic se hunde en 1912, cambiando sus vidas para siempre.",
+        director: "James Cameron",
+        category: "Drama",
+        year: 1997,
+        duration: "3h 15min",
+        url: "https://youtu.be/tA_qMdzvCvk?si=JxBKkdfKQKVTnbVI"
+    },
+    {
+        id: 13,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/duro de matar 5.jpg",
+        horizontal_cover: " ",
+        tittle: "Duro De Matar",
+        description: "John McClane, un policía de Nueva York se enfrenta a un grupo de terroristas liderados por Hans Gruber que toman un rascacielos en Los Ángeles durante una fiesta de Navidad. McClane se convierte en la última esperanza para los rehenes y lucha por detener los malévolos planes de Gruber. ",
+        director: "Jhon McTiernan",
+        category: "Action",
+        year: 2013,
+        duration: "2h 11min",
+        url: "https://youtu.be/PVw40p8ZLkw?si=MXdq1KSpb9C2zzp2"
+    },
+    {
+        id: 14,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/mad max 1.jpg",
+        horizontal_cover: " ",
+        tittle: "Mad Max: Fury Road",
+        description: "En un mundo post-apocalíptico, Max y Furiosa se unen para escapar de Immortan Joe, un tirano despiadado. Furiosa transporta un grupo de mujeres esclavizadas en una peligrosa carrera por la libertad. Enfrentamientos y persecuciones épicas se desatan en su travesía a través del desierto desolado.",
+        director: "George Miller",
+        category: "Action",
+        year: 2015,
+        duration: "2h",
+        url: "https://youtu.be/8TyoKn5Kmbo?si=bhusQUXr3Ic_4-rA2"
+    },
+    {
+        id: 15,
+        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el caballero de la noche 1.jpg",
+        horizontal_cover: " ",
+        tittle: "El Caballero De La Noche",
+        description: "Batman, interpretado por Christian Bale, se enfrenta al Joker, interpretado por Heath Ledger, un psicópata que busca sembrar el caos en Gotham City. La película explora temas de caos, moralidad y el papel de los héroes en la sociedad, desafiando la identidad de Batman como defensor de la justicia.",
+        director: "Christopher Nolan",
+        category: "Action",
+        year: 2008,
+        duration: "2h 32min",
+        url: "https://youtu.be/emYLYfuZAbU?si=t-5ZEsIa9AeCANRN"
+    }
+]
+
+//generador de cartas para MOVIES
+const generateMovies=()=>{
+    moviesData.forEach(moviesData=>createSectionMovies(moviesData))
+}
+
+const createSectionMovies=(moviesData)=>{
+    // contenedor de la movie
+    const container_card_movie = document.createElement("div");
+    container_card_movie.classList.add("container-card");
+
+    // lo que contiene 
+    //portada
+    const cover= document.createElement("img")
+    cover.src=moviesData.vertical_cover;
+    //tittle-h2
+    const tittle=document.createElement("h2")
+    tittle.textContent=moviesData.tittle;
+    //p
+    const information=document.createElement("p")
+    information.classList.add("description")
+    information.textContent=`Duration: ${moviesData.duration}`
+
+    //orden de los elementos
+    container_card_movie.appendChild(cover);
+    container_card_movie.appendChild(tittle);
+    container_card_movie.appendChild(information);
+
+    sectionMovies.appendChild(container_card_movie)
+}
+
+window.addEventListener('DOMContentLoaded', generateMovies)
+
+
+//SERIES
+const sectionSeries=document.querySelector(".sectionC-series")
+
+
 //SERIES
 let seriesData = [
     {
@@ -289,188 +514,35 @@ let seriesData = [
     }
 ]
 
-//MOVIES
-let moviesData = [
-    {
-        id: 1,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/jurassic park 2.jpg",
-        horizontal_cover: " ",
-        tittle: "Jurassic Park",
-        description: "Un parque temático de dinosaurios se convierte en un peligroso caos cuando los depredadores prehistóricos quedan libres. Los visitantes deben unirse para sobrevivir y escapar de la isla. Jurassic Park es conocida por sus efectos especiales innovadores y tensión palpable, convirtiéndose en un clásico del cine con varias secuelas.",
-        director: "Steven Spielberg",
-        category: "Adventure",
-        year: 1993,
-        duration: "2h",
-        url: "https://youtu.be/lc0UehYemQA?si=w3MNNxcoaO_z8oBt"
-    },
-    {
-        id: 2,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/indiana jones.jpg",
-        horizontal_cover: " ",
-        tittle: "Indiana Jones and the Kingdom of the Crystal Skull",
-        description: "Indiana Jones se embarca en una misión durante la Guerra Fría para encontrar una misteriosa Calavera de Cristal con poderes extraterrestres. Con nuevos aliados y enfrentando enemigos, enfrenta peligros y resuelve enigmas en su búsqueda.",
-        director: "Steven Spielberg",
-        category: "Adventure",
-        year: 2008,
-        duration: "2h",
-        url: "https://youtu.be/s942xnT-Lhs?si=lsQskM69t9iUJEgG"
-    },
-    {
-        id: 3,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/señor de los anillos.jpg",
-        horizontal_cover: " ",
-        tittle: "The Lord of the Rings: The Fellowship of the Ring",
-        description: "Frodo Baggins emprende una peligrosa misión para destruir el Anillo Único y evitar que caiga en manos del malvado Sauron. Con la ayuda de la Comunidad del Anillo, enfrentan desafíos y peligros en la Tierra Media en su camino hacia el Monte del Destino. La película destaca por su impresionante paisaje visual y efectos especiales, junto con una narrativa envolvente.",
-        director: "Peter Jackson",
-        category: "Adventure",
-        year: 2001,
-        duration: "2h 58min",
-        url: "https://youtu.be/1YjXoRqUgVk?si=8ry9wa9KG9fOFxFF"
-    },
-    {
-        id: 4,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/que paso ayer.jpg",
-        horizontal_cover: " ",
-        tittle: "The Hangover",
-        description: "Cuatro amigos se despiertan en Las Vegas sin recordar lo ocurrido en su despedida de soltero. Deben seguir pistas para encontrar al novio desaparecido antes de que sea demasiado tarde. En el camino, enfrentan situaciones cómicas y surrealistas en una noche llena de excesos y sorpresas.",
-        director: "Todd Phillips",
-        category: "Comedy",
-        year: 2009,
-        duration: "1h 40min",
-        url: "https://youtu.be/wnNgGp1KVWQ?si=SgeMFHFsbMREPxA7"
-    },
-    {
-        id: 5,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/son como niños.jpg",
-        horizontal_cover: " ",
-        tittle: "Grown Ups",
-        description: "Un grupo de amigos de la infancia se reúne para homenajear a su fallecido entrenador de baloncesto. Pasan el fin de semana cerca de un lago, reviviendo viejas rivalidades y bromas. La película muestra las situaciones hilarantes que surgen entre estos adultos que a veces actúan como niños.",
-        director: "Dennis Dugan",
-        category: "Comedy",
-        year: 2010,
-        duration: "1h 42min",
-        url: "https://youtu.be/yMEDiKD7cyE?si=gC4Rqz3vCknFLDdC"
-    },
-    {
-        id: 6,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/y donde estan las rubias.jpg",
-        horizontal_cover: " ",
-        tittle: "White Chicks",
-        description: "Dos agentes del FBI, los hermanos Marcus, se disfrazan como herederas millonarias rubias para protegerlas de un complot criminal. Se enfrentan a hilarantes situaciones mientras intentan mantener la fachada y resolver el caso.",
-        director: "Keenen Ivory Wayans",
-        category: "Comedy",
-        year: 2004,
-        duration: "1h 49min",
-        url: "https://youtu.be/UxER50XHW-I?si=MleGYXF8R_eF8cEH"
-    },
-    {
-        id: 7,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/El Exorcista 1.jpg",
-        horizontal_cover: " ",
-        tittle: "The Exorcist",
-        description: "El Exorcista sigue a Chris MacNeil y su hija Regan, quienes enfrentan fenómenos aterradores en su casa. A medida que Regan muestra comportamientos perturbadores, Chris busca ayuda y descubre que su hija podría estar poseída por una entidad demoníaca. El Padre Damien Karras, un sacerdote con dudas sobre su fe se convierte en el principal exorcista encargado de enfrentar el mal que posee a Regan.",
-        director: "William Friedkin",
-        category: "Terror",
-        year: 1973,
-        duration: "2h",
-        url: "https://youtu.be/opBpPS-n30s?si=hL0ZtN0QeGqIcF_l"
-    },
-    {
-        id: 8,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/la monja.jpg",
-        horizontal_cover: " ",
-        tittle: "La Monja",
-        description: "Un sacerdote con un pasado oscuro y una novicia enviada por el Vaticano investigan el suicidio de una monja en una abadía en Rumania. Descubren la presencia de una malévola entidad conocida como La Monja, que amenaza la vida espiritual y física de todos. Juntos, deben enfrentarse a fuerzas oscuras y desentrañar el misterio detrás de la entidad antes de que sea demasiado tarde.",
-        director: "Corin Hardy",
-        category: "Terror",
-        year: 2018,
-        duration: "1h 36min",
-        url: "https://youtu.be/eqVjGwYFVqQ?si=DsUAhUCQLGPC4tOg"
-    },
-    {
-        id: 9,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el resplandor 2.jpg",
-        horizontal_cover: " ",
-        tittle: "El Resplandor",
-        description: "Jack Torrance se convierte en el cuidador de un hotel aislado con su familia durante el invierno. Su hijo, Danny, posee una habilidad psíquica llamada el resplandor. Con el tiempo, fuerzas malignas del hotel afectan a Jack, poniendo en peligro a su familia.",
-        director: "Stanley Kubrick",
-        category: "Terror",
-        year: 1980,
-        duration: "2h 26min",
-        url: "https://youtu.be/A3q03BBwMp4?si=zcK1vS0D2xvWob1a"
-    },
-    {
-        id: 10,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/the truman show.jpg",
-        horizontal_cover: " ",
-        tittle: "The Truman Show: Historia De Una Vida",
-        description: "Truman Burbank es el protagonista sin saberlo de un programa de televisión de realidad totalitaria. Vive en un mundo artificial y empieza a sospechar de su realidad. Busca descubrir la verdad y escapar de su vida controlada en el set de televisión.",
-        director: "Peter Weir",
-        category: "Drama",
-        year: 1998,
-        duration: "1h 43min",
-        url: "https://youtu.be/U6jYmOnnImI?si=SGKpZB5hwYlCoxds"
-    },
-    {
-        id: 11,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el  padrino.jpg",
-        horizontal_cover: " ",
-        tittle: "El Padrino",
-        description: "La trama sigue a la familia Corleone, una influyente familia de la mafia en Nueva York, liderada por Vito Corleone. La historia aborda conflictos, traiciones y luchas por el poder en el mundo del crimen organizado a lo largo de varias décadas. La película explora temas de lealtad y venganza en un entorno brutal y complejo.",
-        director: "Francis Ford Coppola",
-        category: "Drama",
-        year: 1972,
-        duration: "2h 55min",
-        url: "https://youtu.be/iOyQx7MXaz0?si=X5YTJIX_FaOcWJbW"
-    },
-    {
-        id: 12,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/titanic 1.jpg",
-        horizontal_cover: " ",
-        tittle: "Titanic",
-        description: "narra la apasionada historia de amor entre Jack, un artista sin recursos, y Rose, una joven aristócrata comprometida. Su romance se ve amenazado por el desastre inminente cuando el Titanic se hunde en 1912, cambiando sus vidas para siempre.",
-        director: "James Cameron",
-        category: "Drama",
-        year: 1997,
-        duration: "3h 15min",
-        url: "https://youtu.be/tA_qMdzvCvk?si=JxBKkdfKQKVTnbVI"
-    },
-    {
-        id: 13,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/duro de matar 5.jpg",
-        horizontal_cover: " ",
-        tittle: "Duro De Matar",
-        description: "John McClane, un policía de Nueva York se enfrenta a un grupo de terroristas liderados por Hans Gruber que toman un rascacielos en Los Ángeles durante una fiesta de Navidad. McClane se convierte en la última esperanza para los rehenes y lucha por detener los malévolos planes de Gruber. ",
-        director: "Jhon McTiernan",
-        category: "Action",
-        year: 2013,
-        duration: "2h 11min",
-        url: "https://youtu.be/PVw40p8ZLkw?si=MXdq1KSpb9C2zzp2"
-    },
-    {
-        id: 14,
-        vertical_cover: "",
-        horizontal_cover: " ",
-        tittle: "Mad Max: Fury Road",
-        description: "En un mundo post-apocalíptico, Max y Furiosa se unen para escapar de Immortan Joe, un tirano despiadado. Furiosa transporta un grupo de mujeres esclavizadas en una peligrosa carrera por la libertad. Enfrentamientos y persecuciones épicas se desatan en su travesía a través del desierto desolado.",
-        director: "George Miller",
-        category: "Action",
-        year: 2015,
-        duration: "2h",
-        url: "https://youtu.be/8TyoKn5Kmbo?si=bhusQUXr3Ic_4-rA2"
-    },
-    {
-        id: 15,
-        vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el caballero de la noche 1.jpg",
-        horizontal_cover: " ",
-        tittle: "El Caballero De La Noche",
-        description: "Batman, interpretado por Christian Bale, se enfrenta al Joker, interpretado por Heath Ledger, un psicópata que busca sembrar el caos en Gotham City. La película explora temas de caos, moralidad y el papel de los héroes en la sociedad, desafiando la identidad de Batman como defensor de la justicia.",
-        director: "Christopher Nolan",
-        category: "Action",
-        year: 2008,
-        duration: "2h 32min",
-        url: "https://youtu.be/emYLYfuZAbU?si=t-5ZEsIa9AeCANRN"
-    }
-]
+//generador de cartas para Series
+const generateSeries=()=>{
+    seriesData.forEach(seriesData=>createSectionSeries(seriesData))
+}
 
+const createSectionSeries=(seriesData)=>{
+    // contenedor de la movie
+    const container_card_serie = document.createElement("div");
+    container_card_serie.classList.add("container-card");
+
+    // lo que contiene 
+    //portada
+    const cover= document.createElement("img")
+    cover.src=seriesData.vertical_cover;
+    //tittle-h2
+    const tittle=document.createElement("h2")
+    tittle.textContent=seriesData.tittle;
+    //p
+    const information=document.createElement("p")
+    information.classList.add("description")
+    information.textContent=`Seasons: ${seriesData.seasons}`
+
+    //orden de los elementos
+    container_card_serie.appendChild(cover);
+    container_card_serie.appendChild(tittle);
+    container_card_serie.appendChild(information);
+
+    sectionMovies.appendChild(container_card_serie)
+}
+
+window.addEventListener('DOMContentLoaded', generateSeries)
 
