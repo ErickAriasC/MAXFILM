@@ -175,12 +175,18 @@ main {
 .side1>ul,
 a {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
+    padding: 0.4rem;
+
     list-style: none;
     text-decoration: none;
     color: #D9D8D7;
 }
 
+#Ancla-Movies:focus {
+    background-color: #03738C;
+    border-radius: 2rem;    
+}
 .side1>ul img {
     width: 30px;
     height: 30px;
