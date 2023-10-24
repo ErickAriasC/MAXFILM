@@ -176,11 +176,15 @@ main {
 a {
     display: flex;
     gap: 3rem;
-    padding: 0.4rem;
+    padding: .4rem;
 
     list-style: none;
     text-decoration: none;
     color: #D9D8D7;
+}
+#anclaSerie:focus{
+    background-color: #03738C;
+    border-radius: 2rem;  
 }
 
 #Ancla-Movies:focus {
