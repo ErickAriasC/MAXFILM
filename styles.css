@@ -177,6 +177,7 @@ a {
     display: flex;
     gap: 3rem;
     padding: .4rem;
+
     list-style: none;
     text-decoration: none;
     color: #D9D8D7;
@@ -186,6 +187,10 @@ a {
     border-radius: 2rem;  
 }
 
+#Ancla-Movies:focus {
+    background-color: #03738C;
+    border-radius: 2rem;    
+}
 .side1>ul img {
     width: 30px;
     height: 30px;
