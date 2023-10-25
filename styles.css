@@ -91,7 +91,7 @@ main {
     width: 280px;
     position: absolute;
     top: 1rem;
-    left: 2rem;
+    left: 4rem;
 }
 
 .sectionA>img {
@@ -103,7 +103,7 @@ main {
 .play{
     background-color: transparent;
     position: absolute;
-    left: 67em;
+    left: 71em;
 }
 
 .text-iconsA {
@@ -266,11 +266,12 @@ button {
 }
 
 .sectionC-movies,
-.section-series {
+.sectionC-series {
     width: 100%;
     height: 100%;
-    padding-left: 3.5rem;
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .tittle-series,
@@ -443,6 +444,11 @@ button {
         top: 6.5rem;
     }
 
+    .play{
+        background-color: transparent;
+        position: absolute;
+        left: 41rem;
+    }
     
     /* SECTION B  santiago aguirre*/
     .sectionB{
@@ -500,9 +506,7 @@ button {
         height: auto;
     }
 
-    .sectionC-movies{
-        padding-left: 2.5rem;
-    }
+  
     /* SECTION D andres facundo */
     .line-1{
         width:67%;
@@ -529,7 +533,7 @@ button {
 
     /* SECTION A  andres facundo*/
     .sectionA button, .icon-play {
-        top: 4.5rem;
+        top: 6rem;
         width: 3rem;
     }
 
@@ -550,6 +554,11 @@ button {
         top: 8rem;
         left: 6.5rem;
         line-height: 2.5rem;
+    }
+    .play{
+        background-color: transparent;
+        position: absolute;
+        left: 40rem;
     }
 
     /* SECTION B  santiago aguirre*/
@@ -588,7 +597,7 @@ button {
     
     /* SECTION C  david gaona*/
     .container-card img {
-        width: 150px;
+        width: 250px;
         height: auto;
     }
     .container-card{
@@ -772,13 +781,9 @@ button {
         height: auto;
     }
 
-    .sectionC-movies{
-        padding-left: 21px;
-    }
-    .sectionC-series{
-        margin-left: 5rem;
-    }
-
+   .play{
+    left:18.9rem;
+   }
     
     /* SECTION D  andres facundo*/
     .show-more {
@@ -1005,7 +1010,7 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 0;
         padding-right: 0.5rem;
         padding-left: 1.5rem;
     }
@@ -1106,46 +1111,49 @@ button {
 
     #next-button-moviesRight {
         position: absolute;
-        top: 26rem;
+        top: 26.5rem;
         right: -0.5rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #d9d8d744;
         border-style: none;
+        border-radius: 50%;
+
     }
 
 
     #next-button-moviesLeft {
         position: absolute;
-        top: 26rem;
-        right: 17.2rem;
+        top: 26.5rem;
+        right: 18.5rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #d9d8d744;
         border-style: none;
     }
 
     #next-button-seriesRight {
         position: absolute;
-        top: 38rem;
+        top: 40.5rem;
         right: -0.5rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #d9d8d744;
         border-style: none;
+        border-radius: 50%;
     }
 
 
     #next-button-seriesLeft {
         position: absolute;
-        top: 38rem;
-        right: 17.2rem;
+        top: 40.5rem;
+        right: 18.5rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #d9d8d744;
         border-style: none;
     }
 
 
     button>.right {
         transform: rotate(-90deg);
-        width: 3rem;
+        width: 2rem;
         height: auto;
         display: block;
 
@@ -1153,7 +1161,7 @@ button {
 
     button>.left {
         transform: rotate(90deg);
-        width: 3rem;
+        width: 2rem;
         height: auto;
         display: block;
 
@@ -1198,17 +1206,15 @@ button {
     /* SECTION D */
     .line-1 {
         outline: 1px solid #88B0BF;
-        width: 60%;
+        width: 90%;
     }
 
     .show-more {
-        font-size: 0.5rem;
-        width: 15%;
+        display: none;
     }
 
     .line-2 {
-        outline: 1px solid #88B0BF;
-        width: 10%;
+        display: none;
     }
 
     /* FOOTER */

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //BD- PARA MOVIES Y SERIES
 
-const sectionMovies=document.querySelector(".sectionC-movies")
+const sectionMovies = document.querySelector(".sectionC-movies")
 
 //MOVIES
 const moviesData = [
@@ -129,7 +129,7 @@ const moviesData = [
         id: 10,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/the truman show.jpg",
         horizontal_cover: " ",
-        tittle: "The Truman Show: Historia De Una Vida",
+        tittle: "The Truman Show",
         description: "Truman Burbank es el protagonista sin saberlo de un programa de televisión de realidad totalitaria. Vive en un mundo artificial y empieza a sospechar de su realidad. Busca descubrir la verdad y escapar de su vida controlada en el set de televisión.",
         director: "Peter Weir",
         category: "Drama",
@@ -202,7 +202,7 @@ const moviesData = [
 
 
 //SERIES
-const sectionSeries=document.querySelector(".sectionC-series")
+const sectionSeries = document.querySelector(".sectionC-series")
 
 
 //SERIES
@@ -496,41 +496,47 @@ const initialSeries = [...seriesData];
 const selectedMovies = [];
 const selectedSeries = [];
 
-// // Define la consulta de medios
-// let mediaQuery = window.matchMedia("(max-width: 480px)");
-  
-// // Ejecuta la función inicialmente si la consulta de medios coincide
-// if (mediaQuery.matches) {
-// // Llamar a las funciones para seleccionar películas y series
-// selectRandomMovies(3);
-// selectRandomSeries(3);
-// }
-
-
-
-
 // Función para seleccionar películas aleatorias no repetidas
 function selectRandomMovies(count) {
-  for (let i = 0; i < count; i++) {
-    const randomIndex = Math.floor(Math.random() * initialMovies.length);
-    const selectedMovie = initialMovies.splice(randomIndex, 1)[0];
-    selectedMovies.push(selectedMovie);
-  }
+    for (let i = 0; i < count; i++) {
+        const randomIndex = Math.floor(Math.random() * initialMovies.length);
+        const selectedMovie = initialMovies.splice(randomIndex, 1)[0];
+        selectedMovies.push(selectedMovie);
+    }
 }
 
 // Función para seleccionar series aleatorias no repetidas
 function selectRandomSeries(count) {
-  for (let i = 0; i < count; i++) {
-    const randomIndex = Math.floor(Math.random() * initialSeries.length);
-    const selectedSerie = initialSeries.splice(randomIndex, 1)[0];
-    selectedSeries.push(selectedSerie);
-  }
+    for (let i = 0; i < count; i++) {
+        const randomIndex = Math.floor(Math.random() * initialSeries.length);
+        const selectedSerie = initialSeries.splice(randomIndex, 1)[0];
+        selectedSeries.push(selectedSerie);
+    }
 }
 
-// Llamar a las funciones para seleccionar películas y series
-selectRandomMovies(3);
-selectRandomSeries(3);
 
+
+function validarMediaQuery() {
+    if (window.matchMedia('(max-width: 480px)').matches) {
+      // La ventana se encuentra en la condición "@media 480px o menos"
+      // Coloca tu lógica aquí
+      selectRandomMovies(3);
+      selectRandomSeries(3);
+      console.log('Estás en @media 480px o menos.');
+    } else {
+      // La ventana no cumple con la condición "@media"
+      selectRandomMovies(4);
+      selectRandomSeries(4);
+      console.log('No estás en @media 480px o menos.');
+    }
+  }
+  
+  // Validar inicialmente cuando se carga la página
+  validarMediaQuery();
+  
+  // Escuchar el evento de cambio de tamaño de ventana (resize)
+  window.addEventListener('resize', validarMediaQuery);
+  
 
 // // Imprimir las películas y series seleccionadas
 // console.log("Películas seleccionadas:");
@@ -543,26 +549,26 @@ selectRandomSeries(3);
 
 
 //generador de cartas para MOVIES
-const generateMovies=()=>{
-    selectedMovies.forEach(selectedMovies=>createSectionMovies(selectedMovies))
+const generateMovies = () => {
+    selectedMovies.forEach(selectedMovies => createSectionMovies(selectedMovies))
 }
 
-const createSectionMovies=(selectedMovies)=>{
+const createSectionMovies = (selectedMovies) => {
     // contenedor de la movie
     const container_card_movie = document.createElement("div");
     container_card_movie.classList.add("container-card");
 
     // lo que contiene 
     //portada
-    const cover= document.createElement("img")
-    cover.src=selectedMovies.vertical_cover;
+    const cover = document.createElement("img")
+    cover.src = selectedMovies.vertical_cover;
     //tittle-h2
-    const tittle=document.createElement("h2")
-    tittle.textContent=selectedMovies.tittle;
+    const tittle = document.createElement("h2")
+    tittle.textContent = selectedMovies.tittle;
     //p
-    const information=document.createElement("p")
+    const information = document.createElement("p")
     information.classList.add("description")
-    information.textContent=`Duration: ${selectedMovies.duration}`
+    information.textContent = `Duration: ${selectedMovies.duration}`
 
     //orden de los elementos
     container_card_movie.appendChild(cover);
@@ -578,26 +584,26 @@ window.addEventListener('DOMContentLoaded', generateMovies)
 
 
 //generador de cartas para Series
-const generateSeries=()=>{
-    selectedSeries.forEach(selectedSeries=>createSectionSeries(selectedSeries))
+const generateSeries = () => {
+    selectedSeries.forEach(selectedSeries => createSectionSeries(selectedSeries))
 }
 
-const createSectionSeries=(selectedSeries)=>{
+const createSectionSeries = (selectedSeries) => {
     // contenedor de la movie
     const container_card_serie = document.createElement("div");
     container_card_serie.classList.add("container-card");
 
     // lo que contiene 
     //portada
-    const cover= document.createElement("img")
-    cover.src=selectedSeries.vertical_cover;
+    const cover = document.createElement("img")
+    cover.src = selectedSeries.vertical_cover;
     //tittle-h2
-    const tittle=document.createElement("h2")
-    tittle.textContent=selectedSeries.tittle;
+    const tittle = document.createElement("h2")
+    tittle.textContent = selectedSeries.tittle;
     //p
-    const information=document.createElement("p")
+    const information = document.createElement("p")
     information.classList.add("description")
-    information.textContent=`Seasons: ${selectedSeries.seasons}`
+    information.textContent = `Seasons: ${selectedSeries.seasons}`
 
     //orden de los elementos
     container_card_serie.appendChild(cover);
@@ -610,31 +616,3 @@ const createSectionSeries=(selectedSeries)=>{
 window.addEventListener('DOMContentLoaded', generateSeries)
 
 
-
-// Define la función que deseas ejecutar en la versión móvil
-function funcionEnVersionMovil() {
-    // Coloca aquí el código que deseas ejecutar en la versión móvil
-    console.log('Estás en la versión móvil');
-  }
-  
-  // Define la consulta de medios
-  var mediaQuery = window.matchMedia("(max-width: 480px)");
-  
-  // Ejecuta la función inicialmente si la consulta de medios coincide
-  if (mediaQuery.matches) {
-    funcionEnVersionMovil();
-  }
-  
-  // Agrega un listener para ejecutar la función cuando cambia el estado de la consulta
-  mediaQuery.addListener(function (event) {
-    if (event.matches) {
-      // La consulta de medios coincide (versión móvil)
-      funcionEnVersionMovil();
-    } else {
-      // La consulta de medios ya no coincide (versión de escritorio)
-      console.log('NOO-Estás en la versión móvil');
-
-      // Puedes agregar código adicional si lo necesitas
-    }
-  });
-  
