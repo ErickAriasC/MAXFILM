@@ -13,6 +13,11 @@ body {
     background-color: #00010d;
 
 }
+body button{
+    cursor: pointer;
+    text-align: center;
+
+}
 
 .header {
     width: 80px;
@@ -48,8 +53,8 @@ body {
     height: 35px;
 }
 
-.home {
-    margin-top: 50rem;
+.content-nav-bar {
+    margin-top: 40rem;
 }
 
 
@@ -75,17 +80,18 @@ main {
 }
 
 /* SECTION A */
-.sectionA {
+ .sectionA {
+
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 
 .sectionA>.logo {
     width: 280px;
     position: absolute;
     top: 1rem;
-    right: 93rem;
+    left: 4rem;
 }
 
 .sectionA>img {
@@ -94,10 +100,17 @@ main {
 
 }
 
+.play{
+    background-color: transparent;
+    position: absolute;
+    left: 71.5em;
+}
+
 .text-iconsA {
     position: absolute;
-    top: 18rem;
-    left: 14rem;
+    top: 14.5rem;
+    left: 12rem;
+
     font-size: 2rem;
     line-height: 4rem;
     width: auto;
@@ -128,7 +141,8 @@ main {
     position: absolute;
     display: flex;
     gap: 4px;
-    margin-top: 35rem;
+    margin-top: 32rem;
+
 }
 
 .sectionA .circle {
@@ -161,23 +175,38 @@ main {
 
 }
 
-.side1 {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sectionB button{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
 
 }
 
-.side1>ul,
-a {
+.side1 {
+    width: 60%;
     display: flex;
-    gap: 5rem;
+    align-items: center;
+    padding-left: 2.5rem;
+}
+
+.side1>ul,
+button {
+    display: flex;
+    margin-right: 5rem;
+    padding: .4rem;
     list-style: none;
     text-decoration: none;
     color: #D9D8D7;
 }
+#buttonSerie:focus{
+    background-color: #03738C;
+    border-radius: 2rem;  
+}
 
+#button-Movies:focus {
+    background-color: #03738C;
+    border-radius: 2rem;    
+}
 .side1>ul img {
     width: 30px;
     height: 30px;
@@ -200,8 +229,9 @@ a {
 
 }
 
-.side2>a {
-    height: 1.5rem;
+.side2>.lupa>img {
+    width: 60px;
+    height: auto;
     padding-right: 1rem;
 }
 
@@ -215,31 +245,33 @@ a {
 
 .line-1 {
     outline: 2px solid #88B0BF;
-    width: 84%;
+    width: 80%;
     height: 0;
 }
 
 .line-2 {
     outline: 2px solid #88B0BF;
-    width: 5%;
+    width: 7.8%;
     height: 0;
 }
 
 .show-more {
-    width: 6%;
+    width: 7.2%;
     background-color: #025373;
     border: none;
     border-radius: 2rem;
     padding: .4rem;
     margin: .4rem;
+    font-size: 1.5rem;
 }
 
 .sectionC-movies,
-.section-series {
+.sectionC-series {
     width: 100%;
     height: 100%;
-    padding-left: 3.5rem;
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .tittle-series,
@@ -314,6 +346,7 @@ a {
     margin-bottom: 1rem;
 }
 
+
 .footer>div {
     display: flex;
 }
@@ -329,7 +362,7 @@ a {
 
 
 .content-footer {
-    width: 200px;
+    width: auto;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -380,82 +413,460 @@ a {
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
     /* HEADER  erick arias*/
-    
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .menu-button {
+        margin-left: 0;
+    }
+
+    .content-nav-bar img {
+        width: 28px;
+        height: 28px;
+    }
+
     /* SECTION A  andres facundo*/
+    .sectionA>.logo {
+    
+        left: 2rem;
+    }
+    .text-iconsA{
+        font-size: 1.5rem;
+        top:12rem;
+        left: 6.5rem;
+    }
+    .sectionA .container-circle{
+        margin-top: 23rem;
+    }
+    .sectionA button,
+    .icon-play{
+        top: 6.5rem;
+    }
+
+    .play{
+        background-color: transparent;
+        position: absolute;
+        left: 39.5rem;
+    }
     
     /* SECTION B  santiago aguirre*/
+    .sectionB{
+        display: flex;
+    }
+    .sectionB button{
+        font-size: 25px;
+    }
+    .lupa{
+        margin: 0;
+    }
+    .side1{
+        width: 65%;
+        padding-top: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .side1, ul,
+    button{
+        font-size: 23px;
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        color: #D9D8D7;
+    }
+    .ancla2{
+        margin-right: 1rem;
+    }
+
+    .side2{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #88B0BF;
+        font-size: 26px;
+        width: 18rem;
     
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgba(217, 216, 215, 0.5);
+        font-family: Baskerv1;
+    }
+    .side2>.lupa>img {
+    width: 50px;
+    }
+
     /* SECTION C  david gaona*/
     .container-card img {
-        width: 178px;
+        width: 225px;
         height: auto;
     }
 
-    section.sectionC-series {
-        margin-left: 10px;
-    }
+  
     /* SECTION D andres facundo */
+    .line-1{
+        width:68.8%;
+    }
+    .show-more{ 
+        width:10.2%;  
+    }
+    .line-2{
+        width: 11%;
+    }
+
     
     /* FOOTER  erick arias*/
-    
+    .content-footer>h3 {
+margin-left: 1.5rem;
+    }
 }
 
 @media (max-width:920px) {
     
     /* HEADER  erick arias*/
-    
+        /* no fue necesario agregar cambios en la seccion HEADER*/
+
+
     /* SECTION A  andres facundo*/
-    
-    /* SECTION B  santiago aguirre*/
-    
-    /* SECTION C  david gaona*/
-    .container-card img {
-        width: 192px;
+    .sectionA button, .icon-play {
+        top: 4rem;
+        width: 3rem;
+    }
+
+    .sectionA .container-circle {
+        margin-top: 16rem;
+    }
+    .sectionA .div-A {
+        width: 8rem;
+    }
+    .sectionA h5 {
+        font-size: 0.8rem;
+        width: auto;
         height: auto;
     }
 
-    section.sectionC-series {
-        margin-left: 51px;
+    .text-iconsA {
+        font-size: 1.2rem;
+        top: 8rem;
+        left: 6.5rem;
+        line-height: 2.5rem;
     }
+    .play{
+        background-color: transparent;
+        position: absolute;
+        left: 28.3rem;
+    }
+
+    /* SECTION B  santiago aguirre*/
+
+    .side1{
+        width: 65%;
+        padding-right: 1rem;
+        font-size: 0.2rem;
+    }
+    .sectionB button{
+        font-size: 1.2rem;
+
+    }
+
+   
+    .side1>ul, button {
+margin-right: 1.8rem;
+    }
+    .side1>ul img {
+        width: 25px;
+        height: 25px;
+    }
+
+    
+
+    .side2{
+        width: 40%;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: #88B0BF;
+        font-size: 20px;
+        width: 13rem;
+    
+    }
+
+    
+    /* SECTION C  david gaona*/
+    .container-card img {
+        width: 170px;
+        height: auto;
+    }
+    .container-card{
+        margin: 0;
+        font-size: 10px;
+        margin: 20px;
+
+    }
+
+  
     /* SECTION D  andres facundo*/
-    
+    .show-more {
+        font-size: 1rem;
+    }
+    .line-1{
+        width:71.6%;
+    }
     /* FOOTER  erick arias*/
-    
+        /* no fue necesario agregar cambios en la seccion HEADER*/
+
+
 }
 
 @media (max-width:768px) {
     /* HEADER  erick arias*/
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .home{
+        margin-top: 20rem;
+    }
+    .content-nav-bar>li>a>img {
+        margin-bottom: 7rem;
+    }
 
     /* SECTION A  andres facundo*/
-
-    /* SECTION B  santiago aguirre*/
-
-    /* SECTION C  david gaona*/
-    .container-card img {
-        width: 281px;
+    .sectionA {
+        width: 100%;
         height: auto;
     }
 
+    .sectionA>img {
+        width: 100%;
+        height: 100%;
+    }
+    .sectionA>.logo {
+        width: 150px;
+        top: -22.5rem;
+        left: 2rem;
+    }
+    .text-iconsA {
+        top: 5rem;
+        left: 4rem;
+        line-height: 1.3rem;
+    }
+
+    .text-iconsA>h2 {
+        font-size: 0.8rem;
+    }
+
+    .sectionA .div-A {
+        width: 4rem;
+        border: 0.7px solid #88B0BF;
+    }
+
+    .sectionA h5 {
+        font-size: 0.5rem;
+    }
+
+    .sectionA 
+    .icon-play {
+        width: 1.8rem;
+        height: auto;
+        top: 0;
+        left: 0.5rem;
+    }
+
+    .sectionA .container-circle {
+
+        margin-top: 7rem;
+    }
+
+    .sectionA>.container-circle>div {
+        width: 0.5rem;
+        height: 0.5rem;
+        border: 1px solid #D9D8D7;
+    } 
+
+    /* SECTION B  santiago aguirre*/
+
+    .sectionB {
+        width: 90%;
+        height: auto;
+        font-size: 30px;
+        display: flex;
+        padding-bottom: 1rem;
+        margin-top: 1.5rem;
+        border-bottom: none;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-bottom: 2px solid #88B0BF;
+        margin-bottom: 0.5rem;
+    }
+
+
+    .side1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .side1>ul,
+    button {
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        color: #D9D8D7;
+        font-size: 15px;
+    }
+
+
+    .side2 {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(136, 176, 191, 0.1);
+        border-radius: 20px;
+        padding-right: 1rem;
+        gap: 10px;
+    }
+
+    .side2>input {
+        height: auto;
+        background-color: transparent;
+        border: none;
+        color: #88B0BF;
+        font-size: 16px;
+        width: 150px;
+        height: 33px;
+
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .side2>button,
+    img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .side2>button {
+        height: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .ancla1 {
+        display: none;
+    }
+
+    ::placeholder {
+        text-align: center;
+        color: rgba(217, 216, 215, 0.5);
+        font-family: Baskerv1;
+    }
+
+
+
+
+    /* SECTION C  david gaona*/
+    .container-card{
+        font-size: 8px;
+        margin: 8px;
+
+    }
+    .container-card img {
+        width: 115px;
+        height: auto;
+    }
+
+   .play{
+    left:18.9rem;
+   }
     
     /* SECTION D  andres facundo*/
-
+    .show-more {
+        width: 20%;
+        font-size: 0.8rem;
+    }
+    .line-1 {
+        width: 60%;
+    }
     /* FOOTER  erick arias*/
+     .footer {
+        font-size: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer>.img-logo {
+        display: none;
+    }
+
+    .footer>.img-logo-m {
+        display: block;
+        width: 50px;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-footer {
+        width: auto;
+        justify-content: center;
+    }
+
+    .content-footer>h3 {
+        margin: 0px;
+    }
+
+    .language {
+        padding: 2px;
+        margin-bottom: 0.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .language>img {
+        width: auto;
+        height: 18px;
+    }
+
+    .footer>h3 {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 0.1rem;
+    } 
+
 
 }
 
-
-/*se comenta este @media para que puedan visualizar 
-los cambios en el resto del responsive 
-NO HACER CAMBIOS AQUI
 @media (max-width:480px) {
 
     /* HEADER */
-    /* body {
+     body {
         flex-direction: column;
-    } */
+    } 
 
-    /* HEADER */
-    /* .header {
+ 
+    .header {
         width: 100%;
         height: 64px;
         background: linear-gradient(90deg, #02537386, #00010D);
@@ -477,6 +888,7 @@ NO HACER CAMBIOS AQUI
     }
 
     .menu-button {
+        margin-left: 4px;
         margin-top: 0;
         margin-right: 2rem;
         padding-left: 0.7rem;
@@ -538,10 +950,10 @@ NO HACER CAMBIOS AQUI
 
     main {
         margin-top: 4rem;
-    } */
+    } 
 
     /* SECTION A */
-    /* .sectionA {
+    .sectionA {
         width: 100%;
         height: auto;
     }
@@ -570,9 +982,9 @@ NO HACER CAMBIOS AQUI
         font-size: 0.5rem;
     }
 
-    .sectionA button,
-    .icon-play {
-        width: 2rem;
+    .sectionA .icon-play {
+        top: 3rem;
+        width: 1.5rem;
         height: auto;
     }
 
@@ -585,13 +997,17 @@ NO HACER CAMBIOS AQUI
         width: 0.5rem;
         height: 0.5rem;
         border: 1px solid #D9D8D7;
-    } */
+    } 
+    .play{
+        left: 10rem;
+        width: 2rem;
+        height: auto;
+    }
 
     /* SECTION B */
-    /* .sectionB {
+    .sectionB {
         width: 90%;
         height: auto;
-        font-size: 30px;
         display: flex;
         padding-bottom: 1rem;
         margin-top: 1.5rem;
@@ -602,25 +1018,33 @@ NO HACER CAMBIOS AQUI
         margin-bottom: 0.5rem;
     }
 
+    .sectionB button{
+        font-size: 1rem;
+
+    }
 
     .side1 {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 0;
+        padding-right: 0.5rem;
+        padding-left: 1.5rem;
     }
 
     .side1>ul,
-    a {
+    button {
         display: flex;
-        gap: 1rem;
         list-style: none;
         text-decoration: none;
         color: #D9D8D7;
-        font-size: 15px;
+        margin-right: 1rem;
     }
 
+    .side1>ul{
+        margin-right: 0;
+    }
 
     .side2 {
         width: 60%;
@@ -630,7 +1054,6 @@ NO HACER CAMBIOS AQUI
         background-color: rgba(136, 176, 191, 0.1);
         border-radius: 20px;
         padding-right: 1rem;
-        gap: 10px;
     }
 
     .side2>input {
@@ -648,14 +1071,13 @@ NO HACER CAMBIOS AQUI
         outline: none;
     }
 
-    .side2>a,
-    img {
-        width: 21px;
-        height: 21px;
+    .side2>.lupa>img {
+        width: 40px;
+        height: auto;
     }
 
-    .side2>a {
-        height: 1.5rem;
+    .side2>button {
+        height: auto;
         padding-right: 1rem;
     }
 
@@ -668,11 +1090,11 @@ NO HACER CAMBIOS AQUI
         color: rgba(217, 216, 215, 0.5);
         font-family: Baskerv1;
     }
- */
+
 
 
     /* SECTION C */
-    /* .sectionC-movies,
+    .sectionC-movies,
     .sectionC-series {
         font-size: 14px;
         padding-left: 0;
@@ -681,18 +1103,21 @@ NO HACER CAMBIOS AQUI
         justify-content: center;
         flex-wrap: nowrap;
         overflow: hidden;
+        margin: 0;
+        margin-top: 0.5rem;
     }
 
     .sectionC-series {
         width: 100%;
         margin-top: 1rem;
+        
     }
 
     main>.tittle-movies,
     .tittle-series {
         display: block;
         position: relative;
-        top: 0.5rem;
+        top: 1px;
         right: 8rem;
         width: auto;
         font-size: 1rem;
@@ -704,45 +1129,53 @@ NO HACER CAMBIOS AQUI
 
     #next-button-moviesRight {
         position: absolute;
-        top: 24rem;
-        right: 0.5rem;
+        top: 26rem;
+        right: -0.5rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #03738cc7;
         border-style: none;
+        border-radius: 50%;
+
     }
 
 
     #next-button-moviesLeft {
         position: absolute;
-        top: 24rem;
-        left: 0.5rem;
+        top: 26rem;
+        right: 18.8rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #03738cc7;
         border-style: none;
+        border-radius: 50%;
+
     }
 
     #next-button-seriesRight {
         position: absolute;
-        top: 37.5rem;
-        right: 0.5rem;
+        top: 40rem;
+        right: -0.5rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #03738cc7;
         border-style: none;
+        border-radius: 50%;
     }
+
 
     #next-button-seriesLeft {
         position: absolute;
-        top: 37.5rem;
-        left: 0.5rem;
+        top: 40rem;
+        right: 18.8rem;
         display: block;
-        background-color: #d9d8d718;
+        background-color: #03738cc7;
         border-style: none;
+        border-radius: 50%;
+
     }
 
 
     button>.right {
         transform: rotate(-90deg);
-        width: 3rem;
+        width: 1.5rem;
         height: auto;
         display: block;
 
@@ -750,16 +1183,13 @@ NO HACER CAMBIOS AQUI
 
     button>.left {
         transform: rotate(90deg);
-        width: 3rem;
+        width: 1.5rem;
         height: auto;
         display: block;
 
     }
 
-    .container-card:nth-child(n+4) {
-        display: none;
-    }
-
+  
 
     .container-card {
         width: 90px;
@@ -792,27 +1222,25 @@ NO HACER CAMBIOS AQUI
         line-height: none;
 
     }
- */
+ 
 
 
     /* SECTION D */
-    /* .line-1 {
+    .line-1 {
         outline: 1px solid #88B0BF;
-        width: 60%;
+        width: 90%;
     }
 
     .show-more {
-        font-size: 0.5rem;
-        width: 15%;
+        display: none;
     }
 
     .line-2 {
-        outline: 1px solid #88B0BF;
-        width: 10%;
+        display: none;
     }
 
     /* FOOTER */
-    /* .footer {
+    .footer {
         font-size: 0.6rem;
         margin-bottom: 1.5rem;
     }
@@ -854,8 +1282,12 @@ NO HACER CAMBIOS AQUI
         font-size: 1rem;
         margin-bottom: 3rem;
         margin-top: 0.1rem;
-    } */
+    }
 
+    .sectionA>.logo {
+        display: none;
+    }
    
-/* }  */
+} 
+
 

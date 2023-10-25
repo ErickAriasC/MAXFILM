@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link href="fuente/Baskerv3.ttf" rel="stylesheet">
+  <link href="fuente/Baskerv2.ttf" rel="stylesheet">
   <title>MAXFILM</title>
 </head>
 
@@ -49,7 +49,7 @@
           <div class="div-A"></div>
           <h5>Stiven Spielberg</h5>
         </div>
-        <button><img class="icon-play" src="/icons/play_blue3.png" alt=""></button>
+        <button class="play" ><img class="icon-play" src="/icons/play_blue3.png" alt=""></button>
         <div class="container-circle">
           <div class="circle1"></div>
           <div class="circle"></div>
@@ -58,18 +58,18 @@
       </section>
 
       <section class="sectionB">
-        
         <div class="side1">
           <ul>
-            <li><a class="ancla1" href="">Movie</a></li>
-            <li><a class="ancla1" href="">Serie</a></li>
-            <li><a class="ancla2" href="">By category <img class="img1" src="icons/abajo_blancopng.png" alt=""></a></li>
-            <li><a class="ancla2" href="">By date <img class="img1" src="icons/abajo_blancopng.png" alt=""></a></li>
+            <li><button class="ancla1" id="button-Movies" >Movie</button></li>
+            <li><button id="buttonSerie" class="ancla1" >Serie</button></li>
+
+            <li><button class="ancla2" href="">By Category <img class="img1" src="icons/abajo_blancopng.png" alt=""></button></li>
+            <li><button class="ancla2" href="">By Date <img class="img1" src="icons/abajo_blancopng.png" alt=""></button></li>
           </ul>
         </div>
         <div class="side2">
           <input class="inputSearch" type="text" placeholder="Search by name">
-          <a href=""><img src="icons/lupa_blanco.png" alt=""></a>
+          <button class="lupa"><img src="icons/lupa_blanco.png" alt=""></button>
         </div>
       </section>
 
@@ -77,73 +77,13 @@
       <button id="next-button-moviesRight"><img class="right" src="icons/abajo_blancopng.png" alt=""></button>
       <button id="next-button-moviesLeft"><img class="left" src="icons/abajo_blancopng.png" alt=""></button>
       <section class="sectionC-movies">
-        <div class="container-card">
-          <img src="IMG/A good day to die hard.jpg" alt="A Good Day To Die Hard">
-          <h2>A Good Day To Die Hard</h2>
-          <p class="description">Duration: 2h 11min Date: 2013</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/the godfather.jpg">
-          <h2>The Godfather</h2>
-          <p class="description">Duration: 2h 55min Date: 1972</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/the dark night.jpg" alt="The Dark Knight">
-          <h2>The Dark Knight</h2>
-          <p class="description">Duration: 2h 32min Date: 2008</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/the exorcist black and white.jpg">
-          <h2>The Exorcist</h2>
-          <p class="description">Duration: 2h Date: 1973</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/A good day to die hard.jpg" alt="A Good Day To Die Hard">
-          <h2>A Good Day To Die Hard</h2>
-          <p class="description">Duration: 2h 11min Date: 2013</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/the godfather.jpg">
-          <h2>The Godfather</h2>
-          <p class="description">Duration: 2h 55min Date: 1972</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/the dark night.jpg" alt="The Dark Knight">
-          <h2>The Dark Knight</h2>
-          <p class="description">Duration: 2h 32min Date: 2008</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/the exorcist black and white.jpg">
-          <h2>The Exorcist</h2>
-          <p class="description">Duration: 2h Date: 1973</p>
-        </div>
+        <!-- EL CONTENIDO ESTA EN APP.JS -->
       </section>
 
       <h3 class="tittle-series">Series</h3>
       <button id="next-button-seriesRight"><img class="right" src="icons/abajo_blancopng.png" alt=""></button>
       <button id="next-button-seriesLeft"><img class="left" src="icons/abajo_blancopng.png" alt=""></button>
       <section class="sectionC-series">
-        <div class="container-card">
-          <img src="IMG/the shininig blue.jpg" alt="A Good Day To Die Hard">
-          <h2>A Good Day To Die Hard</h2>
-          <p class="description">Duration: 2h 11min Date: 2013</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/indiana jones.jpg">
-          <h2>The Godfather</h2>
-          <p class="description">Duration: 2h 55min Date: 1972</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/the shining knife.jpg" alt="The Dark Night">
-          <h2>The Dark Night</h2>
-          <p class="description">Duration: 2h 32min Date: 2008</p>
-        </div>
-        <div class="container-card">
-          <img src="IMG/la monja.jpg">
-          <h2>The Exorcist</h2>
-          <p class="description">Duration: 2h Date: 1973</p>
-        </div>
-        
       </section>
 
       <section class="section-D">
@@ -172,4 +112,4 @@
   </section>
   <script src="app.js"></script>
 </body>
-   
+</html>
