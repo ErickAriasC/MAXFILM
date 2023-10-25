@@ -13,6 +13,11 @@ body {
     background-color: #00010d;
 
 }
+body button{
+    cursor: pointer;
+    text-align: center;
+
+}
 
 .header {
     width: 80px;
@@ -48,8 +53,8 @@ body {
     height: 35px;
 }
 
-.home {
-    margin-top: 50rem;
+.content-nav-bar {
+    margin-top: 40rem;
 }
 
 
@@ -95,6 +100,11 @@ main {
 
 }
 
+.play{
+    background-color: transparent;
+    position: absolute;
+    left: 67em;
+}
 
 .text-iconsA {
     position: absolute;
@@ -168,6 +178,8 @@ main {
 .sectionB button{
     background-color: transparent;
     border: none;
+    font-size: 2rem;
+
 }
 
 .side1 {
@@ -180,18 +192,18 @@ main {
 .side1>ul,
 button {
     display: flex;
-    gap: 3rem;
+    margin-right: 5rem;
     padding: .4rem;
     list-style: none;
     text-decoration: none;
     color: #D9D8D7;
 }
-#anclaSerie:focus{
+#buttonSerie:focus{
     background-color: #03738C;
     border-radius: 2rem;  
 }
 
-#Ancla-Movies:focus {
+#button-Movies:focus {
     background-color: #03738C;
     border-radius: 2rem;    
 }
@@ -217,8 +229,9 @@ button {
 
 }
 
-.side2>button {
-    height: 1.5rem;
+.side2>.lupa>img {
+    width: 60px;
+    height: auto;
     padding-right: 1rem;
 }
 
@@ -232,18 +245,18 @@ button {
 
 .line-1 {
     outline: 2px solid #88B0BF;
-    width: 75%;
+    width: 80%;
     height: 0;
 }
 
 .line-2 {
     outline: 2px solid #88B0BF;
-    width: 5%;
+    width: 7.8%;
     height: 0;
 }
 
 .show-more {
-    width: 10%;
+    width: 7.2%;
     background-color: #025373;
     border: none;
     border-radius: 2rem;
@@ -448,7 +461,6 @@ button {
     button{
         font-size: 23px;
         display: flex;
-        gap: 2rem;
         list-style: none;
         text-decoration: none;
         color: #D9D8D7;
@@ -556,7 +568,6 @@ button {
 
     .side1> ul, button {
         font-size: 20px;
-        gap: 1.8rem;
     }
 
     .side2{
@@ -693,7 +704,6 @@ button {
     .side1>ul,
     button {
         display: flex;
-        gap: 1rem;
         list-style: none;
         text-decoration: none;
         color: #D9D8D7;
@@ -965,12 +975,16 @@ button {
         height: 0.5rem;
         border: 1px solid #D9D8D7;
     } 
+    .play{
+        left: 9.8rem;
+        width: 2rem;
+        height: auto;
+    }
 
     /* SECTION B */
     .sectionB {
         width: 90%;
         height: auto;
-        font-size: 30px;
         display: flex;
         padding-bottom: 1rem;
         margin-top: 1.5rem;
@@ -981,6 +995,10 @@ button {
         margin-bottom: 0.5rem;
     }
 
+    .sectionB button{
+        font-size: 1rem;
+
+    }
 
     .side1 {
         width: 100%;
@@ -988,18 +1006,22 @@ button {
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 1.5rem;
     }
 
     .side1>ul,
     button {
         display: flex;
-        gap: 1rem;
         list-style: none;
         text-decoration: none;
         color: #D9D8D7;
-        font-size: 15px;
+        margin-right: 1rem;
     }
 
+    .side1>ul{
+        margin-right: 0;
+    }
 
     .side2 {
         width: 60%;
@@ -1009,7 +1031,6 @@ button {
         background-color: rgba(136, 176, 191, 0.1);
         border-radius: 20px;
         padding-right: 1rem;
-        gap: 10px;
     }
 
     .side2>input {
@@ -1027,14 +1048,13 @@ button {
         outline: none;
     }
 
-    .side2>button,
-    img {
-        width: 21px;
-        height: 21px;
+    .side2>.lupa>img {
+        width: 40px;
+        height: auto;
     }
 
     .side2>button {
-        height: 1.5rem;
+        height: auto;
         padding-right: 1rem;
     }
 
@@ -1061,6 +1081,7 @@ button {
         flex-wrap: nowrap;
         overflow: hidden;
         margin: 0;
+        margin-top: 0.5rem;
     }
 
     .sectionC-series {
@@ -1073,7 +1094,7 @@ button {
     .tittle-series {
         display: block;
         position: relative;
-        top: 0.5rem;
+        top: 1px;
         right: 8rem;
         width: auto;
         font-size: 1rem;
@@ -1085,8 +1106,8 @@ button {
 
     #next-button-moviesRight {
         position: absolute;
-        top: 24rem;
-        right: 0.5rem;
+        top: 26rem;
+        right: -0.5rem;
         display: block;
         background-color: #d9d8d718;
         border-style: none;
@@ -1095,8 +1116,8 @@ button {
 
     #next-button-moviesLeft {
         position: absolute;
-        top: 24rem;
-        left: 0.5rem;
+        top: 26rem;
+        right: 17.2rem;
         display: block;
         background-color: #d9d8d718;
         border-style: none;
@@ -1104,8 +1125,8 @@ button {
 
     #next-button-seriesRight {
         position: absolute;
-        top: 37.5rem;
-        right: 0.5rem;
+        top: 38rem;
+        right: -0.5rem;
         display: block;
         background-color: #d9d8d718;
         border-style: none;
@@ -1114,8 +1135,8 @@ button {
 
     #next-button-seriesLeft {
         position: absolute;
-        top: 37.5rem;
-        left: 0.5rem;
+        top: 38rem;
+        right: 17.2rem;
         display: block;
         background-color: #d9d8d718;
         border-style: none;
@@ -1138,11 +1159,7 @@ button {
 
     }
 
-    .container-card:nth-child(n+4) {
-        display: none;
-    }
-
-
+  
 
     .container-card {
         width: 90px;

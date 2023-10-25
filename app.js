@@ -199,37 +199,6 @@ const moviesData = [
     }
 ]
 
-//generador de cartas para MOVIES
-const generateMovies=()=>{
-    moviesData.forEach(moviesData=>createSectionMovies(moviesData))
-}
-
-const createSectionMovies=(moviesData)=>{
-    // contenedor de la movie
-    const container_card_movie = document.createElement("div");
-    container_card_movie.classList.add("container-card");
-
-    // lo que contiene 
-    //portada
-    const cover= document.createElement("img")
-    cover.src=moviesData.vertical_cover;
-    //tittle-h2
-    const tittle=document.createElement("h2")
-    tittle.textContent=moviesData.tittle;
-    //p
-    const information=document.createElement("p")
-    information.classList.add("description")
-    information.textContent=`Duration: ${moviesData.duration}`
-
-    //orden de los elementos
-    container_card_movie.appendChild(cover);
-    container_card_movie.appendChild(tittle);
-    container_card_movie.appendChild(information);
-
-    sectionMovies.appendChild(container_card_movie)
-}
-
-window.addEventListener('DOMContentLoaded', generateMovies)
 
 
 //SERIES
@@ -514,12 +483,106 @@ let seriesData = [
     }
 ]
 
-//generador de cartas para Series
-const generateSeries=()=>{
-    seriesData.forEach(seriesData=>createSectionSeries(seriesData))
+
+
+
+//elegir aleatoriamente
+
+// Arreglos de películas y series iniciales
+const initialMovies = [...moviesData];
+const initialSeries = [...seriesData];
+
+// Arreglos para almacenar las películas y series seleccionadas
+const selectedMovies = [];
+const selectedSeries = [];
+
+// // Define la consulta de medios
+// let mediaQuery = window.matchMedia("(max-width: 480px)");
+  
+// // Ejecuta la función inicialmente si la consulta de medios coincide
+// if (mediaQuery.matches) {
+// // Llamar a las funciones para seleccionar películas y series
+// selectRandomMovies(3);
+// selectRandomSeries(3);
+// }
+
+
+
+
+// Función para seleccionar películas aleatorias no repetidas
+function selectRandomMovies(count) {
+  for (let i = 0; i < count; i++) {
+    const randomIndex = Math.floor(Math.random() * initialMovies.length);
+    const selectedMovie = initialMovies.splice(randomIndex, 1)[0];
+    selectedMovies.push(selectedMovie);
+  }
 }
 
-const createSectionSeries=(seriesData)=>{
+// Función para seleccionar series aleatorias no repetidas
+function selectRandomSeries(count) {
+  for (let i = 0; i < count; i++) {
+    const randomIndex = Math.floor(Math.random() * initialSeries.length);
+    const selectedSerie = initialSeries.splice(randomIndex, 1)[0];
+    selectedSeries.push(selectedSerie);
+  }
+}
+
+// Llamar a las funciones para seleccionar películas y series
+selectRandomMovies(3);
+selectRandomSeries(3);
+
+
+// // Imprimir las películas y series seleccionadas
+// console.log("Películas seleccionadas:");
+// console.log(selectedMovies);
+// console.log("Series seleccionadas:");
+// console.log(selectedSeries);
+
+
+
+
+
+//generador de cartas para MOVIES
+const generateMovies=()=>{
+    selectedMovies.forEach(selectedMovies=>createSectionMovies(selectedMovies))
+}
+
+const createSectionMovies=(selectedMovies)=>{
+    // contenedor de la movie
+    const container_card_movie = document.createElement("div");
+    container_card_movie.classList.add("container-card");
+
+    // lo que contiene 
+    //portada
+    const cover= document.createElement("img")
+    cover.src=selectedMovies.vertical_cover;
+    //tittle-h2
+    const tittle=document.createElement("h2")
+    tittle.textContent=selectedMovies.tittle;
+    //p
+    const information=document.createElement("p")
+    information.classList.add("description")
+    information.textContent=`Duration: ${selectedMovies.duration}`
+
+    //orden de los elementos
+    container_card_movie.appendChild(cover);
+    container_card_movie.appendChild(tittle);
+    container_card_movie.appendChild(information);
+
+    sectionMovies.appendChild(container_card_movie)
+}
+
+window.addEventListener('DOMContentLoaded', generateMovies)
+
+
+
+
+//generador de cartas para Series
+const generateSeries=()=>{
+    selectedSeries.forEach(selectedSeries=>createSectionSeries(selectedSeries))
+}
+
+const createSectionSeries=(selectedSeries)=>{
     // contenedor de la movie
     const container_card_serie = document.createElement("div");
     container_card_serie.classList.add("container-card");
@@ -527,22 +590,51 @@ const createSectionSeries=(seriesData)=>{
     // lo que contiene 
     //portada
     const cover= document.createElement("img")
-    cover.src=seriesData.vertical_cover;
+    cover.src=selectedSeries.vertical_cover;
     //tittle-h2
     const tittle=document.createElement("h2")
-    tittle.textContent=seriesData.tittle;
+    tittle.textContent=selectedSeries.tittle;
     //p
     const information=document.createElement("p")
     information.classList.add("description")
-    information.textContent=`Seasons: ${seriesData.seasons}`
+    information.textContent=`Seasons: ${selectedSeries.seasons}`
 
     //orden de los elementos
     container_card_serie.appendChild(cover);
     container_card_serie.appendChild(tittle);
     container_card_serie.appendChild(information);
 
-    sectionMovies.appendChild(container_card_serie)
+    sectionSeries.appendChild(container_card_serie)
 }
 
 window.addEventListener('DOMContentLoaded', generateSeries)
 
+
+
+// Define la función que deseas ejecutar en la versión móvil
+function funcionEnVersionMovil() {
+    // Coloca aquí el código que deseas ejecutar en la versión móvil
+    console.log('Estás en la versión móvil');
+  }
+  
+  // Define la consulta de medios
+  var mediaQuery = window.matchMedia("(max-width: 480px)");
+  
+  // Ejecuta la función inicialmente si la consulta de medios coincide
+  if (mediaQuery.matches) {
+    funcionEnVersionMovil();
+  }
+  
+  // Agrega un listener para ejecutar la función cuando cambia el estado de la consulta
+  mediaQuery.addListener(function (event) {
+    if (event.matches) {
+      // La consulta de medios coincide (versión móvil)
+      funcionEnVersionMovil();
+    } else {
+      // La consulta de medios ya no coincide (versión de escritorio)
+      console.log('NOO-Estás en la versión móvil');
+
+      // Puedes agregar código adicional si lo necesitas
+    }
+  });
+  
