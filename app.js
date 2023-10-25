@@ -13,11 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //BD- PARA MOVIES Y SERIES
 
-<<<<<<< HEAD
 const sectionMovies = document.querySelector(".sectionC-movies")
-=======
-const sectionMovies=document.querySelector(".sectionC-movies")
->>>>>>> 412a29ad64ac23eb176701620a52a7c61739382c
 
 //MOVIES
 const moviesData = [
@@ -133,11 +129,7 @@ const moviesData = [
         id: 10,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/the truman show.jpg",
         horizontal_cover: " ",
-<<<<<<< HEAD
         tittle: "The Truman Show",
-=======
-        tittle: "The Truman Show: Historia De Una Vida",
->>>>>>> 412a29ad64ac23eb176701620a52a7c61739382c
         description: "Truman Burbank es el protagonista sin saberlo de un programa de televisión de realidad totalitaria. Vive en un mundo artificial y empieza a sospechar de su realidad. Busca descubrir la verdad y escapar de su vida controlada en el set de televisión.",
         director: "Peter Weir",
         category: "Drama",
@@ -207,48 +199,10 @@ const moviesData = [
     }
 ]
 
-<<<<<<< HEAD
 
 
 //SERIES
 const sectionSeries = document.querySelector(".sectionC-series")
-=======
-//generador de cartas para MOVIES
-const generateMovies=()=>{
-    moviesData.forEach(moviesData=>createSectionMovies(moviesData))
-}
-
-const createSectionMovies=(moviesData)=>{
-    // contenedor de la movie
-    const container_card_movie = document.createElement("div");
-    container_card_movie.classList.add("container-card");
-
-    // lo que contiene 
-    //portada
-    const cover= document.createElement("img")
-    cover.src=moviesData.vertical_cover;
-    //tittle-h2
-    const tittle=document.createElement("h2")
-    tittle.textContent=moviesData.tittle;
-    //p
-    const information=document.createElement("p")
-    information.classList.add("description")
-    information.textContent=`Duration: ${moviesData.duration}`
-
-    //orden de los elementos
-    container_card_movie.appendChild(cover);
-    container_card_movie.appendChild(tittle);
-    container_card_movie.appendChild(information);
-
-    sectionMovies.appendChild(container_card_movie)
-}
-
-window.addEventListener('DOMContentLoaded', generateMovies)
-
-
-//SERIES
-const sectionSeries=document.querySelector(".sectionC-series")
->>>>>>> 412a29ad64ac23eb176701620a52a7c61739382c
 
 
 //SERIES
@@ -529,7 +483,6 @@ let seriesData = [
     }
 ]
 
-<<<<<<< HEAD
 
 
 
@@ -636,21 +589,12 @@ const generateSeries = () => {
 }
 
 const createSectionSeries = (selectedSeries) => {
-=======
-//generador de cartas para Series
-const generateSeries=()=>{
-    seriesData.forEach(seriesData=>createSectionSeries(seriesData))
-}
-
-const createSectionSeries=(seriesData)=>{
->>>>>>> 412a29ad64ac23eb176701620a52a7c61739382c
     // contenedor de la movie
     const container_card_serie = document.createElement("div");
     container_card_serie.classList.add("container-card");
 
     // lo que contiene 
     //portada
-<<<<<<< HEAD
     const cover = document.createElement("img")
     cover.src = selectedSeries.vertical_cover;
     //tittle-h2
@@ -660,33 +604,15 @@ const createSectionSeries=(seriesData)=>{
     const information = document.createElement("p")
     information.classList.add("description")
     information.textContent = `Seasons: ${selectedSeries.seasons}`
-=======
-    const cover= document.createElement("img")
-    cover.src=seriesData.vertical_cover;
-    //tittle-h2
-    const tittle=document.createElement("h2")
-    tittle.textContent=seriesData.tittle;
-    //p
-    const information=document.createElement("p")
-    information.classList.add("description")
-    information.textContent=`Seasons: ${seriesData.seasons}`
->>>>>>> 412a29ad64ac23eb176701620a52a7c61739382c
 
     //orden de los elementos
     container_card_serie.appendChild(cover);
     container_card_serie.appendChild(tittle);
     container_card_serie.appendChild(information);
 
-<<<<<<< HEAD
     sectionSeries.appendChild(container_card_serie)
-=======
-    sectionMovies.appendChild(container_card_serie)
->>>>>>> 412a29ad64ac23eb176701620a52a7c61739382c
 }
 
 window.addEventListener('DOMContentLoaded', generateSeries)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 412a29ad64ac23eb176701620a52a7c61739382c
