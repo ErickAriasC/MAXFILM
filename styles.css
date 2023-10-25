@@ -103,7 +103,7 @@ main {
 .play{
     background-color: transparent;
     position: absolute;
-    left: 71em;
+    left: 71.5em;
 }
 
 .text-iconsA {
@@ -362,7 +362,7 @@ button {
 
 
 .content-footer {
-    width: 200px;
+    width: auto;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -417,8 +417,9 @@ button {
         display: flex;
         flex-direction: column;
     }
-    .home{
-        margin-top: 30rem;
+   
+    .menu-button {
+        margin-left: 0;
     }
 
     .content-nav-bar img {
@@ -447,14 +448,19 @@ button {
     .play{
         background-color: transparent;
         position: absolute;
-        left: 41rem;
+        left: 39.5rem;
     }
     
     /* SECTION B  santiago aguirre*/
     .sectionB{
         display: flex;
     }
-
+    .sectionB button{
+        font-size: 25px;
+    }
+    .lupa{
+        margin: 0;
+    }
     .side1{
         width: 65%;
         padding-top: 0.5rem;
@@ -470,6 +476,9 @@ button {
         list-style: none;
         text-decoration: none;
         color: #D9D8D7;
+    }
+    .ancla2{
+        margin-right: 1rem;
     }
 
     .side2{
@@ -498,7 +507,9 @@ button {
         color: rgba(217, 216, 215, 0.5);
         font-family: Baskerv1;
     }
-
+    .side2>.lupa>img {
+    width: 50px;
+    }
 
     /* SECTION C  david gaona*/
     .container-card img {
@@ -509,20 +520,20 @@ button {
   
     /* SECTION D andres facundo */
     .line-1{
-        width:67%;
+        width:68.8%;
     }
     .show-more{ 
-        width:13%;  
+        width:10.2%;  
     }
     .line-2{
-        width: 10%;
+        width: 11%;
     }
 
     
     /* FOOTER  erick arias*/
-        /* no fue necesario agregar cambios en la seccion HEADER*/
-
-
+    .content-footer>h3 {
+margin-left: 1.5rem;
+    }
 }
 
 @media (max-width:920px) {
@@ -533,7 +544,7 @@ button {
 
     /* SECTION A  andres facundo*/
     .sectionA button, .icon-play {
-        top: 6rem;
+        top: 4rem;
         width: 3rem;
     }
 
@@ -558,26 +569,31 @@ button {
     .play{
         background-color: transparent;
         position: absolute;
-        left: 40rem;
+        left: 28.3rem;
     }
 
     /* SECTION B  santiago aguirre*/
 
     .side1{
         width: 65%;
-        padding-right: 3rem;
+        padding-right: 1rem;
         font-size: 0.2rem;
     }
+    .sectionB button{
+        font-size: 1.2rem;
 
- 
+    }
+
+   
+    .side1>ul, button {
+margin-right: 1.8rem;
+    }
     .side1>ul img {
         width: 25px;
         height: 25px;
     }
 
-    .side1> ul, button {
-        font-size: 20px;
-    }
+    
 
     .side2{
         width: 40%;
@@ -597,7 +613,7 @@ button {
     
     /* SECTION C  david gaona*/
     .container-card img {
-        width: 250px;
+        width: 170px;
         height: auto;
     }
     .container-card{
@@ -610,8 +626,10 @@ button {
   
     /* SECTION D  andres facundo*/
     .show-more {
-        width: 13%;
         font-size: 1rem;
+    }
+    .line-1{
+        width:71.6%;
     }
     /* FOOTER  erick arias*/
         /* no fue necesario agregar cambios en la seccion HEADER*/
@@ -965,8 +983,8 @@ button {
     }
 
     .sectionA .icon-play {
-        top: 2rem;
-        width: 2rem;
+        top: 3rem;
+        width: 1.5rem;
         height: auto;
     }
 
@@ -981,7 +999,7 @@ button {
         border: 1px solid #D9D8D7;
     } 
     .play{
-        left: 9.8rem;
+        left: 10rem;
         width: 2rem;
         height: auto;
     }
@@ -1111,10 +1129,10 @@ button {
 
     #next-button-moviesRight {
         position: absolute;
-        top: 26.5rem;
+        top: 26rem;
         right: -0.5rem;
         display: block;
-        background-color: #d9d8d744;
+        background-color: #03738cc7;
         border-style: none;
         border-radius: 50%;
 
@@ -1123,19 +1141,21 @@ button {
 
     #next-button-moviesLeft {
         position: absolute;
-        top: 26.5rem;
-        right: 18.5rem;
+        top: 26rem;
+        right: 18.8rem;
         display: block;
-        background-color: #d9d8d744;
+        background-color: #03738cc7;
         border-style: none;
+        border-radius: 50%;
+
     }
 
     #next-button-seriesRight {
         position: absolute;
-        top: 40.5rem;
+        top: 40rem;
         right: -0.5rem;
         display: block;
-        background-color: #d9d8d744;
+        background-color: #03738cc7;
         border-style: none;
         border-radius: 50%;
     }
@@ -1143,17 +1163,19 @@ button {
 
     #next-button-seriesLeft {
         position: absolute;
-        top: 40.5rem;
-        right: 18.5rem;
+        top: 40rem;
+        right: 18.8rem;
         display: block;
-        background-color: #d9d8d744;
+        background-color: #03738cc7;
         border-style: none;
+        border-radius: 50%;
+
     }
 
 
     button>.right {
         transform: rotate(-90deg);
-        width: 2rem;
+        width: 1.5rem;
         height: auto;
         display: block;
 
@@ -1161,7 +1183,7 @@ button {
 
     button>.left {
         transform: rotate(90deg);
-        width: 2rem;
+        width: 1.5rem;
         height: auto;
         display: block;
 
