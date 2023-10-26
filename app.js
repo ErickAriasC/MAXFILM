@@ -3,17 +3,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
     const navBar = document.querySelector(".content-nav-bar");
-
+    
     menuButton.addEventListener("click", function () {
         navBar.classList.toggle("active");
     });
 });
 
 
+const sectionSeries = document.querySelector(".sectionC-series")
+const sectionMovies = document.querySelector(".sectionC-movies")
 
 //BD- PARA MOVIES Y SERIES
-
-const sectionMovies = document.querySelector(".sectionC-movies")
 
 //MOVIES
 const moviesData = [
@@ -199,13 +199,67 @@ const moviesData = [
     }
 ]
 
+const selectedMovies = [];
+
+function generateRandomMovieCard() {
+    if (selectedMovies.length === moviesData.length) {
+        selectedMovies.length = 0;
+    }
+    
+    let randomIndex;
+    let randomMovie;
+
+  do {
+    randomIndex = Math.floor(Math.random() * moviesData.length);
+    randomMovie = moviesData[randomIndex];
+  } while (selectedMovies.includes(randomMovie));
+
+  selectedMovies.push(randomMovie);
+
+  const container_card_movie = document.createElement("div");
+  container_card_movie.classList.add("container-card");
+
+  const cover = document.createElement("img");
+  cover.src = randomMovie.vertical_cover;
+
+  const tittle = document.createElement("h2");
+  tittle.textContent = randomMovie.tittle;
+
+  const information = document.createElement("p");
+  information.classList.add("description");
+  information.textContent = `Duration: ${randomMovie.duration}`;
+
+  container_card_movie.appendChild(cover);
+  container_card_movie.appendChild(tittle);
+  container_card_movie.appendChild(information);
+
+  return container_card_movie;
+}
+
+function showRandomMovieCards(count) {
+  for (let i = 0; i < count; i++) {
+    if (selectedMovies.length === moviesData.length) {
+      // Todas las películas han sido mostradas
+      showMoreButton.disabled = true;
+      break;
+    }
+    const randomMovieCard = generateRandomMovieCard();
+    sectionMovies.appendChild(randomMovieCard);
+  }
+}
+
+// Función para mostrar 4 películas aleatorias inicialmente
+function showInitialRandomMovies() {
+  showRandomMovieCards(4);
+}
 
 
-//SERIES
-const sectionSeries = document.querySelector(".sectionC-series")
+// Llama a la función para mostrar 4 películas aleatorias inicialmente
+showInitialRandomMovies();
 
 
-//SERIES
+
+// //SERIES
 let seriesData = [
     {
         id: 1,
@@ -483,136 +537,63 @@ let seriesData = [
     }
 ]
 
-
-
-
-//elegir aleatoriamente
-
-// Arreglos de películas y series iniciales
-const initialMovies = [...moviesData];
-const initialSeries = [...seriesData];
-
-// Arreglos para almacenar las películas y series seleccionadas
-const selectedMovies = [];
 const selectedSeries = [];
 
-// Función para seleccionar películas aleatorias no repetidas
-function selectRandomMovies(count) {
-    for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * initialMovies.length);
-        const selectedMovie = initialMovies.splice(randomIndex, 1)[0];
-        selectedMovies.push(selectedMovie);
-    }
-}
-
-// Función para seleccionar series aleatorias no repetidas
-function selectRandomSeries(count) {
-    for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * initialSeries.length);
-        const selectedSerie = initialSeries.splice(randomIndex, 1)[0];
-        selectedSeries.push(selectedSerie);
-    }
-}
-
-
-
-function validarMediaQuery() {
-    if (window.matchMedia('(max-width: 480px)').matches) {
-      // La ventana se encuentra en la condición "@media 480px o menos"
-      // Coloca tu lógica aquí
-      selectRandomMovies(3);
-      selectRandomSeries(3);
-      console.log('Estás en @media 480px o menos.');
-    } else {
-      // La ventana no cumple con la condición "@media"
-      selectRandomMovies(4);
-      selectRandomSeries(4);
-      console.log('No estás en @media 480px o menos.');
-    }
+function generateRandomSerieCard() {
+  if (selectedSeries.length === seriesData.length) {
+    selectedSeries.length = 0;
   }
-  
-  // Validar inicialmente cuando se carga la página
-  validarMediaQuery();
-  
-  // Escuchar el evento de cambio de tamaño de ventana (resize)
-  window.addEventListener('resize', validarMediaQuery);
-  
 
-// // Imprimir las películas y series seleccionadas
-// console.log("Películas seleccionadas:");
-// console.log(selectedMovies);
-// console.log("Series seleccionadas:");
-// console.log(selectedSeries);
+  let randomIndex;
+  let randomSerie;
 
+  do {
+    randomIndex = Math.floor(Math.random() * seriesData.length);
+    randomSerie = seriesData[randomIndex];
+  } while (selectedSeries.includes(randomSerie));
 
+  selectedSeries.push(randomSerie);
 
+  const container_card_Serie = document.createElement("div");
+  container_card_Serie.classList.add("container-card");
 
+  const cover = document.createElement("img");
+  cover.src = randomSerie.vertical_cover;
 
-//generador de cartas para MOVIES
-const generateMovies = () => {
-    selectedMovies.forEach(selectedMovies => createSectionMovies(selectedMovies))
+  const tittle = document.createElement("h2");
+  tittle.textContent = randomSerie.tittle;
+
+  const information = document.createElement("p");
+  information.classList.add("description");
+  information.textContent = `Duration: ${randomSerie.duration}`;
+
+  container_card_Serie.appendChild(cover);
+  container_card_Serie.appendChild(tittle);
+  container_card_Serie.appendChild(information);
+
+  return container_card_Serie;
 }
 
-const createSectionMovies = (selectedMovies) => {
-    // contenedor de la movie
-    const container_card_movie = document.createElement("div");
-    container_card_movie.classList.add("container-card");
-
-    // lo que contiene 
-    //portada
-    const cover = document.createElement("img")
-    cover.src = selectedMovies.vertical_cover;
-    //tittle-h2
-    const tittle = document.createElement("h2")
-    tittle.textContent = selectedMovies.tittle;
-    //p
-    const information = document.createElement("p")
-    information.classList.add("description")
-    information.textContent = `Duration: ${selectedMovies.duration}`
-
-    //orden de los elementos
-    container_card_movie.appendChild(cover);
-    container_card_movie.appendChild(tittle);
-    container_card_movie.appendChild(information);
-
-    sectionMovies.appendChild(container_card_movie)
+function showRandomSerieCards(count) {
+  for (let i = 0; i < count; i++) {
+    if (selectedSeries.length === seriesData.length) {
+      // Todas las series han sido mostradas
+      showMoreSeries.disabled = true;
+      break;
+    }
+    const randomSerieCard = generateRandomSerieCard();
+    sectionSeries.appendChild(randomSerieCard);
+  }
 }
 
-window.addEventListener('DOMContentLoaded', generateMovies)
-
-
-
-
-//generador de cartas para Series
-const generateSeries = () => {
-    selectedSeries.forEach(selectedSeries => createSectionSeries(selectedSeries))
+// Función para mostrar 4 series aleatorias inicialmente
+function showInitialRandomSeries() {
+  showRandomSerieCards(4);
 }
 
-const createSectionSeries = (selectedSeries) => {
-    // contenedor de la movie
-    const container_card_serie = document.createElement("div");
-    container_card_serie.classList.add("container-card");
 
-    // lo que contiene 
-    //portada
-    const cover = document.createElement("img")
-    cover.src = selectedSeries.vertical_cover;
-    //tittle-h2
-    const tittle = document.createElement("h2")
-    tittle.textContent = selectedSeries.tittle;
-    //p
-    const information = document.createElement("p")
-    information.classList.add("description")
-    information.textContent = `Seasons: ${selectedSeries.seasons}`
 
-    //orden de los elementos
-    container_card_serie.appendChild(cover);
-    container_card_serie.appendChild(tittle);
-    container_card_serie.appendChild(information);
-
-    sectionSeries.appendChild(container_card_serie)
-}
-
-window.addEventListener('DOMContentLoaded', generateSeries)
+// Llama a la función para mostrar 4 series aleatorias inicialmente
+showInitialRandomSeries();
 
 
