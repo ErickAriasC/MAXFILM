@@ -537,6 +537,15 @@ let seriesData = [
     }
 ]
 
+
+const buttonSerie = document.getElementById("buttonSerie");
+
+buttonSerie.addEventListener("click", function () {
+    sectionMovies.style.display = "none"
+  
+})
+
+
 const selectedSeries = [];
 
 function generateRandomSerieCard() {
