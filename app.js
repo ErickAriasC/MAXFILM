@@ -542,13 +542,16 @@ const buttonSerie = document.getElementById("buttonSerie");
 
 buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
-  
+    sectionSeries.style.display='flex'
+
+    
 })
 
 const buttonMovie = document.getElementById("button-Movies");
 
 buttonMovie.addEventListener("click", function(){
     sectionSeries.style.display ="none"
+    sectionMovies.style.display='flex'
 
 })
 
