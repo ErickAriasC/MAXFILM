@@ -15,11 +15,6 @@ const sectionMovies = document.querySelector(".sectionC-movies")
 
 //BD- PARA MOVIES Y SERIES
 
-<<<<<<< HEAD
-const sectionMovies = document.querySelector(".sectionC-movies")
-
-=======
->>>>>>> develop
 //MOVIES
 const moviesData = [
     {
@@ -204,12 +199,6 @@ const moviesData = [
     }
 ]
 
-<<<<<<< HEAD
-
-
-//SERIES
-const sectionSeries = document.querySelector(".sectionC-series")
-=======
 const selectedMovies = [];
 
 function generateRandomMovieCard() {
@@ -267,7 +256,6 @@ function showInitialRandomMovies() {
 
 // Llama a la función para mostrar 4 películas aleatorias inicialmente
 showInitialRandomMovies();
->>>>>>> develop
 
 
 
@@ -550,140 +538,19 @@ let seriesData = [
 ]
 
 
-<<<<<<< HEAD
-
-
-//elegir aleatoriamente
-
-// Arreglos de películas y series iniciales
-const initialMovies = [...moviesData];
-const initialSeries = [...seriesData];
-
-// Arreglos para almacenar las películas y series seleccionadas
-const selectedMovies = [];
-const selectedSeries = [];
-
-// Función para seleccionar películas aleatorias no repetidas
-function selectRandomMovies(count) {
-    for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * initialMovies.length);
-        const selectedMovie = initialMovies.splice(randomIndex, 1)[0];
-        selectedMovies.push(selectedMovie);
-    }
-}
-
-// Función para seleccionar series aleatorias no repetidas
-function selectRandomSeries(count) {
-    for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * initialSeries.length);
-        const selectedSerie = initialSeries.splice(randomIndex, 1)[0];
-        selectedSeries.push(selectedSerie);
-    }
-}
-
-
-
-function validarMediaQuery() {
-    if (window.matchMedia('(max-width: 480px)').matches) {
-      // La ventana se encuentra en la condición "@media 480px o menos"
-      // Coloca tu lógica aquí
-      selectRandomMovies(3);
-      selectRandomSeries(3);
-      console.log('Estás en @media 480px o menos.');
-    } else {
-      // La ventana no cumple con la condición "@media"
-      selectRandomMovies(4);
-      selectRandomSeries(4);
-      console.log('No estás en @media 480px o menos.');
-    }
-  }
-  
-  // Validar inicialmente cuando se carga la página
-  validarMediaQuery();
-  
-  // Escuchar el evento de cambio de tamaño de ventana (resize)
-  window.addEventListener('resize', validarMediaQuery);
-  
-
-// // Imprimir las películas y series seleccionadas
-// console.log("Películas seleccionadas:");
-// console.log(selectedMovies);
-// console.log("Series seleccionadas:");
-// console.log(selectedSeries);
-
-
-
-
-
-//generador de cartas para MOVIES
-const generateMovies = () => {
-    selectedMovies.forEach(selectedMovies => createSectionMovies(selectedMovies))
-}
-
-const createSectionMovies = (selectedMovies) => {
-    // contenedor de la movie
-    const container_card_movie = document.createElement("div");
-    container_card_movie.classList.add("container-card");
-
-    // lo que contiene 
-    //portada
-    const cover = document.createElement("img")
-    cover.src = selectedMovies.vertical_cover;
-    //tittle-h2
-    const tittle = document.createElement("h2")
-    tittle.textContent = selectedMovies.tittle;
-    //p
-    const information = document.createElement("p")
-    information.classList.add("description")
-    information.textContent = `Duration: ${selectedMovies.duration}`
-
-    //orden de los elementos
-    container_card_movie.appendChild(cover);
-    container_card_movie.appendChild(tittle);
-    container_card_movie.appendChild(information);
-
-    sectionMovies.appendChild(container_card_movie)
-}
-
-window.addEventListener('DOMContentLoaded', generateMovies)
-
-
-
-
-//generador de cartas para Series
-const generateSeries = () => {
-    selectedSeries.forEach(selectedSeries => createSectionSeries(selectedSeries))
-}
-
-const createSectionSeries = (selectedSeries) => {
-    // contenedor de la movie
-    const container_card_serie = document.createElement("div");
-    container_card_serie.classList.add("container-card");
-
-    // lo que contiene 
-    //portada
-    const cover = document.createElement("img")
-    cover.src = selectedSeries.vertical_cover;
-    //tittle-h2
-    const tittle = document.createElement("h2")
-    tittle.textContent = selectedSeries.tittle;
-    //p
-    const information = document.createElement("p")
-    information.classList.add("description")
-    information.textContent = `Seasons: ${selectedSeries.seasons}`
-
-    //orden de los elementos
-    container_card_serie.appendChild(cover);
-    container_card_serie.appendChild(tittle);
-    container_card_serie.appendChild(information);
-
-    sectionSeries.appendChild(container_card_serie)
-=======
 const buttonSerie = document.getElementById("buttonSerie");
 
 buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
   
+})
+
+const buttonMovie = document.getElementById("button-Movies");
+
+buttonMovie.addEventListener("click", function(){
+    sectionSeries.style.display ="none"
+    sectionMovies.style.display ="block"
+
 })
 
 
@@ -734,7 +601,6 @@ function showRandomSerieCards(count) {
     const randomSerieCard = generateRandomSerieCard();
     sectionSeries.appendChild(randomSerieCard);
   }
->>>>>>> develop
 }
 
 // Función para mostrar 4 series aleatorias inicialmente
