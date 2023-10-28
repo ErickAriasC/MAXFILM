@@ -545,6 +545,14 @@ buttonSerie.addEventListener("click", function () {
   
 })
 
+const buttonMovie = document.getElementById("button-Movies");
+
+buttonMovie.addEventListener("click", function(){
+    sectionSeries.style.display ="none"
+    sectionMovies.style.display ="block"
+
+})
+
 
 const selectedSeries = [];
 
@@ -604,5 +612,6 @@ function showInitialRandomSeries() {
 
 // Llama a la función para mostrar 4 series aleatorias inicialmente
 showInitialRandomSeries();
+
 
 

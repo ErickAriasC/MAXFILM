@@ -272,7 +272,6 @@ button {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .tittle-series,

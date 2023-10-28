@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+    "liveServer.settings.multiRootWorkspaceName": "MAXFILM"
+=======
     "liveServer.settings.multiRootWorkspaceName": "MAXFILM",
     "liveServer.settings.port": 5501
+>>>>>>> develop
 }
