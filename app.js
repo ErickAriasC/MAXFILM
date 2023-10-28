@@ -3,18 +3,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
     const navBar = document.querySelector(".content-nav-bar");
-
+    
     menuButton.addEventListener("click", function () {
         navBar.classList.toggle("active");
     });
 });
 
 
+const sectionSeries = document.querySelector(".sectionC-series")
+const sectionMovies = document.querySelector(".sectionC-movies")
 
 //BD- PARA MOVIES Y SERIES
 
+<<<<<<< HEAD
 const sectionMovies = document.querySelector(".sectionC-movies")
 
+=======
+>>>>>>> develop
 //MOVIES
 const moviesData = [
     {
@@ -199,13 +204,74 @@ const moviesData = [
     }
 ]
 
+<<<<<<< HEAD
 
 
 //SERIES
 const sectionSeries = document.querySelector(".sectionC-series")
+=======
+const selectedMovies = [];
+
+function generateRandomMovieCard() {
+    if (selectedMovies.length === moviesData.length) {
+        selectedMovies.length = 0;
+    }
+    
+    let randomIndex;
+    let randomMovie;
+
+  do {
+    randomIndex = Math.floor(Math.random() * moviesData.length);
+    randomMovie = moviesData[randomIndex];
+  } while (selectedMovies.includes(randomMovie));
+
+  selectedMovies.push(randomMovie);
+
+  const container_card_movie = document.createElement("div");
+  container_card_movie.classList.add("container-card");
+
+  const cover = document.createElement("img");
+  cover.src = randomMovie.vertical_cover;
+
+  const tittle = document.createElement("h2");
+  tittle.textContent = randomMovie.tittle;
+
+  const information = document.createElement("p");
+  information.classList.add("description");
+  information.textContent = `Duration: ${randomMovie.duration}`;
+
+  container_card_movie.appendChild(cover);
+  container_card_movie.appendChild(tittle);
+  container_card_movie.appendChild(information);
+
+  return container_card_movie;
+}
+
+function showRandomMovieCards(count) {
+  for (let i = 0; i < count; i++) {
+    if (selectedMovies.length === moviesData.length) {
+      // Todas las películas han sido mostradas
+      showMoreButton.disabled = true;
+      break;
+    }
+    const randomMovieCard = generateRandomMovieCard();
+    sectionMovies.appendChild(randomMovieCard);
+  }
+}
+
+// Función para mostrar 4 películas aleatorias inicialmente
+function showInitialRandomMovies() {
+  showRandomMovieCards(4);
+}
 
 
-//SERIES
+// Llama a la función para mostrar 4 películas aleatorias inicialmente
+showInitialRandomMovies();
+>>>>>>> develop
+
+
+
+// //SERIES
 let seriesData = [
     {
         id: 1,
@@ -484,6 +550,7 @@ let seriesData = [
 ]
 
 
+<<<<<<< HEAD
 
 
 //elegir aleatoriamente
@@ -611,8 +678,74 @@ const createSectionSeries = (selectedSeries) => {
     container_card_serie.appendChild(information);
 
     sectionSeries.appendChild(container_card_serie)
+=======
+const buttonSerie = document.getElementById("buttonSerie");
+
+buttonSerie.addEventListener("click", function () {
+    sectionMovies.style.display = "none"
+  
+})
+
+
+const selectedSeries = [];
+
+function generateRandomSerieCard() {
+  if (selectedSeries.length === seriesData.length) {
+    selectedSeries.length = 0;
+  }
+
+  let randomIndex;
+  let randomSerie;
+
+  do {
+    randomIndex = Math.floor(Math.random() * seriesData.length);
+    randomSerie = seriesData[randomIndex];
+  } while (selectedSeries.includes(randomSerie));
+
+  selectedSeries.push(randomSerie);
+
+  const container_card_Serie = document.createElement("div");
+  container_card_Serie.classList.add("container-card");
+
+  const cover = document.createElement("img");
+  cover.src = randomSerie.vertical_cover;
+
+  const tittle = document.createElement("h2");
+  tittle.textContent = randomSerie.tittle;
+
+  const information = document.createElement("p");
+  information.classList.add("description");
+  information.textContent = `Duration: ${randomSerie.duration}`;
+
+  container_card_Serie.appendChild(cover);
+  container_card_Serie.appendChild(tittle);
+  container_card_Serie.appendChild(information);
+
+  return container_card_Serie;
 }
 
-window.addEventListener('DOMContentLoaded', generateSeries)
+function showRandomSerieCards(count) {
+  for (let i = 0; i < count; i++) {
+    if (selectedSeries.length === seriesData.length) {
+      // Todas las series han sido mostradas
+      showMoreSeries.disabled = true;
+      break;
+    }
+    const randomSerieCard = generateRandomSerieCard();
+    sectionSeries.appendChild(randomSerieCard);
+  }
+>>>>>>> develop
+}
+
+// Función para mostrar 4 series aleatorias inicialmente
+function showInitialRandomSeries() {
+  showRandomSerieCards(4);
+}
+
+
+
+// Llama a la función para mostrar 4 series aleatorias inicialmente
+showInitialRandomSeries();
+
 
 

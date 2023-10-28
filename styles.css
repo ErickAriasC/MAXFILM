@@ -272,6 +272,10 @@ button {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
+=======
+    flex-wrap: wrap;
+>>>>>>> develop
 }
 
 .tittle-series,
