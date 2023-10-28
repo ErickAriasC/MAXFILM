@@ -549,7 +549,6 @@ const buttonMovie = document.getElementById("button-Movies");
 
 buttonMovie.addEventListener("click", function(){
     sectionSeries.style.display ="none"
-    sectionMovies.style.display ="block"
 
 })
 
@@ -582,7 +581,7 @@ function generateRandomSerieCard() {
 
   const information = document.createElement("p");
   information.classList.add("description");
-  information.textContent = `Duration: ${randomSerie.duration}`;
+  information.textContent = `Temporadas: ${randomSerie.seasons}`;
 
   container_card_Serie.appendChild(cover);
   container_card_Serie.appendChild(tittle);
