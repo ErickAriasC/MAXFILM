@@ -542,14 +542,16 @@ const buttonSerie = document.getElementById("buttonSerie");
 
 buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
-  
+    sectionSeries.style.display='flex'
+
+    
 })
 
 const buttonMovie = document.getElementById("button-Movies");
 
 buttonMovie.addEventListener("click", function(){
     sectionSeries.style.display ="none"
-    sectionMovies.style.display ="block"
+    sectionMovies.style.display='flex'
 
 })
 
@@ -582,7 +584,7 @@ function generateRandomSerieCard() {
 
   const information = document.createElement("p");
   information.classList.add("description");
-  information.textContent = `Duration: ${randomSerie.duration}`;
+  information.textContent = `Temporadas: ${randomSerie.seasons}`;
 
   container_card_Serie.appendChild(cover);
   container_card_Serie.appendChild(tittle);
@@ -614,4 +616,21 @@ function showInitialRandomSeries() {
 showInitialRandomSeries();
 
 
+const showMore=document.querySelector('.show-more')
 
+showMore.addEventListener('click', buttonShowMore)
+let remainingSeries ;
+let remainingMovies ;
+
+function buttonShowMore() {
+    //en Series
+    if (sectionMovies.style.display === 'none') {
+         remainingSeries = seriesData.length - selectedSeries.length;
+        showRandomSerieCards(remainingSeries);
+
+    } else if (sectionSeries.style.display === 'none') {
+         remainingMovies = moviesData.length - selectedMovies.length;
+        showRandomMovieCards(remainingMovies);
+
+    }
+}
