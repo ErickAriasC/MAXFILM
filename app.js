@@ -586,9 +586,7 @@ function generateRandomSerieCard() {
 
   const information = document.createElement("p");
   information.classList.add("description");
-  information.textContent = `Duration: ${randomSerie.duration}`;
   information.textContent = `Temporadas: ${randomSerie.seasons}`;
-
   container_card_Serie.appendChild(cover);
   container_card_Serie.appendChild(tittle);
   container_card_Serie.appendChild(information);
@@ -617,5 +615,25 @@ function showInitialRandomSeries() {
 
 // Llama a la función para mostrar 4 series aleatorias inicialmente
 showInitialRandomSeries();
+
+
+const showMore=document.querySelector('.show-more')
+
+showMore.addEventListener('click', buttonShowMore)
+let remainingSeries ;
+let remainingMovies ;
+
+function buttonShowMore() {
+    //en Series
+    if (sectionMovies.style.display === 'none') {
+         remainingSeries = seriesData.length - selectedSeries.length;
+        showRandomSerieCards(remainingSeries);
+
+    } else if (sectionSeries.style.display === 'none') {
+         remainingMovies = moviesData.length - selectedMovies.length;
+        showRandomMovieCards(remainingMovies);
+
+    }
+}
 
 
