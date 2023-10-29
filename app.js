@@ -229,6 +229,7 @@ function generateRandomMovieCard() {
   information.classList.add("description");
   information.textContent = `Duration: ${randomMovie.duration}`;
 
+
   container_card_movie.appendChild(cover);
   container_card_movie.appendChild(tittle);
   container_card_movie.appendChild(information);
@@ -268,6 +269,7 @@ let seriesData = [
         tittle: "Black Mirror",
         description: "Antología de ciencia ficción dominada por el extrañamiento y la inminencia del futuro, donde la tecnología más avanzada choca contra los instintos más oscuros.",
         year: 2011,
+
         director: "Charlie Brooker",
         category: "Ciencia ficción",
         seasons: 6,
@@ -537,6 +539,25 @@ let seriesData = [
     }
 ]
 
+
+const buttonSerie = document.getElementById("buttonSerie");
+
+buttonSerie.addEventListener("click", function () {
+    sectionMovies.style.display = "none"
+    sectionSeries.style.display='flex'
+
+    
+})
+
+const buttonMovie = document.getElementById("button-Movies");
+
+buttonMovie.addEventListener("click", function(){
+    sectionSeries.style.display ="none"
+    sectionMovies.style.display='flex'
+
+})
+
+
 const selectedSeries = [];
 
 function generateRandomSerieCard() {
@@ -566,6 +587,7 @@ function generateRandomSerieCard() {
   const information = document.createElement("p");
   information.classList.add("description");
   information.textContent = `Duration: ${randomSerie.duration}`;
+  information.textContent = `Temporadas: ${randomSerie.seasons}`;
 
   container_card_Serie.appendChild(cover);
   container_card_Serie.appendChild(tittle);
