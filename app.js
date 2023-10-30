@@ -546,6 +546,12 @@ buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
     sectionSeries.style.display='flex'
 
+    buttonSerie.style.backgroundColor= "#03738C"
+    buttonMovie.style.backgroundColor= ""
+
+    buttonSerie.style.borderRadius= "2rem"
+    buttonMovie.style.borderRadius= ""
+
     
 })
 
@@ -554,6 +560,14 @@ const buttonMovie = document.getElementById("button-Movies");
 buttonMovie.addEventListener("click", function(){
     sectionSeries.style.display ="none"
     sectionMovies.style.display='flex'
+
+    buttonMovie.style.backgroundColor= "#03738C"
+    buttonSerie.style.backgroundColor= ""
+
+    
+    buttonMovie.style.borderRadius= "2rem"
+    buttonSerie.style.borderRadius= ""
+
 
 })
 
