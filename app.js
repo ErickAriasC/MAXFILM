@@ -20,7 +20,7 @@ const moviesData = [
     {
         id: 1,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/jurassic park 2.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/Jurassick.jpg ",
         tittle: "Jurassic Park",
         description: "Un parque temático de dinosaurios se convierte en un peligroso caos cuando los depredadores prehistóricos quedan libres. Los visitantes deben unirse para sobrevivir y escapar de la isla. Jurassic Park es conocida por sus efectos especiales innovadores y tensión palpable, convirtiéndose en un clásico del cine con varias secuelas.",
         director: "Steven Spielberg",
@@ -32,7 +32,7 @@ const moviesData = [
     {
         id: 2,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/indiana jones.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/la monja.jpg",
         tittle: "Indiana Jones",
         description: "Indiana Jones se embarca en una misión durante la Guerra Fría para encontrar una misteriosa Calavera de Cristal con poderes extraterrestres. Con nuevos aliados y enfrentando enemigos, enfrenta peligros y resuelve enigmas en su búsqueda.",
         director: "Steven Spielberg",
@@ -546,6 +546,12 @@ buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
     sectionSeries.style.display='flex'
 
+    buttonSerie.style.backgroundColor= "#03738C"
+    buttonMovie.style.backgroundColor= ""
+
+    buttonSerie.style.borderRadius= "2rem"
+    buttonMovie.style.borderRadius= ""
+
     
 })
 
@@ -554,6 +560,15 @@ const buttonMovie = document.getElementById("button-Movies");
 buttonMovie.addEventListener("click", function(){
     sectionSeries.style.display ="none"
     sectionMovies.style.display='flex'
+
+
+    buttonMovie.style.backgroundColor= "#03738C"
+    buttonSerie.style.backgroundColor= ""
+
+    
+    buttonMovie.style.borderRadius= "2rem"
+    buttonSerie.style.borderRadius= ""
+
 
 })
 
@@ -623,6 +638,7 @@ showMore.addEventListener('click', buttonShowMore)
 let remainingSeries ;
 let remainingMovies ;
 
+
 function buttonShowMore() {
     //en Series
     if (sectionMovies.style.display === 'none') {
@@ -632,8 +648,46 @@ function buttonShowMore() {
     } else if (sectionSeries.style.display === 'none') {
          remainingMovies = moviesData.length - selectedMovies.length;
         showRandomMovieCards(remainingMovies);
+    } 
 
-    }
 }
 
+
+
+console.log(remainingSeries);
+
+
+//Funcionalidad Carrusell//
+const carouselContent = document.getElementById('carouselContent');
+const carouselIndicators = document.getElementById('carouselIndicators');
+
+moviesData.forEach((movie, index) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.classList.add('carousel-item');
+    carouselItem.innerHTML = `<img class='img-carousel' src="${movie.horizontal_cover}" alt="${movie.tittle}">`;
+    carouselContent.appendChild(carouselItem);
+
+    const indicator = document.createElement('div');
+    indicator.classList.add('indicator');
+    indicator.addEventListener('click', () => showSlide(index));
+    carouselIndicators.appendChild(indicator);
+});
+
+let currentIndex = 0;
+const indicators = document.querySelectorAll('.indicator');
+
+function showSlide(index) {
+    currentIndex = index;
+    carouselContent.style.transform = `translateX(${-currentIndex * 100}%)`;
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === currentIndex);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % moviesData.length;
+    showSlide(currentIndex);
+}
+
+setInterval(nextSlide, 3000);
 
