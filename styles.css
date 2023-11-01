@@ -272,6 +272,8 @@ button {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .tittle-series,
@@ -409,6 +411,48 @@ button {
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc; /* Añade un borde si lo deseas */
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #0000ff;
+}
+
 
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {

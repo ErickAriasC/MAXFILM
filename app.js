@@ -3,17 +3,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
     const navBar = document.querySelector(".content-nav-bar");
-
+    
     menuButton.addEventListener("click", function () {
         navBar.classList.toggle("active");
     });
 });
 
 
+const sectionSeries = document.querySelector(".sectionC-series")
+const sectionMovies = document.querySelector(".sectionC-movies")
 
 //BD- PARA MOVIES Y SERIES
-
-const sectionMovies = document.querySelector(".sectionC-movies")
 
 //MOVIES
 const moviesData = [
@@ -199,13 +199,68 @@ const moviesData = [
     }
 ]
 
+const selectedMovies = [];
+
+function generateRandomMovieCard() {
+    if (selectedMovies.length === moviesData.length) {
+        selectedMovies.length = 0;
+    }
+    
+    let randomIndex;
+    let randomMovie;
+
+  do {
+    randomIndex = Math.floor(Math.random() * moviesData.length);
+    randomMovie = moviesData[randomIndex];
+  } while (selectedMovies.includes(randomMovie));
+
+  selectedMovies.push(randomMovie);
+
+  const container_card_movie = document.createElement("div");
+  container_card_movie.classList.add("container-card");
+
+  const cover = document.createElement("img");
+  cover.src = randomMovie.vertical_cover;
+
+  const tittle = document.createElement("h2");
+  tittle.textContent = randomMovie.tittle;
+
+  const information = document.createElement("p");
+  information.classList.add("description");
+  information.textContent = `Duration: ${randomMovie.duration}`;
 
 
-//SERIES
-const sectionSeries = document.querySelector(".sectionC-series")
+  container_card_movie.appendChild(cover);
+  container_card_movie.appendChild(tittle);
+  container_card_movie.appendChild(information);
+
+  return container_card_movie;
+}
+
+function showRandomMovieCards(count) {
+  for (let i = 0; i < count; i++) {
+    if (selectedMovies.length === moviesData.length) {
+      // Todas las películas han sido mostradas
+      showMoreButton.disabled = true;
+      break;
+    }
+    const randomMovieCard = generateRandomMovieCard();
+    sectionMovies.appendChild(randomMovieCard);
+  }
+}
+
+// Función para mostrar 4 películas aleatorias inicialmente
+function showInitialRandomMovies() {
+  showRandomMovieCards(4);
+}
 
 
-//SERIES
+// Llama a la función para mostrar 4 películas aleatorias inicialmente
+showInitialRandomMovies();
+
+
+
+// //SERIES
 let seriesData = [
     {
         id: 1,
@@ -213,7 +268,8 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Black Mirror",
         description: "Antología de ciencia ficción dominada por el extrañamiento y la inminencia del futuro, donde la tecnología más avanzada choca contra los instintos más oscuros.",
-        creation_Date: "4 diciembre 2011",
+        year: 2011,
+
         director: "Charlie Brooker",
         category: "Ciencia ficción",
         seasons: 6,
@@ -231,7 +287,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Stranger Things",
         description: "A raíz de la desaparición de un niño, un pueblo desvela un misterio relacionado con experimentos secretos, fuerzas sobrenaturales aterradoras y una niña muy extraña.",
-        creation_date: "15 de julio de 2016 (Netflix)",
+        year: 2016,
         director: "The Duffer Brothers",
         category: "Ciencia ficción",
         seasons: 4,
@@ -247,7 +303,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "The Mandalorian",
         description: "Tras las historias de Jango y Boba Fett, otro guerrero emerge en el universo de Star Wars. 'The Mandalorian' se sitúa después de la caída del Imperio y antes de la aparición de la Primera Orden. Seguimos las tribulaciones de un pistolero solitario en los confines de la galaxia, lejos de la autoridad de la Nueva República....",
-        creation_date: "12 de noviembre de 2019 (Estados Unidos)",
+        year: 2019,
         director: "Jon Favreau",
         category: "Ciencia ficción",
         seasons: 3,
@@ -262,7 +318,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Mindhunter",
         description: "Un agente del FBI, experto en asesinos en serie, inventa técnicas de creación de perfiles mientras persigue a violadores y asesinos famosos.",
-        creation_date: "13 de octubre de 2017 (Netflix)",
+        year: 2017,
         director: "David Fincher",
         category: "Misterio",
         seasons: 2,
@@ -276,7 +332,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Sherlock",
         description: "Sherlock Holmes es un detective privado que vive en el Londres del siglo XXI. Es un genio en la resolución de crímenes, pero también es excéntrico, antisocial y tiene problemas para relacionarse con los demás.",
-        creation_date: "25 de julio de 2010 (Reino Unido)",
+        year: 2010,
         director: "Paul McGuigan",
         category: "Misterio",
         seasons: 4,
@@ -292,7 +348,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Peaky Blinders",
         description: "En 1919, Thomas Shelby, un veterano de la Primera Guerra Mundial, regresa a Birmingham para hacerse cargo del negocio familiar. Thomas es un hombre inteligente y ambicioso, y está decidido a llevar a los Peaky Blinders a la cima del mundo criminal.",
-        creation_date: "12 de septiembre de 2013 (Reino Unido)",
+        year: 2013,
         director: "Steven Knight",
         category: "Misterio",
         seasons: 6,
@@ -310,7 +366,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Game of Thrones",
         description: "En un mundo ficticio de fantasía medieval, varias familias, relativas a la nobleza, se disputan el poder para dominar el territorio ficticio de Poniente (Westeros) y tomar el control de los Siete Reinos desde el Trono de Hierro, lugar donde el rey ejerce el poder.",
-        creation_date: "17 de abril de 2011 (Estados Unidos)",
+        year: 2011,
         director: "David Benioff",
         category: "Drama",
         seasons: 8,
@@ -330,7 +386,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Breaking Bad",
         description: "Walter White (Bryan Cranston) es un profesor de química de instituto con un sueldo modesto, casado con Skyler (Anna Gunn) y padre de dos hijos, Walter Jr. (RJ Mitte) y Holly (Skyler White). Cuando le diagnostican cáncer de pulmón terminal, Walter decide entrar en el mundo del narcotráfico para asegurar el futuro económico de su familia.",
-        creation_date: "20 de enero de 2008 (Estados Unidos)",
+        year: 2008,
         director: "Vince Gilligan",
         category: "Drama",
         seasons: 5,
@@ -347,7 +403,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "The Crown",
         description: "La serie comienza con la boda de Isabel y Felipe, y sigue su vida desde la abdicación de su tío, Eduardo VIII, hasta el presente. La serie explora temas como la política, la familia, el amor y el poder.",
-        creation_date: "4 de noviembre de 2016 (Reino Unido)",
+        year: 2016,
         director: "Stephen Daldry",
         category: "Drama",
         seasons: 6,
@@ -365,7 +421,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Friends",
         description: "Narra las aventuras y desventuras de seis jóvenes de Nueva York. Rachel forman una unida pandilla de amigos que viven en Manhattan y que suelen reunirse en sus apartamentos o en su bar habitual, el Central Perk. A pesar de los numerosos cambios que se producen en sus vidas, su amistad es inquebrantable en la dura batalla por salir adelante en sus periplos profesionales y personales.",
-        creation_date: "22 de septiembre de 1994 (Estados Unidos)",
+        year: 1994,
         director: "Kevin S. Bright",
         category: "Comedy",
         seasons: 10,
@@ -387,7 +443,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "The Office (US)",
         description: "La serie sigue las vidas y aventuras de los empleados de la sucursal de Scranton, Pensilvania, de la empresa de papel Dunder Mifflin.",
-        creation_date: "24 de marzo de 2005 (Estados Unidos)",
+        year: 2005,
         director: "Ken Kwapis",
         category: "Comedy",
         seasons: 9,
@@ -408,7 +464,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "Brooklyn Nine-Nine",
         description: "La serie sigue las vidas y aventuras de los detectives del Departamento de Policía de Nueva York en la comisaría 99 de Brooklyn. El equipo está liderado por el capitán Raymond Holt, un hombre serio y estricto que está decidido a hacer que su comisaría sea la mejor.",
-        creation_date: "17 de septiembre de 2013 (Estados Unidos)",
+        year: 2013,
         director: "Michael Schur",
         category: "Comedy",
         seasons: 8,
@@ -428,7 +484,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "American Horror History",
         description: "Es una serie antológica que explora diferentes géneros de terror en cada temporada. Cada temporada tiene una trama y un elenco de personajes completamente nuevos, aunque algunos actores han aparecido en varias temporadas interpretando diferentes personajes.",
-        creation_date: "5 de octubre de 2011 (Estados Unidos) ",
+        year: 2011,
         director: "Ryan Murphy",
         category: "Terror",
         seasons: 11,
@@ -451,7 +507,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "The Haunting Of Hill House",
         description: "The Haunting of Hill House sigue la historia de los Crain, una familia que se muda a la mansión Hill para restaurarla y venderla. Sin embargo, pronto descubren que la casa está embrujada y que su presencia comienza a afectarlos de formas horribles.",
-        creation_date: "10 de octubre de 2018 (Estados Unidos)",
+        year: 2018,
         director: "Mike Flanagan",
         category: "Terror",
         seasons: 1,
@@ -464,7 +520,7 @@ let seriesData = [
         horizontal_cover: " ",
         tittle: "The Walking Dead",
         description: "La historia comienza con Rick Grimes, un sheriff de un pequeño pueblo de Georgia que se despierta de un coma para encontrarse en un mundo devastado por los zombis. Rick se reúne con su familia y un grupo de sobrevivientes, y juntos comienzan un viaje para encontrar un lugar seguro para vivir.",
-        creation_date: "31 de octubre de 2010 (Estados Unidos)",
+        year: 2010,
         director: "Frank Darabont.",
         category: "Terror",
         seasons: 11,
@@ -484,135 +540,153 @@ let seriesData = [
 ]
 
 
+const buttonSerie = document.getElementById("buttonSerie");
+
+buttonSerie.addEventListener("click", function () {
+    sectionMovies.style.display = "none"
+    sectionSeries.style.display='flex'
+
+    buttonSerie.style.backgroundColor= "#03738C"
+    buttonMovie.style.backgroundColor= ""
+
+    buttonSerie.style.borderRadius= "2rem"
+    buttonMovie.style.borderRadius= ""
+
+    
+})
+
+const buttonMovie = document.getElementById("button-Movies");
+
+buttonMovie.addEventListener("click", function(){
+    sectionSeries.style.display ="none"
+    sectionMovies.style.display='flex'
+
+    buttonMovie.style.backgroundColor= "#03738C"
+    buttonSerie.style.backgroundColor= ""
+
+    
+    buttonMovie.style.borderRadius= "2rem"
+    buttonSerie.style.borderRadius= ""
 
 
-//elegir aleatoriamente
+})
 
-// Arreglos de películas y series iniciales
-const initialMovies = [...moviesData];
-const initialSeries = [...seriesData];
 
-// Arreglos para almacenar las películas y series seleccionadas
-const selectedMovies = [];
 const selectedSeries = [];
 
-// Función para seleccionar películas aleatorias no repetidas
-function selectRandomMovies(count) {
-    for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * initialMovies.length);
-        const selectedMovie = initialMovies.splice(randomIndex, 1)[0];
-        selectedMovies.push(selectedMovie);
-    }
-}
-
-// Función para seleccionar series aleatorias no repetidas
-function selectRandomSeries(count) {
-    for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * initialSeries.length);
-        const selectedSerie = initialSeries.splice(randomIndex, 1)[0];
-        selectedSeries.push(selectedSerie);
-    }
-}
-
-
-
-function validarMediaQuery() {
-    if (window.matchMedia('(max-width: 480px)').matches) {
-      // La ventana se encuentra en la condición "@media 480px o menos"
-      // Coloca tu lógica aquí
-      selectRandomMovies(3);
-      selectRandomSeries(3);
-      console.log('Estás en @media 480px o menos.');
-    } else {
-      // La ventana no cumple con la condición "@media"
-      selectRandomMovies(4);
-      selectRandomSeries(4);
-      console.log('No estás en @media 480px o menos.');
-    }
+function generateRandomSerieCard() {
+  if (selectedSeries.length === seriesData.length) {
+    selectedSeries.length = 0;
   }
-  
-  // Validar inicialmente cuando se carga la página
-  validarMediaQuery();
-  
-  // Escuchar el evento de cambio de tamaño de ventana (resize)
-  window.addEventListener('resize', validarMediaQuery);
-  
 
-// // Imprimir las películas y series seleccionadas
-// console.log("Películas seleccionadas:");
-// console.log(selectedMovies);
-// console.log("Series seleccionadas:");
-// console.log(selectedSeries);
+  let randomIndex;
+  let randomSerie;
 
+  do {
+    randomIndex = Math.floor(Math.random() * seriesData.length);
+    randomSerie = seriesData[randomIndex];
+  } while (selectedSeries.includes(randomSerie));
 
+  selectedSeries.push(randomSerie);
 
+  const container_card_Serie = document.createElement("div");
+  container_card_Serie.classList.add("container-card");
 
+  const cover = document.createElement("img");
+  cover.src = randomSerie.vertical_cover;
 
-//generador de cartas para MOVIES
-const generateMovies = () => {
-    selectedMovies.forEach(selectedMovies => createSectionMovies(selectedMovies))
+  const tittle = document.createElement("h2");
+  tittle.textContent = randomSerie.tittle;
+
+  const information = document.createElement("p");
+  information.classList.add("description");
+  information.textContent = `Temporadas: ${randomSerie.seasons}`;
+  container_card_Serie.appendChild(cover);
+  container_card_Serie.appendChild(tittle);
+  container_card_Serie.appendChild(information);
+
+  return container_card_Serie;
 }
 
-const createSectionMovies = (selectedMovies) => {
-    // contenedor de la movie
-    const container_card_movie = document.createElement("div");
-    container_card_movie.classList.add("container-card");
-
-    // lo que contiene 
-    //portada
-    const cover = document.createElement("img")
-    cover.src = selectedMovies.vertical_cover;
-    //tittle-h2
-    const tittle = document.createElement("h2")
-    tittle.textContent = selectedMovies.tittle;
-    //p
-    const information = document.createElement("p")
-    information.classList.add("description")
-    information.textContent = `Duration: ${selectedMovies.duration}`
-
-    //orden de los elementos
-    container_card_movie.appendChild(cover);
-    container_card_movie.appendChild(tittle);
-    container_card_movie.appendChild(information);
-
-    sectionMovies.appendChild(container_card_movie)
+function showRandomSerieCards(count) {
+  for (let i = 0; i < count; i++) {
+    if (selectedSeries.length === seriesData.length) {
+      // Todas las series han sido mostradas
+      showMoreSeries.disabled = true;
+      break;
+    }
+    const randomSerieCard = generateRandomSerieCard();
+    sectionSeries.appendChild(randomSerieCard);
+  }
 }
 
-window.addEventListener('DOMContentLoaded', generateMovies)
-
-
-
-
-//generador de cartas para Series
-const generateSeries = () => {
-    selectedSeries.forEach(selectedSeries => createSectionSeries(selectedSeries))
+// Función para mostrar 4 series aleatorias inicialmente
+function showInitialRandomSeries() {
+  showRandomSerieCards(4);
 }
 
-const createSectionSeries = (selectedSeries) => {
-    // contenedor de la movie
-    const container_card_serie = document.createElement("div");
-    container_card_serie.classList.add("container-card");
 
-    // lo que contiene 
-    //portada
-    const cover = document.createElement("img")
-    cover.src = selectedSeries.vertical_cover;
-    //tittle-h2
-    const tittle = document.createElement("h2")
-    tittle.textContent = selectedSeries.tittle;
-    //p
-    const information = document.createElement("p")
-    information.classList.add("description")
-    information.textContent = `Seasons: ${selectedSeries.seasons}`
 
-    //orden de los elementos
-    container_card_serie.appendChild(cover);
-    container_card_serie.appendChild(tittle);
-    container_card_serie.appendChild(information);
+// Llama a la función para mostrar 4 series aleatorias inicialmente
+showInitialRandomSeries();
 
-    sectionSeries.appendChild(container_card_serie)
+
+const showMore=document.querySelector('.show-more')
+
+showMore.addEventListener('click', buttonShowMore)
+let remainingSeries ;
+let remainingMovies ;
+
+
+function buttonShowMore() {
+    //en Series
+    if (sectionMovies.style.display === 'none') {
+         remainingSeries = seriesData.length - selectedSeries.length;
+        showRandomSerieCards(remainingSeries);
+
+    } else if (sectionSeries.style.display === 'none') {
+         remainingMovies = moviesData.length - selectedMovies.length;
+        showRandomMovieCards(remainingMovies);
+    } 
+
 }
 
-window.addEventListener('DOMContentLoaded', generateSeries)
 
+
+console.log(remainingSeries);
+
+
+
+const carouselContent = document.getElementById('carouselContent');
+const carouselIndicators = document.getElementById('carouselIndicators');
+
+moviesData.forEach((movie, index) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.classList.add('carousel-item');
+    carouselItem.innerHTML = `<img src="${movie.vertical_cover}" alt="${movie.tittle}">`;
+    carouselContent.appendChild(carouselItem);
+
+    const indicator = document.createElement('div');
+    indicator.classList.add('indicator');
+    indicator.addEventListener('click', () => showSlide(index));
+    carouselIndicators.appendChild(indicator);
+});
+
+let currentIndex = 0;
+const indicators = document.querySelectorAll('.indicator');
+
+function showSlide(index) {
+    currentIndex = index;
+    carouselContent.style.transform = `translateX(${-currentIndex * 100}%)`;
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === currentIndex);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % moviesData.length;
+    showSlide(currentIndex);
+}
+
+setInterval(nextSlide, 3000);
 
