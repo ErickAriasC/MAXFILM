@@ -92,6 +92,7 @@ main {
     position: absolute;
     top: 1rem;
     left: 4rem;
+    z-index: 1;
 }
 
 .sectionA>img {
@@ -104,6 +105,7 @@ main {
     background-color: transparent;
     position: absolute;
     left: 71.5em;
+    z-index: 1;
 }
 
 .text-iconsA {
@@ -114,7 +116,7 @@ main {
     font-size: 2rem;
     line-height: 4rem;
     width: auto;
-    z-index: -1;
+    z-index: 1;
 }
 
 .sectionA .div-A {
@@ -411,6 +413,51 @@ button {
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    top: 28rem;
+    left: 49rem;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #D9D8D7;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #025373;
+}
+
 
 /* options category */
 
