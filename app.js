@@ -1,4 +1,5 @@
 
+
 //FUNCIONALIDAD PARA EL MENU HAMBURGUEZA
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
@@ -680,5 +681,7 @@ function buttonShowMore() {
 
     }
 }
+
+
 
 
