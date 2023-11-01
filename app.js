@@ -1,4 +1,5 @@
 
+
 //FUNCIONALIDAD PARA EL MENU HAMBURGUEZA
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
@@ -552,7 +553,11 @@ buttonSerie.addEventListener("click", function () {
     buttonSerie.style.borderRadius= "2rem"
     buttonMovie.style.borderRadius= ""
 
-    
+    button_byCategory.style.backgroundColor= ""
+    button_byCategory.style.borderRadius= " "
+
+    optionsCategory.style.display='none';
+
 })
 
 const buttonMovie = document.getElementById("button-Movies");
@@ -568,8 +573,35 @@ buttonMovie.addEventListener("click", function(){
     buttonMovie.style.borderRadius= "2rem"
     buttonSerie.style.borderRadius= ""
 
+    button_byCategory.style.backgroundColor= ""
+    button_byCategory.style.borderRadius= " "
+
+    optionsCategory.style.display='none';
+
 
 })
+
+const optionsCategory=document.querySelector('.container_categories')
+optionsCategory.style.display='none';
+
+const button_byCategory=document.querySelector('.ancla2');
+
+button_byCategory.addEventListener('click', optionCategory);
+
+function optionCategory() {
+    button_byCategory.style.backgroundColor= "#03738C"
+    button_byCategory.style.borderRadius= "2rem"
+
+    buttonMovie.style.backgroundColor= ""
+    buttonSerie.style.backgroundColor= ""
+
+    buttonSerie.style.borderRadius= ""
+    buttonMovie.style.borderRadius= ""
+
+    optionsCategory.style.display='flex';
+
+
+}
 
 
 const selectedSeries = [];
@@ -649,5 +681,7 @@ function buttonShowMore() {
 
     }
 }
+
+
 
 

@@ -412,6 +412,92 @@ button {
     margin-bottom: 2rem;
 }
 
+/* options category */
+
+.container_categories{
+    background-color: #025373e8;
+    width: 28rem;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    position:absolute;
+    top: 47rem;
+    left: 24rem;
+    padding-top: 1.5rem;
+}
+
+.category_movies{
+    width: 45%;
+    height: 16rem;
+}
+.category_series{
+    width: 45%;
+    height: 16rem;
+}
+
+.icon_movie{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icon_movie img{
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.icon_movie h4{
+    font-size: 35px;
+}
+
+.category_movies ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon_serie{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icon_serie img{
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.icon_serie h4{
+    font-size: 35px;
+}
+
+.category_series ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.category_series>ul>li>a{
+    font-size: 27px;
+}
+.category_movies>ul>li>a{
+    font-size: 27px;
+}
+a{
+    text-decoration: none;
+}
+
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
     /* HEADER  erick arias*/
