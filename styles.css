@@ -441,14 +441,14 @@ button {
     margin-top: 10px;
     position: absolute;
     top: 28rem;
-    left: 49rem;
+    left: 47rem;
 }
 
 .indicator {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border: 1px solid #D9D8D7;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #D9D8D7;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
