@@ -675,20 +675,37 @@ let remainingMovies ;
 function buttonShowMore() {
     //en Series
     if (sectionMovies.style.display === 'none') {
-         remainingSeries = seriesData.length - selectedSeries.length;
+        remainingSeries = seriesData.length - selectedSeries.length;
         showRandomSerieCards(remainingSeries);
-
+        
+    
     } else if (sectionSeries.style.display === 'none') {
-         remainingMovies = moviesData.length - selectedMovies.length;
+        remainingMovies = moviesData.length - selectedMovies.length;
         showRandomMovieCards(remainingMovies);
+        return 
     } 
 
 }
+let Finally=buttonShowMore(remainingMovies);
+console.log(Finally);
+// Crea un botón
+let button = document.getElementById("myButton");
 
+// Crea la primera función
+function function1() {
+  console.log("La función 1 se ha ejecutado");
+}
 
+// Crea la segunda función
+function function2() {
+  console.log("La función 2 se ha ejecutado");
+}
 
-console.log(remainingSeries);
+// Asigna la primera función al evento de clic del botón
+button.onclick = function1;
 
+// Asigna la segunda función al evento de clic del botón
+button.onclick = function2;
 
 //Funcionalidad Carrusell//
 const carouselContent = document.getElementById('carouselContent');
