@@ -555,6 +555,8 @@ buttonSerie.addEventListener("click", function () {
     button_byCategory.style.backgroundColor= ""
     button_byCategory.style.borderRadius= " "
 
+    optionsCategory.style.display='none';
+
 })
 
 const buttonMovie = document.getElementById("button-Movies");
@@ -573,8 +575,13 @@ buttonMovie.addEventListener("click", function(){
     button_byCategory.style.backgroundColor= ""
     button_byCategory.style.borderRadius= " "
 
+    optionsCategory.style.display='none';
+
 
 })
+
+const optionsCategory=document.querySelector('.container_categories')
+optionsCategory.style.display='none';
 
 const button_byCategory=document.querySelector('.ancla2');
 
@@ -589,6 +596,9 @@ function optionCategory() {
 
     buttonSerie.style.borderRadius= ""
     buttonMovie.style.borderRadius= ""
+
+    optionsCategory.style.display='flex';
+
 
 }
 
