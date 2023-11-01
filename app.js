@@ -587,6 +587,7 @@ optionsCategory.style.display='none';
 const button_byCategory=document.querySelector('.ancla2');
 
 button_byCategory.addEventListener('click', optionCategory);
+let categorysVisible = false;
 
 function optionCategory() {
     button_byCategory.style.backgroundColor= "#03738C"
@@ -598,9 +599,14 @@ function optionCategory() {
     buttonSerie.style.borderRadius= ""
     buttonMovie.style.borderRadius= ""
 
-    optionsCategory.style.display='flex';
+    if(categorysVisible){
 
+        optionsCategory.style.display='none';
+    }else{
+        optionsCategory.style.display='flex';
+    }
 
+    categorysVisible=!categorysVisible
 }
 
 
