@@ -561,7 +561,10 @@ buttonMovie.addEventListener("click", function(){
     sectionSeries.style.display ="none"
     sectionMovies.style.display='flex'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/develop
     buttonMovie.style.backgroundColor= "#03738C"
     buttonSerie.style.backgroundColor= ""
 
