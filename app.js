@@ -45,7 +45,7 @@ const moviesData = [
     {
         id: 3,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/señor de los anillos.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen1.jpg",
         tittle: "The Lord of the Rings",
         description: "Frodo Baggins emprende una peligrosa misión para destruir el Anillo Único y evitar que caiga en manos del malvado Sauron. Con la ayuda de la Comunidad del Anillo, enfrentan desafíos y peligros en la Tierra Media en su camino hacia el Monte del Destino. La película destaca por su impresionante paisaje visual y efectos especiales, junto con una narrativa envolvente.",
         director: "Peter Jackson",
@@ -57,7 +57,7 @@ const moviesData = [
     {
         id: 4,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/que paso ayer.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen2.jpg",
         tittle: "The Hangover",
         description: "Cuatro amigos se despiertan en Las Vegas sin recordar lo ocurrido en su despedida de soltero. Deben seguir pistas para encontrar al novio desaparecido antes de que sea demasiado tarde. En el camino, enfrentan situaciones cómicas y surrealistas en una noche llena de excesos y sorpresas.",
         director: "Todd Phillips",
@@ -69,7 +69,7 @@ const moviesData = [
     {
         id: 5,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/son como niños.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen3.jpg",
         tittle: "Grown Ups",
         description: "Un grupo de amigos de la infancia se reúne para homenajear a su fallecido entrenador de baloncesto. Pasan el fin de semana cerca de un lago, reviviendo viejas rivalidades y bromas. La película muestra las situaciones hilarantes que surgen entre estos adultos que a veces actúan como niños.",
         director: "Dennis Dugan",
@@ -81,7 +81,7 @@ const moviesData = [
     {
         id: 6,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/y donde estan las rubias.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen4.jpg",
         tittle: "White Chicks",
         description: "Dos agentes del FBI, los hermanos Marcus, se disfrazan como herederas millonarias rubias para protegerlas de un complot criminal. Se enfrentan a hilarantes situaciones mientras intentan mantener la fachada y resolver el caso.",
         director: "Keenen Ivory Wayans",
@@ -93,7 +93,7 @@ const moviesData = [
     {
         id: 7,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/El Exorcista 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen5.jpg",
         tittle: "The Exorcist",
         description: "El Exorcista sigue a Chris MacNeil y su hija Regan, quienes enfrentan fenómenos aterradores en su casa. A medida que Regan muestra comportamientos perturbadores, Chris busca ayuda y descubre que su hija podría estar poseída por una entidad demoníaca. El Padre Damien Karras, un sacerdote con dudas sobre su fe se convierte en el principal exorcista encargado de enfrentar el mal que posee a Regan.",
         director: "William Friedkin",
@@ -105,7 +105,7 @@ const moviesData = [
     {
         id: 8,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/la monja.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen6.jpg",
         tittle: "La Monja",
         description: "Un sacerdote con un pasado oscuro y una novicia enviada por el Vaticano investigan el suicidio de una monja en una abadía en Rumania. Descubren la presencia de una malévola entidad conocida como La Monja, que amenaza la vida espiritual y física de todos. Juntos, deben enfrentarse a fuerzas oscuras y desentrañar el misterio detrás de la entidad antes de que sea demasiado tarde.",
         director: "Corin Hardy",
@@ -117,7 +117,7 @@ const moviesData = [
     {
         id: 9,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el resplandor 2.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen7.jpg",
         tittle: "El Resplandor",
         description: "Jack Torrance se convierte en el cuidador de un hotel aislado con su familia durante el invierno. Su hijo, Danny, posee una habilidad psíquica llamada el resplandor. Con el tiempo, fuerzas malignas del hotel afectan a Jack, poniendo en peligro a su familia.",
         director: "Stanley Kubrick",
@@ -129,7 +129,7 @@ const moviesData = [
     {
         id: 10,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/the truman show.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen8.jpg",
         tittle: "The Truman Show",
         description: "Truman Burbank es el protagonista sin saberlo de un programa de televisión de realidad totalitaria. Vive en un mundo artificial y empieza a sospechar de su realidad. Busca descubrir la verdad y escapar de su vida controlada en el set de televisión.",
         director: "Peter Weir",
@@ -141,7 +141,7 @@ const moviesData = [
     {
         id: 11,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el  padrino.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen9.jpg",
         tittle: "El Padrino",
         description: "La trama sigue a la familia Corleone, una influyente familia de la mafia en Nueva York, liderada por Vito Corleone. La historia aborda conflictos, traiciones y luchas por el poder en el mundo del crimen organizado a lo largo de varias décadas. La película explora temas de lealtad y venganza en un entorno brutal y complejo.",
         director: "Francis Ford Coppola",
@@ -153,7 +153,7 @@ const moviesData = [
     {
         id: 12,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/titanic 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen10.jpg",
         tittle: "Titanic",
         description: "narra la apasionada historia de amor entre Jack, un artista sin recursos, y Rose, una joven aristócrata comprometida. Su romance se ve amenazado por el desastre inminente cuando el Titanic se hunde en 1912, cambiando sus vidas para siempre.",
         director: "James Cameron",
@@ -165,7 +165,7 @@ const moviesData = [
     {
         id: 13,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/duro de matar 5.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen11.jpeg",
         tittle: "Duro De Matar",
         description: "John McClane, un policía de Nueva York se enfrenta a un grupo de terroristas liderados por Hans Gruber que toman un rascacielos en Los Ángeles durante una fiesta de Navidad. McClane se convierte en la última esperanza para los rehenes y lucha por detener los malévolos planes de Gruber. ",
         director: "Jhon McTiernan",
@@ -177,7 +177,7 @@ const moviesData = [
     {
         id: 14,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/mad max 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen12.webp",
         tittle: "Mad Max: Fury Road",
         description: "En un mundo post-apocalíptico, Max y Furiosa se unen para escapar de Immortan Joe, un tirano despiadado. Furiosa transporta un grupo de mujeres esclavizadas en una peligrosa carrera por la libertad. Enfrentamientos y persecuciones épicas se desatan en su travesía a través del desierto desolado.",
         director: "George Miller",
@@ -189,7 +189,7 @@ const moviesData = [
     {
         id: 15,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el caballero de la noche 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/FOTOS-RANDOM/imagen13.jpg",
         tittle: "El Caballero De La Noche",
         description: "Batman, interpretado por Christian Bale, se enfrenta al Joker, interpretado por Heath Ledger, un psicópata que busca sembrar el caos en Gotham City. La película explora temas de caos, moralidad y el papel de los héroes en la sociedad, desafiando la identidad de Batman como defensor de la justicia.",
         director: "Christopher Nolan",
@@ -694,7 +694,10 @@ console.log(remainingSeries);
 const carouselContent = document.getElementById('carouselContent');
 const carouselIndicators = document.getElementById('carouselIndicators');
 
-moviesData.forEach((movie, index) => {
+// Obtén 5 películas aleatorias del array moviesData
+const randomMovies = moviesData.sort(() => Math.random() - 0.5).slice(0, 5);
+
+randomMovies.forEach((movie, index) => {
     const carouselItem = document.createElement('div');
     carouselItem.classList.add('carousel-item');
     carouselItem.innerHTML = `<img class='img-carousel' src="${movie.horizontal_cover}" alt="${movie.tittle}">`;
@@ -718,10 +721,11 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % moviesData.length;
+    currentIndex = (currentIndex + 1) % 5;
     showSlide(currentIndex);
 }
 
 setInterval(nextSlide, 3000);
+
 
 

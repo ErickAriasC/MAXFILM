@@ -432,8 +432,9 @@ button {
 }
 
 .carousel-item img {
-    width: 100%;
+    width: 99%;
     height: 500px;
+    margin: 9px;
 }
 
 .carousel-indicators {
@@ -441,7 +442,7 @@ button {
     margin-top: 10px;
     position: absolute;
     top: 28rem;
-    left: 47rem;
+    left: 54.3rem;
 }
 
 .indicator {
