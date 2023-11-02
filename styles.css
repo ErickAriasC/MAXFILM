@@ -257,12 +257,12 @@ button {
     height: 0;
 }
 
-.show-more {
+.show-more-home,.show-more-movies,.show-more-series {
     width: 7.2%;
     background-color: #025373;
     border: none;
     border-radius: 2rem;
-    padding: .4rem;
+    padding: .6rem;
     margin: .4rem;
     font-size: 1.5rem;
 }

@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
     const navBar = document.querySelector(".content-nav-bar");
-    
+
     menuButton.addEventListener("click", function () {
         navBar.classList.toggle("active");
     });
@@ -206,53 +206,53 @@ function generateRandomMovieCard() {
     if (selectedMovies.length === moviesData.length) {
         selectedMovies.length = 0;
     }
-    
+
     let randomIndex;
     let randomMovie;
 
-  do {
-    randomIndex = Math.floor(Math.random() * moviesData.length);
-    randomMovie = moviesData[randomIndex];
-  } while (selectedMovies.includes(randomMovie));
+    do {
+        randomIndex = Math.floor(Math.random() * moviesData.length);
+        randomMovie = moviesData[randomIndex];
+    } while (selectedMovies.includes(randomMovie));
 
-  selectedMovies.push(randomMovie);
+    selectedMovies.push(randomMovie);
 
-  const container_card_movie = document.createElement("div");
-  container_card_movie.classList.add("container-card");
+    const container_card_movie = document.createElement("div");
+    container_card_movie.classList.add("container-card");
 
-  const cover = document.createElement("img");
-  cover.src = randomMovie.vertical_cover;
+    const cover = document.createElement("img");
+    cover.src = randomMovie.vertical_cover;
 
-  const tittle = document.createElement("h2");
-  tittle.textContent = randomMovie.tittle;
+    const tittle = document.createElement("h2");
+    tittle.textContent = randomMovie.tittle;
 
-  const information = document.createElement("p");
-  information.classList.add("description");
-  information.textContent = `Duration: ${randomMovie.duration}`;
+    const information = document.createElement("p");
+    information.classList.add("description");
+    information.textContent = `Duration: ${randomMovie.duration}`;
 
 
-  container_card_movie.appendChild(cover);
-  container_card_movie.appendChild(tittle);
-  container_card_movie.appendChild(information);
+    container_card_movie.appendChild(cover);
+    container_card_movie.appendChild(tittle);
+    container_card_movie.appendChild(information);
 
-  return container_card_movie;
+    return container_card_movie;
 }
 
 function showRandomMovieCards(count) {
-  for (let i = 0; i < count; i++) {
-    if (selectedMovies.length === moviesData.length) {
-      // Todas las películas han sido mostradas
-      showMoreButton.disabled = true;
-      break;
+    for (let i = 0; i < count; i++) {
+        if (selectedMovies.length === moviesData.length) {
+            // Todas las películas han sido mostradas
+            showMoreButton.disabled = true;
+            break;
+        }
+        const randomMovieCard = generateRandomMovieCard();
+        sectionMovies.appendChild(randomMovieCard);
     }
-    const randomMovieCard = generateRandomMovieCard();
-    sectionMovies.appendChild(randomMovieCard);
-  }
 }
 
 // Función para mostrar 4 películas aleatorias inicialmente
 function showInitialRandomMovies() {
-  showRandomMovieCards(4);
+    showRandomMovieCards(4);
 }
 
 
@@ -545,62 +545,62 @@ const buttonSerie = document.getElementById("buttonSerie");
 
 buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
-    sectionSeries.style.display='flex'
+    sectionSeries.style.display = 'flex'
 
-    buttonSerie.style.backgroundColor= "#03738C"
-    buttonMovie.style.backgroundColor= ""
+    buttonSerie.style.backgroundColor = "#03738C"
+    buttonMovie.style.backgroundColor = ""
 
-    buttonSerie.style.borderRadius= "2rem"
-    buttonMovie.style.borderRadius= ""
+    buttonSerie.style.borderRadius = "2rem"
+    buttonMovie.style.borderRadius = ""
 
 
-    button_byCategory.style.backgroundColor= ""
-    button_byCategory.style.borderRadius= " "
+    button_byCategory.style.backgroundColor = ""
+    button_byCategory.style.borderRadius = " "
 
-    optionsCategory.style.display='none';
+    optionsCategory.style.display = 'none';
 
 })
 
 const buttonMovie = document.getElementById("button-Movies");
 
-buttonMovie.addEventListener("click", function(){
-    sectionSeries.style.display ="none"
-    sectionMovies.style.display='flex'
+buttonMovie.addEventListener("click", function () {
+    sectionSeries.style.display = "none"
+    sectionMovies.style.display = 'flex'
 
 
-    buttonMovie.style.backgroundColor= "#03738C"
-    buttonSerie.style.backgroundColor= ""
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonSerie.style.backgroundColor = ""
 
-    
-    buttonMovie.style.borderRadius= "2rem"
-    buttonSerie.style.borderRadius= ""
 
-    button_byCategory.style.backgroundColor= ""
-    button_byCategory.style.borderRadius= " "
+    buttonMovie.style.borderRadius = "2rem"
+    buttonSerie.style.borderRadius = ""
 
-    optionsCategory.style.display='none';
+    button_byCategory.style.backgroundColor = ""
+    button_byCategory.style.borderRadius = " "
+
+    optionsCategory.style.display = 'none';
 
 
 })
 
-const optionsCategory=document.querySelector('.container_categories')
-optionsCategory.style.display='none';
+const optionsCategory = document.querySelector('.container_categories')
+optionsCategory.style.display = 'none';
 
-const button_byCategory=document.querySelector('.ancla2');
+const button_byCategory = document.querySelector('.ancla2');
 
 button_byCategory.addEventListener('click', optionCategory);
 
 function optionCategory() {
-    button_byCategory.style.backgroundColor= "#03738C"
-    button_byCategory.style.borderRadius= "2rem"
+    button_byCategory.style.backgroundColor = "#03738C"
+    button_byCategory.style.borderRadius = "2rem"
 
-    buttonMovie.style.backgroundColor= ""
-    buttonSerie.style.backgroundColor= ""
+    buttonMovie.style.backgroundColor = ""
+    buttonSerie.style.backgroundColor = ""
 
-    buttonSerie.style.borderRadius= ""
-    buttonMovie.style.borderRadius= ""
+    buttonSerie.style.borderRadius = ""
+    buttonMovie.style.borderRadius = ""
 
-    optionsCategory.style.display='flex';
+    optionsCategory.style.display = 'flex';
 
 
 }
@@ -609,54 +609,54 @@ function optionCategory() {
 const selectedSeries = [];
 
 function generateRandomSerieCard() {
-  if (selectedSeries.length === seriesData.length) {
-    selectedSeries.length = 0;
-  }
+    if (selectedSeries.length === seriesData.length) {
+        selectedSeries.length = 0;
+    }
 
-  let randomIndex;
-  let randomSerie;
+    let randomIndex;
+    let randomSerie;
 
-  do {
-    randomIndex = Math.floor(Math.random() * seriesData.length);
-    randomSerie = seriesData[randomIndex];
-  } while (selectedSeries.includes(randomSerie));
+    do {
+        randomIndex = Math.floor(Math.random() * seriesData.length);
+        randomSerie = seriesData[randomIndex];
+    } while (selectedSeries.includes(randomSerie));
 
-  selectedSeries.push(randomSerie);
+    selectedSeries.push(randomSerie);
 
-  const container_card_Serie = document.createElement("div");
-  container_card_Serie.classList.add("container-card");
+    const container_card_Serie = document.createElement("div");
+    container_card_Serie.classList.add("container-card");
 
-  const cover = document.createElement("img");
-  cover.src = randomSerie.vertical_cover;
+    const cover = document.createElement("img");
+    cover.src = randomSerie.vertical_cover;
 
-  const tittle = document.createElement("h2");
-  tittle.textContent = randomSerie.tittle;
+    const tittle = document.createElement("h2");
+    tittle.textContent = randomSerie.tittle;
 
-  const information = document.createElement("p");
-  information.classList.add("description");
-  information.textContent = `Temporadas: ${randomSerie.seasons}`;
-  container_card_Serie.appendChild(cover);
-  container_card_Serie.appendChild(tittle);
-  container_card_Serie.appendChild(information);
+    const information = document.createElement("p");
+    information.classList.add("description");
+    information.textContent = `Temporadas: ${randomSerie.seasons}`;
+    container_card_Serie.appendChild(cover);
+    container_card_Serie.appendChild(tittle);
+    container_card_Serie.appendChild(information);
 
-  return container_card_Serie;
+    return container_card_Serie;
 }
 
 function showRandomSerieCards(count) {
-  for (let i = 0; i < count; i++) {
-    if (selectedSeries.length === seriesData.length) {
-      // Todas las series han sido mostradas
-      showMoreSeries.disabled = true;
-      break;
+    for (let i = 0; i < count; i++) {
+        if (selectedSeries.length === seriesData.length) {
+            // Todas las series han sido mostradas
+            showMoreSeries.disabled = true;
+            break;
+        }
+        const randomSerieCard = generateRandomSerieCard();
+        sectionSeries.appendChild(randomSerieCard);
     }
-    const randomSerieCard = generateRandomSerieCard();
-    sectionSeries.appendChild(randomSerieCard);
-  }
 }
 
 // Función para mostrar 4 series aleatorias inicialmente
 function showInitialRandomSeries() {
-  showRandomSerieCards(4);
+    showRandomSerieCards(4);
 }
 
 
@@ -664,31 +664,54 @@ function showInitialRandomSeries() {
 // Llama a la función para mostrar 4 series aleatorias inicialmente
 showInitialRandomSeries();
 
+//funcionalidades show more 
+const showMoreHome = document.querySelector('.show-more-home')//falta funcionalidad del show more HOME 
 
-const showMore=document.querySelector('.show-more')
+const showMoreMovies = document.querySelector('.show-more-movies')
+showMoreMovies.style.display = "none";
 
-showMore.addEventListener('click', buttonShowMore)
-let remainingSeries ;
-let remainingMovies ;
+const showMoreSeries = document.querySelector('.show-more-series')
+showMoreSeries.style.display = "none";
 
+const mutationObserver = new MutationObserver(validateIf);
 
-function buttonShowMore() {
-    //en Series
-    if (sectionMovies.style.display === 'none') {
-         remainingSeries = seriesData.length - selectedSeries.length;
-        showRandomSerieCards(remainingSeries);
+mutationObserver.observe(sectionMovies, { attributes: true });
+mutationObserver.observe(sectionSeries, { attributes: true });
 
-    } else if (sectionSeries.style.display === 'none') {
-         remainingMovies = moviesData.length - selectedMovies.length;
-        showRandomMovieCards(remainingMovies);
-    } 
-
+function validateIf() {
+    // Condición para que aparezca el botón show more
+    if (sectionMovies.style.display === "none") {
+        showMoreSeries.style.display = "flex";
+        showMoreHome.style.display = "none";
+        showMoreMovies.style.display = "none";
+    } else if (sectionSeries.style.display === "none") {
+        showMoreSeries.style.display = "none";
+        showMoreHome.style.display = "none";
+        showMoreMovies.style.display = "flex";
+    }
 }
 
 
+let remainingSeries = seriesData.length;
+let remainingMovies = moviesData.length;
 
-console.log(remainingSeries);
+//BUTTON MOVIES
+showMoreMovies.addEventListener('click', btnShowMoreMovies)
 
+function btnShowMoreMovies() {
+    remainingMovies = moviesData.length - selectedMovies.length;
+    showRandomMovieCards(remainingMovies);
+    showMoreMovies.textContent = 'Show Less'
+}
+
+//BUTTON SERIES
+showMoreSeries.addEventListener('click', btnShowMoreSeries)
+
+function btnShowMoreSeries() {
+    remainingSeries = seriesData.length - selectedSeries.length;
+    showRandomSerieCards(remainingSeries);
+    showMoreSeries.textContent = 'Show Less'
+}
 
 //Funcionalidad Carrusell//
 const carouselContent = document.getElementById('carouselContent');
