@@ -755,3 +755,37 @@ function nextSlide() {
 setInterval(nextSlide, 3000);
 
 
+const searchInput= document.getElementById("search");
+const resultSearch= document.getElementById("search-result");
+
+searchInput.addEventListener("input", function () {
+    const searchTerm = searchInput.value.toLowerCase();
+    
+    // Filtrar moviesData y seriesData en tiempo real
+    const filteredMoviesData = moviesData.filter((obj) =>
+      obj.tittle.toLowerCase().includes(searchTerm)
+    );
+    const filteredSeriesData = seriesData.filter((obj) =>
+      obj.tittle.toLowerCase().includes(searchTerm)
+    );
+    
+    // Combinar resultados
+    const combinedResults = [...filteredMoviesData, ...filteredSeriesData];
+    
+    // Mostrar resultados en tiempo real
+    displayResults(combinedResults);
+  });
+  
+  function displayResults(results) {
+    resultSearch.innerHTML = "";
+    
+    if (results.length > 0) {
+      results.forEach((result) => {
+        const div = document.createElement("div");
+        div.textContent = result.tittle;
+        resultSearch.appendChild(div);
+      });
+    } else {
+      resultSearch.innerHTML = "No se encontraron resultados.";
+    }
+  }
