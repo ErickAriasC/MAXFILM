@@ -759,6 +759,7 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 3000);
+showSlide(0);
 
 
 
