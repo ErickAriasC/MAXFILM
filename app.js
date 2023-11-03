@@ -723,7 +723,8 @@ function btnShowMoreSeries() {
 //Funcionalidad Carrusell//
 const carouselContent = document.getElementById('carouselContent');
 const carouselIndicators = document.getElementById('carouselIndicators');
-
+const tittle = document.querySelector (".Titles")
+const director = document.querySelector (".Director")
 // Obtén 5 películas aleatorias del array moviesData
 const randomMovies = moviesData.sort(() => Math.random() - 0.5).slice(0, 5);
 
@@ -744,6 +745,8 @@ const indicators = document.querySelectorAll('.indicator');
 
 function showSlide(index) {
     currentIndex = index;
+    tittle.textContent = randomMovies[currentIndex].tittle;
+    director.textContent = randomMovies[currentIndex].director;
     carouselContent.style.transform = `translateX(${-currentIndex * 100}%)`;
     indicators.forEach((indicator, i) => {
         indicator.classList.toggle('active', i === currentIndex);
@@ -756,6 +759,7 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 3000);
+showSlide(0);
 
 
 
