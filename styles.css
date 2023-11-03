@@ -435,6 +435,7 @@ button {
     width: 99%;
     height: 500px;
     margin: 9px;
+    opacity: 50%;
 }
 
 .carousel-indicators {
