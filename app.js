@@ -760,20 +760,28 @@ const resultSearch= document.getElementById("search-result");
 
 searchInput.addEventListener("input", function () {
     const searchTerm = searchInput.value.toLowerCase();
-    
-    // Filtrar moviesData y seriesData en tiempo real
-    const filteredMoviesData = moviesData.filter((obj) =>
-      obj.tittle.toLowerCase().includes(searchTerm)
-    );
-    const filteredSeriesData = seriesData.filter((obj) =>
-      obj.tittle.toLowerCase().includes(searchTerm)
-    );
-    
-    // Combinar resultados
-    const combinedResults = [...filteredMoviesData, ...filteredSeriesData];
-    
-    // Mostrar resultados en tiempo real
-    displayResults(combinedResults);
+  
+    if (searchTerm === "") {
+      // Si el campo de búsqueda está vacío, oculta los resultados
+      resultSearch.classList.add("hidden");
+    } else {
+      // Filtrar moviesData y seriesData en tiempo real
+      const filteredMoviesData = moviesData.filter((obj) =>
+        obj.tittle.toLowerCase().includes(searchTerm)
+      );
+      const filteredSeriesData = seriesData.filter((obj) =>
+        obj.tittle.toLowerCase().includes(searchTerm)
+      );
+      
+      // Combinar resultados
+      const combinedResults = [...filteredMoviesData, ...filteredSeriesData];
+      
+      // Mostrar resultados en tiempo real
+      displayResults(combinedResults);
+  
+      // Muestra el cuadro de resultados
+      resultSearch.classList.remove("hidden");
+    }
   });
   
   function displayResults(results) {
