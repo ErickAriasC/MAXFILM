@@ -559,6 +559,10 @@ buttonSerie.addEventListener("click", function () {
 
     optionsCategory.style.display = 'none';
 
+    button_byDate.style.backgroundColor = ""
+    button_byDate.style.borderRadius = " "
+
+    optionsDate.style.display = 'none';
 })
 
 const buttonMovie = document.getElementById("button-Movies");
@@ -580,7 +584,10 @@ buttonMovie.addEventListener("click", function () {
 
     optionsCategory.style.display = 'none';
 
+    button_byDate.style.backgroundColor = ""
+    button_byDate.style.borderRadius = " "
 
+    optionsDate.style.display = 'none';
 })
 
 const optionsCategory = document.querySelector('.container_categories')
@@ -611,6 +618,38 @@ function optionCategory() {
 
     categorysVisible=!categorysVisible
 }
+
+
+const optionsDate = document.querySelector('.container-byDate')
+optionsDate.style.display = 'none';
+
+const button_byDate = document.getElementById('button-byDate');
+
+button_byDate.addEventListener('click', optionDate);
+let byDateVisible = false;
+
+function optionDate() {
+    button_byDate.style.backgroundColor = "#03738C"
+    button_byDate.style.borderRadius = "2rem"
+    
+    buttonMovie.style.backgroundColor = ""
+    buttonSerie.style.backgroundColor = ""
+    
+    buttonSerie.style.borderRadius = ""
+    buttonMovie.style.borderRadius = ""
+    
+    if(byDateVisible){
+        optionsDate.style.display = 'flex';
+        
+        optionsDate.style.display='none';
+    }else{
+        optionsDate.style.display='flex';
+    }
+    
+    byDateVisible=!byDateVisible
+    
+}
+
 
 
 const selectedSeries = [];

@@ -545,6 +545,37 @@ a{
     text-decoration: none;
 }
 
+/* options Date */
+
+.container-byDate{
+    position: absolute;
+    background-color: #025373e8;
+    top: 38rem;
+    left: 48.3rem;
+    width: 8rem;
+    height:10.8rem;
+    justify-content: center;
+    clip-path: inset(0px round 15px);
+    overflow:auto;
+    padding-top: 1.5rem;
+}
+/* Estilo del scroll */
+.container-byDate::-webkit-scrollbar{
+    width: 7px;
+     
+}
+/* Cambia el color del fondo del scroll */
+.container-byDate::-webkit-scrollbar-track {
+    background: #025373e8;
+}
+   
+/* Cambia el color de la barra de desplazamiento */
+.container-byDate::-webkit-scrollbar-thumb {
+    background: #88B0BF;
+    border-radius: 1rem;
+ }
+  
+
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
     /* HEADER  erick arias*/
