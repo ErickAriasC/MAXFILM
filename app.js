@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const sectionSeries = document.querySelector(".sectionC-series")
 const sectionMovies = document.querySelector(".sectionC-movies")
+const sectionCategory = document.querySelector(".section-category")
+
 
 //BD- PARA MOVIES Y SERIES
 
@@ -21,7 +23,7 @@ const moviesData = [
     {
         id: 1,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/jurassic park 2.jpg",
-        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/Jurassick.jpg ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/jurassic park horizontal.jpg",
         tittle: "Jurassic Park",
         description: "Un parque temático de dinosaurios se convierte en un peligroso caos cuando los depredadores prehistóricos quedan libres. Los visitantes deben unirse para sobrevivir y escapar de la isla. Jurassic Park es conocida por sus efectos especiales innovadores y tensión palpable, convirtiéndose en un clásico del cine con varias secuelas.",
         director: "Steven Spielberg",
@@ -33,7 +35,7 @@ const moviesData = [
     {
         id: 2,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/indiana jones.jpg",
-        horizontal_cover: "IMG/la monja.jpg",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/indiana jones horizontal.jpg",
         tittle: "Indiana Jones",
         description: "Indiana Jones se embarca en una misión durante la Guerra Fría para encontrar una misteriosa Calavera de Cristal con poderes extraterrestres. Con nuevos aliados y enfrentando enemigos, enfrenta peligros y resuelve enigmas en su búsqueda.",
         director: "Steven Spielberg",
@@ -45,7 +47,7 @@ const moviesData = [
     {
         id: 3,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/señor de los anillos.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/señor de los anillos horizontal.jpg",
         tittle: "The Lord of the Rings",
         description: "Frodo Baggins emprende una peligrosa misión para destruir el Anillo Único y evitar que caiga en manos del malvado Sauron. Con la ayuda de la Comunidad del Anillo, enfrentan desafíos y peligros en la Tierra Media en su camino hacia el Monte del Destino. La película destaca por su impresionante paisaje visual y efectos especiales, junto con una narrativa envolvente.",
         director: "Peter Jackson",
@@ -57,7 +59,7 @@ const moviesData = [
     {
         id: 4,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/que paso ayer.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/Que paso ayer.jpg",
         tittle: "The Hangover",
         description: "Cuatro amigos se despiertan en Las Vegas sin recordar lo ocurrido en su despedida de soltero. Deben seguir pistas para encontrar al novio desaparecido antes de que sea demasiado tarde. En el camino, enfrentan situaciones cómicas y surrealistas en una noche llena de excesos y sorpresas.",
         director: "Todd Phillips",
@@ -69,7 +71,7 @@ const moviesData = [
     {
         id: 5,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/son como niños.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/son como niños.jpg",
         tittle: "Grown Ups",
         description: "Un grupo de amigos de la infancia se reúne para homenajear a su fallecido entrenador de baloncesto. Pasan el fin de semana cerca de un lago, reviviendo viejas rivalidades y bromas. La película muestra las situaciones hilarantes que surgen entre estos adultos que a veces actúan como niños.",
         director: "Dennis Dugan",
@@ -81,7 +83,7 @@ const moviesData = [
     {
         id: 6,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/y donde estan las rubias.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/y donde estan las rubias horizontal.jpg",
         tittle: "White Chicks",
         description: "Dos agentes del FBI, los hermanos Marcus, se disfrazan como herederas millonarias rubias para protegerlas de un complot criminal. Se enfrentan a hilarantes situaciones mientras intentan mantener la fachada y resolver el caso.",
         director: "Keenen Ivory Wayans",
@@ -93,7 +95,7 @@ const moviesData = [
     {
         id: 7,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/El Exorcista 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/el exorcista hotizontal.jpg",
         tittle: "The Exorcist",
         description: "El Exorcista sigue a Chris MacNeil y su hija Regan, quienes enfrentan fenómenos aterradores en su casa. A medida que Regan muestra comportamientos perturbadores, Chris busca ayuda y descubre que su hija podría estar poseída por una entidad demoníaca. El Padre Damien Karras, un sacerdote con dudas sobre su fe se convierte en el principal exorcista encargado de enfrentar el mal que posee a Regan.",
         director: "William Friedkin",
@@ -105,7 +107,7 @@ const moviesData = [
     {
         id: 8,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/la monja.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/la monja.jpg",
         tittle: "La Monja",
         description: "Un sacerdote con un pasado oscuro y una novicia enviada por el Vaticano investigan el suicidio de una monja en una abadía en Rumania. Descubren la presencia de una malévola entidad conocida como La Monja, que amenaza la vida espiritual y física de todos. Juntos, deben enfrentarse a fuerzas oscuras y desentrañar el misterio detrás de la entidad antes de que sea demasiado tarde.",
         director: "Corin Hardy",
@@ -117,7 +119,7 @@ const moviesData = [
     {
         id: 9,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el resplandor 2.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/el resplandor horizontal.jpg",
         tittle: "El Resplandor",
         description: "Jack Torrance se convierte en el cuidador de un hotel aislado con su familia durante el invierno. Su hijo, Danny, posee una habilidad psíquica llamada el resplandor. Con el tiempo, fuerzas malignas del hotel afectan a Jack, poniendo en peligro a su familia.",
         director: "Stanley Kubrick",
@@ -129,7 +131,7 @@ const moviesData = [
     {
         id: 10,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/the truman show.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/the truman show hotizontal.jpg",
         tittle: "The Truman Show",
         description: "Truman Burbank es el protagonista sin saberlo de un programa de televisión de realidad totalitaria. Vive en un mundo artificial y empieza a sospechar de su realidad. Busca descubrir la verdad y escapar de su vida controlada en el set de televisión.",
         director: "Peter Weir",
@@ -141,7 +143,7 @@ const moviesData = [
     {
         id: 11,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el  padrino.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/el padrino horizontal.jpg",
         tittle: "El Padrino",
         description: "La trama sigue a la familia Corleone, una influyente familia de la mafia en Nueva York, liderada por Vito Corleone. La historia aborda conflictos, traiciones y luchas por el poder en el mundo del crimen organizado a lo largo de varias décadas. La película explora temas de lealtad y venganza en un entorno brutal y complejo.",
         director: "Francis Ford Coppola",
@@ -153,7 +155,7 @@ const moviesData = [
     {
         id: 12,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/titanic 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/titatic horizontal.jpg",
         tittle: "Titanic",
         description: "narra la apasionada historia de amor entre Jack, un artista sin recursos, y Rose, una joven aristócrata comprometida. Su romance se ve amenazado por el desastre inminente cuando el Titanic se hunde en 1912, cambiando sus vidas para siempre.",
         director: "James Cameron",
@@ -165,7 +167,7 @@ const moviesData = [
     {
         id: 13,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/duro de matar 5.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/duro de matar horizontal.jpg",
         tittle: "Duro De Matar",
         description: "John McClane, un policía de Nueva York se enfrenta a un grupo de terroristas liderados por Hans Gruber que toman un rascacielos en Los Ángeles durante una fiesta de Navidad. McClane se convierte en la última esperanza para los rehenes y lucha por detener los malévolos planes de Gruber. ",
         director: "Jhon McTiernan",
@@ -177,7 +179,7 @@ const moviesData = [
     {
         id: 14,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/mad max 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/mad max horizontal.jpg",
         tittle: "Mad Max: Fury Road",
         description: "En un mundo post-apocalíptico, Max y Furiosa se unen para escapar de Immortan Joe, un tirano despiadado. Furiosa transporta un grupo de mujeres esclavizadas en una peligrosa carrera por la libertad. Enfrentamientos y persecuciones épicas se desatan en su travesía a través del desierto desolado.",
         director: "George Miller",
@@ -189,7 +191,7 @@ const moviesData = [
     {
         id: 15,
         vertical_cover: "IMG/PORTADAS/VERTICAL/PELICULAS/el caballero de la noche 1.jpg",
-        horizontal_cover: " ",
+        horizontal_cover: "IMG/PORTADAS/HORIZONTAL/PELICULAS/el caballero de la noche.jpg",
         tittle: "El Caballero De La Noche",
         description: "Batman, interpretado por Christian Bale, se enfrenta al Joker, interpretado por Heath Ledger, un psicópata que busca sembrar el caos en Gotham City. La película explora temas de caos, moralidad y el papel de los héroes en la sociedad, desafiando la identidad de Batman como defensor de la justicia.",
         director: "Christopher Nolan",
@@ -272,7 +274,7 @@ let seriesData = [
         year: 2011,
 
         director: "Charlie Brooker",
-        category: "Ciencia ficción",
+        category: "Science Fiction",
         seasons: 6,
         season_1: "3 capítulos",
         season_2: "3 capítulos",
@@ -290,7 +292,7 @@ let seriesData = [
         description: "A raíz de la desaparición de un niño, un pueblo desvela un misterio relacionado con experimentos secretos, fuerzas sobrenaturales aterradoras y una niña muy extraña.",
         year: 2016,
         director: "The Duffer Brothers",
-        category: "Ciencia ficción",
+        category: "Science Fiction",
         seasons: 4,
         season_1: "8 capítulos",
         season_2: "9 capítulos",
@@ -306,7 +308,7 @@ let seriesData = [
         description: "Tras las historias de Jango y Boba Fett, otro guerrero emerge en el universo de Star Wars. 'The Mandalorian' se sitúa después de la caída del Imperio y antes de la aparición de la Primera Orden. Seguimos las tribulaciones de un pistolero solitario en los confines de la galaxia, lejos de la autoridad de la Nueva República....",
         year: 2019,
         director: "Jon Favreau",
-        category: "Ciencia ficción",
+        category: "Science Fiction",
         seasons: 3,
         season_1: "8 capítulos",
         season_2: "8 capítulos",
@@ -321,7 +323,7 @@ let seriesData = [
         description: "Un agente del FBI, experto en asesinos en serie, inventa técnicas de creación de perfiles mientras persigue a violadores y asesinos famosos.",
         year: 2017,
         director: "David Fincher",
-        category: "Misterio",
+        category: "Mystery",
         seasons: 2,
         season_1: "10 capítulos",
         season_2: "9 capítulos",
@@ -335,7 +337,7 @@ let seriesData = [
         description: "Sherlock Holmes es un detective privado que vive en el Londres del siglo XXI. Es un genio en la resolución de crímenes, pero también es excéntrico, antisocial y tiene problemas para relacionarse con los demás.",
         year: 2010,
         director: "Paul McGuigan",
-        category: "Misterio",
+        category: "Mystery",
         seasons: 4,
         season_1: "3 capítulos",
         season_2: "3 capítulos",
@@ -351,7 +353,7 @@ let seriesData = [
         description: "En 1919, Thomas Shelby, un veterano de la Primera Guerra Mundial, regresa a Birmingham para hacerse cargo del negocio familiar. Thomas es un hombre inteligente y ambicioso, y está decidido a llevar a los Peaky Blinders a la cima del mundo criminal.",
         year: 2013,
         director: "Steven Knight",
-        category: "Misterio",
+        category: "Mystery",
         seasons: 6,
         season_1: "6 capítulos",
         season_2: "6 capítulos",
@@ -558,6 +560,8 @@ buttonSerie.addEventListener("click", function () {
     button_byCategory.style.borderRadius = " "
 
     optionsCategory.style.display = 'none';
+    sectionCategory.style.display = 'none';
+    button_byCategory.textContent='By Category'
 
     button_byDate.style.backgroundColor = ""
     button_byDate.style.borderRadius = " "
@@ -583,6 +587,8 @@ buttonMovie.addEventListener("click", function () {
     button_byCategory.style.borderRadius = " "
 
     optionsCategory.style.display = 'none';
+    sectionCategory.style.display = 'none';
+    button_byCategory.textContent='By Category'
 
     button_byDate.style.backgroundColor = ""
     button_byDate.style.borderRadius = " "
@@ -726,7 +732,11 @@ mutationObserver.observe(sectionSeries, { attributes: true });
 
 function validateIf() {
     // Condición para que aparezca el botón show more
-    if (sectionMovies.style.display === "none") {
+    if (sectionCategory.style.display==='flex'){
+        showMoreSeries.style.display = "none";
+        showMoreHome.style.display = "none";
+        showMoreMovies.style.display = "none";
+    } else if (sectionMovies.style.display === "none") {
         showMoreSeries.style.display = "flex";
         showMoreHome.style.display = "none";
         showMoreMovies.style.display = "none";
@@ -735,6 +745,7 @@ function validateIf() {
         showMoreHome.style.display = "none";
         showMoreMovies.style.display = "flex";
     }
+
 }
 
 
@@ -762,8 +773,12 @@ function btnShowMoreSeries() {
 //Funcionalidad Carrusell//
 const carouselContent = document.getElementById('carouselContent');
 const carouselIndicators = document.getElementById('carouselIndicators');
+const tittle = document.querySelector (".Titles")
+const director = document.querySelector (".Director")
+// Obtén 5 películas aleatorias del array moviesData
+const randomMovies = moviesData.sort(() => Math.random() - 0.5).slice(0, 5);
 
-moviesData.forEach((movie, index) => {
+randomMovies.forEach((movie, index) => {
     const carouselItem = document.createElement('div');
     carouselItem.classList.add('carousel-item');
     carouselItem.innerHTML = `<img class='img-carousel' src="${movie.horizontal_cover}" alt="${movie.tittle}">`;
@@ -780,6 +795,8 @@ const indicators = document.querySelectorAll('.indicator');
 
 function showSlide(index) {
     currentIndex = index;
+    tittle.textContent = randomMovies[currentIndex].tittle;
+    director.textContent = randomMovies[currentIndex].director;
     carouselContent.style.transform = `translateX(${-currentIndex * 100}%)`;
     indicators.forEach((indicator, i) => {
         indicator.classList.toggle('active', i === currentIndex);
@@ -787,10 +804,300 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % moviesData.length;
+    currentIndex = (currentIndex + 1) % 5;
     showSlide(currentIndex);
 }
 
 setInterval(nextSlide, 3000);
+showSlide(0);
+
+const line_1=document.querySelector('.line-1')
+//filtrar el contenido segun su categoria
+const filterMovieAdventure=moviesData.filter((moviesData)=>moviesData.category==='Adventure')
+const filterMovieComedy=moviesData.filter((moviesData)=>moviesData.category==='Comedy')
+const filterMovieTerror=moviesData.filter((moviesData)=>moviesData.category==='Terror')
+const filterMovieDrama=moviesData.filter((moviesData)=>moviesData.category==='Drama')
+const filterMovieAction=moviesData.filter((moviesData)=>moviesData.category==='Action')
 
 
+const moviesAdventure = document.querySelector('.moviesAdventure');
+
+
+moviesAdventure.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Adventure'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+    line_1.style.width='87%'
+    const filteredMovies = filterMovieAdventure;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+
+
+});
+
+const moviesComedy = document.querySelector('.moviesComedy');
+
+moviesComedy.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Comedy'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieComedy;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+const moviesTerror = document.querySelector('.moviesTerror');
+
+
+moviesTerror.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Terror'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieTerror;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+const moviesDrama = document.querySelector('.moviesDrama');
+
+
+moviesDrama.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Drama'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieDrama;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+const moviesAction = document.querySelector('.moviesAction');
+
+
+moviesAction.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Action'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieAction;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+
+function createMovieCard(movie) {
+    const container_card_movie = document.createElement("div");
+    container_card_movie.classList.add("container-card");
+
+    const cover = document.createElement("img");
+    cover.src = movie.vertical_cover;
+
+    const tittle = document.createElement("h2");
+    tittle.textContent = movie.tittle;
+
+    const information = document.createElement("p");
+    information.classList.add("description");
+    information.textContent = `Duration: ${movie.duration}`;
+
+    container_card_movie.appendChild(cover);
+    container_card_movie.appendChild(tittle);
+    container_card_movie.appendChild(information);
+
+    return container_card_movie;
+}
+
+
+// //categorias de series
+ //filtrar el contenido segun su categoria
+ const filterSeriesScienceFiction=seriesData.filter((seriesData)=>seriesData.category==='Science Fiction')
+ const filterSeriesMystery=seriesData.filter((seriesData)=>seriesData.category==='Mystery')
+ const filterSeriesDrama=seriesData.filter((seriesData)=>seriesData.category==='Drama')
+ const filterSeriesComedy=seriesData.filter((seriesData)=>seriesData.category==='Comedy')
+ const filterSeriesTerror=seriesData.filter((seriesData)=>seriesData.category==='Terror')
+ 
+ 
+ const seriesScienceFiction= document.querySelector('.seriesScienceFiction');
+ 
+ 
+ seriesScienceFiction.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Science Fiction'
+    buttonSerie.style.backgroundColor = "#03738C"
+    buttonSerie.style.borderRadius = "2rem"
+    line_1.style.width='87%'
+
+     
+     const filteredSeries = filterSeriesScienceFiction;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesMystery= document.querySelector('.seriesMystery');
+ 
+ 
+ seriesMystery.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Mystery'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesMystery;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesDrama= document.querySelector('.seriesDrama');
+ 
+ 
+ seriesDrama.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Drama'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesDrama;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesComedy= document.querySelector('.seriesComedy');
+ 
+ 
+ seriesComedy.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Comedy'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesComedy;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesTerror= document.querySelector('.seriesTerror');
+ 
+ 
+ seriesTerror.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Terror'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesTerror;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ 
+ function createSerieCard(serie) {
+     const container_card_serie = document.createElement("div");
+     container_card_serie.classList.add("container-card");
+ 
+     const cover = document.createElement("img");
+     cover.src = serie.vertical_cover;
+ 
+     const tittle = document.createElement("h2");
+     tittle.textContent = serie.tittle;
+ 
+     const information = document.createElement("p");
+     information.classList.add("description");
+     information.textContent = `Seasons: ${serie.seasons}`;
+ 
+     container_card_serie.appendChild(cover);
+     container_card_serie.appendChild(tittle);
+     container_card_serie.appendChild(information);
+ 
+     return container_card_serie;
+ }
+ 
