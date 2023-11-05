@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const sectionSeries = document.querySelector(".sectionC-series")
 const sectionMovies = document.querySelector(".sectionC-movies")
+const sectionCategory = document.querySelector(".section-category")
+
 
 //BD- PARA MOVIES Y SERIES
 
@@ -272,7 +274,7 @@ let seriesData = [
         year: 2011,
 
         director: "Charlie Brooker",
-        category: "Ciencia ficción",
+        category: "Science Fiction",
         seasons: 6,
         season_1: "3 capítulos",
         season_2: "3 capítulos",
@@ -290,7 +292,7 @@ let seriesData = [
         description: "A raíz de la desaparición de un niño, un pueblo desvela un misterio relacionado con experimentos secretos, fuerzas sobrenaturales aterradoras y una niña muy extraña.",
         year: 2016,
         director: "The Duffer Brothers",
-        category: "Ciencia ficción",
+        category: "Science Fiction",
         seasons: 4,
         season_1: "8 capítulos",
         season_2: "9 capítulos",
@@ -306,7 +308,7 @@ let seriesData = [
         description: "Tras las historias de Jango y Boba Fett, otro guerrero emerge en el universo de Star Wars. 'The Mandalorian' se sitúa después de la caída del Imperio y antes de la aparición de la Primera Orden. Seguimos las tribulaciones de un pistolero solitario en los confines de la galaxia, lejos de la autoridad de la Nueva República....",
         year: 2019,
         director: "Jon Favreau",
-        category: "Ciencia ficción",
+        category: "Science Fiction",
         seasons: 3,
         season_1: "8 capítulos",
         season_2: "8 capítulos",
@@ -321,7 +323,7 @@ let seriesData = [
         description: "Un agente del FBI, experto en asesinos en serie, inventa técnicas de creación de perfiles mientras persigue a violadores y asesinos famosos.",
         year: 2017,
         director: "David Fincher",
-        category: "Misterio",
+        category: "Mystery",
         seasons: 2,
         season_1: "10 capítulos",
         season_2: "9 capítulos",
@@ -335,7 +337,7 @@ let seriesData = [
         description: "Sherlock Holmes es un detective privado que vive en el Londres del siglo XXI. Es un genio en la resolución de crímenes, pero también es excéntrico, antisocial y tiene problemas para relacionarse con los demás.",
         year: 2010,
         director: "Paul McGuigan",
-        category: "Misterio",
+        category: "Mystery",
         seasons: 4,
         season_1: "3 capítulos",
         season_2: "3 capítulos",
@@ -351,7 +353,7 @@ let seriesData = [
         description: "En 1919, Thomas Shelby, un veterano de la Primera Guerra Mundial, regresa a Birmingham para hacerse cargo del negocio familiar. Thomas es un hombre inteligente y ambicioso, y está decidido a llevar a los Peaky Blinders a la cima del mundo criminal.",
         year: 2013,
         director: "Steven Knight",
-        category: "Misterio",
+        category: "Mystery",
         seasons: 6,
         season_1: "6 capítulos",
         season_2: "6 capítulos",
@@ -558,6 +560,8 @@ buttonSerie.addEventListener("click", function () {
     button_byCategory.style.borderRadius = " "
 
     optionsCategory.style.display = 'none';
+    sectionCategory.style.display = 'none';
+    button_byCategory.textContent='By Category'
 
 })
 
@@ -579,7 +583,8 @@ buttonMovie.addEventListener("click", function () {
     button_byCategory.style.borderRadius = " "
 
     optionsCategory.style.display = 'none';
-
+    sectionCategory.style.display = 'none';
+    button_byCategory.textContent='By Category'
 
 })
 
@@ -687,7 +692,11 @@ mutationObserver.observe(sectionSeries, { attributes: true });
 
 function validateIf() {
     // Condición para que aparezca el botón show more
-    if (sectionMovies.style.display === "none") {
+    if (sectionCategory.style.display==='flex'){
+        showMoreSeries.style.display = "none";
+        showMoreHome.style.display = "none";
+        showMoreMovies.style.display = "none";
+    } else if (sectionMovies.style.display === "none") {
         showMoreSeries.style.display = "flex";
         showMoreHome.style.display = "none";
         showMoreMovies.style.display = "none";
@@ -696,6 +705,7 @@ function validateIf() {
         showMoreHome.style.display = "none";
         showMoreMovies.style.display = "flex";
     }
+
 }
 
 
@@ -761,5 +771,293 @@ function nextSlide() {
 setInterval(nextSlide, 3000);
 showSlide(0);
 
+const line_1=document.querySelector('.line-1')
+//filtrar el contenido segun su categoria
+const filterMovieAdventure=moviesData.filter((moviesData)=>moviesData.category==='Adventure')
+const filterMovieComedy=moviesData.filter((moviesData)=>moviesData.category==='Comedy')
+const filterMovieTerror=moviesData.filter((moviesData)=>moviesData.category==='Terror')
+const filterMovieDrama=moviesData.filter((moviesData)=>moviesData.category==='Drama')
+const filterMovieAction=moviesData.filter((moviesData)=>moviesData.category==='Action')
 
 
+const moviesAdventure = document.querySelector('.moviesAdventure');
+
+
+moviesAdventure.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Adventure'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+    line_1.style.width='87%'
+    const filteredMovies = filterMovieAdventure;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+
+
+});
+
+const moviesComedy = document.querySelector('.moviesComedy');
+
+moviesComedy.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Comedy'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieComedy;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+const moviesTerror = document.querySelector('.moviesTerror');
+
+
+moviesTerror.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Terror'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieTerror;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+const moviesDrama = document.querySelector('.moviesDrama');
+
+
+moviesDrama.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Drama'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieDrama;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+const moviesAction = document.querySelector('.moviesAction');
+
+
+moviesAction.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Action'
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = "2rem"
+
+    const filteredMovies = filterMovieAction;
+    
+    filteredMovies.forEach((movie) => {
+        const movieCard = createMovieCard(movie);
+        sectionCategory.appendChild(movieCard);
+    });
+});
+
+
+function createMovieCard(movie) {
+    const container_card_movie = document.createElement("div");
+    container_card_movie.classList.add("container-card");
+
+    const cover = document.createElement("img");
+    cover.src = movie.vertical_cover;
+
+    const tittle = document.createElement("h2");
+    tittle.textContent = movie.tittle;
+
+    const information = document.createElement("p");
+    information.classList.add("description");
+    information.textContent = `Duration: ${movie.duration}`;
+
+    container_card_movie.appendChild(cover);
+    container_card_movie.appendChild(tittle);
+    container_card_movie.appendChild(information);
+
+    return container_card_movie;
+}
+
+
+// //categorias de series
+ //filtrar el contenido segun su categoria
+ const filterSeriesScienceFiction=seriesData.filter((seriesData)=>seriesData.category==='Science Fiction')
+ const filterSeriesMystery=seriesData.filter((seriesData)=>seriesData.category==='Mystery')
+ const filterSeriesDrama=seriesData.filter((seriesData)=>seriesData.category==='Drama')
+ const filterSeriesComedy=seriesData.filter((seriesData)=>seriesData.category==='Comedy')
+ const filterSeriesTerror=seriesData.filter((seriesData)=>seriesData.category==='Terror')
+ 
+ 
+ const seriesScienceFiction= document.querySelector('.seriesScienceFiction');
+ 
+ 
+ seriesScienceFiction.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+    optionsCategory.style.display = 'none';
+    button_byCategory.textContent='Science Fiction'
+    buttonSerie.style.backgroundColor = "#03738C"
+    buttonSerie.style.borderRadius = "2rem"
+    line_1.style.width='87%'
+
+     
+     const filteredSeries = filterSeriesScienceFiction;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesMystery= document.querySelector('.seriesMystery');
+ 
+ 
+ seriesMystery.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Mystery'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesMystery;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesDrama= document.querySelector('.seriesDrama');
+ 
+ 
+ seriesDrama.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Drama'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesDrama;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesComedy= document.querySelector('.seriesComedy');
+ 
+ 
+ seriesComedy.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Comedy'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesComedy;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ const seriesTerror= document.querySelector('.seriesTerror');
+ 
+ 
+ seriesTerror.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display='none'
+    sectionSeries.style.display='none'
+     optionsCategory.style.display = 'none';
+     button_byCategory.textContent='Terror'
+     buttonSerie.style.backgroundColor = "#03738C"
+     buttonSerie.style.borderRadius = "2rem"
+ 
+     
+     const filteredSeries = filterSeriesTerror;
+     
+     filteredSeries.forEach((serie) => {
+         const serieCard = createSerieCard(serie);
+         sectionCategory.appendChild(serieCard);
+     });
+ 
+ 
+ });
+ 
+ 
+ function createSerieCard(serie) {
+     const container_card_serie = document.createElement("div");
+     container_card_serie.classList.add("container-card");
+ 
+     const cover = document.createElement("img");
+     cover.src = serie.vertical_cover;
+ 
+     const tittle = document.createElement("h2");
+     tittle.textContent = serie.tittle;
+ 
+     const information = document.createElement("p");
+     information.classList.add("description");
+     information.textContent = `Seasons: ${serie.seasons}`;
+ 
+     container_card_serie.appendChild(cover);
+     container_card_serie.appendChild(tittle);
+     container_card_serie.appendChild(information);
+ 
+     return container_card_serie;
+ }
+ 
