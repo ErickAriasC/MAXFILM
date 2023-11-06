@@ -104,14 +104,14 @@ main {
 .play{
     background-color: transparent;
     position: absolute;
-    left: 71.5em;
+    left: 54.5rem;
     z-index: 1;
 }
 
 .text-iconsA {
     position: absolute;
-    top: 14.5rem;
-    left: 12rem;
+    top: 22rem;
+    left: 14rem;
 
     font-size: 2rem;
     line-height: 4rem;
@@ -291,7 +291,7 @@ button {
     border-radius: 2rem;
     padding: .6rem;
     margin: .4rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .sectionC-movies,
@@ -443,7 +443,7 @@ button {
 .carousel-container {
     position: relative;
     max-width: 100%;
-    height: 500px;
+    height: 600px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -459,16 +459,18 @@ button {
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 500px;
+    width: 99%;
+    height: 600px;
+    margin: 9px;
+    opacity: 35%;
 }
 
 .carousel-indicators {
     text-align: center;
     margin-top: 10px;
     position: absolute;
-    top: 28rem;
-    left: 47rem;
+    top: 34rem;
+    left: 50rem;
 }
 
 .indicator {
@@ -497,8 +499,8 @@ button {
     align-items: center;
     border-radius: 40px;
     position:absolute;
-    top: 38rem;
-    left: 22.7rem;
+    top: 44.5rem;
+    left: 22.2rem;
     padding-top: 1.5rem;
 }
 
