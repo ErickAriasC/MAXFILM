@@ -758,42 +758,46 @@ setInterval(nextSlide, 3000);
 const searchInput= document.getElementById("search");
 const resultSearch= document.getElementById("search-result");
 
+
 searchInput.addEventListener("input", function () {
     const searchTerm = searchInput.value.toLowerCase();
   
-    if (searchTerm === "") {
-      // Si el campo de búsqueda está vacío, oculta los resultados
-      resultSearch.classList.add("hidden");
-    } else {
-      // Filtrar moviesData y seriesData en tiempo real
-      const filteredMoviesData = moviesData.filter((obj) =>
-        obj.tittle.toLowerCase().includes(searchTerm)
-      );
-      const filteredSeriesData = seriesData.filter((obj) =>
-        obj.tittle.toLowerCase().includes(searchTerm)
-      );
-      
-      // Combinar resultados
-      const combinedResults = [...filteredMoviesData, ...filteredSeriesData];
-      
-      // Mostrar resultados en tiempo real
-      displayResults(combinedResults);
+    // Limpia el contenedor de resultados antes de mostrar nuevos resultados
+    sectionMovies.innerHTML = "";
   
-      // Muestra el cuadro de resultados
-      resultSearch.classList.remove("hidden");
+    // Muestra las cards que coinciden con el término de búsqueda en tiempo real
+    for (const cardData of moviesData) {
+      if (cardData.tittle.toLowerCase().includes(searchTerm)) {
+        const card = generateCardFromData(cardData);
+        sectionMovies.appendChild(card);
+      }
+    }
+  
+    if (sectionMovies.children.length === 0) {
+      // Si no se encontraron resultados, muestra un mensaje
+      sectionMovies.innerHTML = "No se encontraron resultados.";
     }
   });
   
-  function displayResults(results) {
-    resultSearch.innerHTML = "";
-    
-    if (results.length > 0) {
-      results.forEach((result) => {
-        const div = document.createElement("div");
-        div.textContent = result.tittle;
-        resultSearch.appendChild(div);
-      });
-    } else {
-      resultSearch.innerHTML = "No se encontraron resultados.";
-    }
+  function generateCardFromData(cardData) {
+    const container_card_movie = document.createElement("div");
+    container_card_movie.classList.add("container-card");
+  
+    const cover = document.createElement("img");
+    cover.src = cardData.vertical_cover;
+  
+    const tittle = document.createElement("h2");
+    tittle.textContent = cardData.tittle;
+  
+    const information = document.createElement("p");
+    information.classList.add("description");
+    information.textContent = `Duration: ${cardData.duration}`;
+  
+    container_card_movie.appendChild(cover);
+    container_card_movie.appendChild(tittle);
+    container_card_movie.appendChild(information);
+  
+    return container_card_movie;
   }
+
+  
