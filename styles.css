@@ -57,7 +57,14 @@ body button{
     margin-top: 40rem;
 }
 
+.content-nav-bar li {
+    display: flex;
+}
 
+.header-menu {
+    padding-left: 1rem;
+    display: flex;
+}
 li {
     list-style: none;
 }

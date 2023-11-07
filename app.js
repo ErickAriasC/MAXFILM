@@ -1061,3 +1061,9 @@ function createMovieCard(movie) {
      return container_card_serie;
  }
  
+const iconsNames = document.querySelectorAll(".content-nav-bar a")
+const menuButton = document.querySelector(".menu-button")
+menuButton.addEventListener ("click", showNames)
+function showNames(){
+    iconsNames.style.display = "none";
+}
