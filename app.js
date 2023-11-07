@@ -780,6 +780,84 @@ const filterMovieDrama=moviesData.filter((moviesData)=>moviesData.category==='Dr
 const filterMovieAction=moviesData.filter((moviesData)=>moviesData.category==='Action')
 
 
+
+const searchInput= document.getElementById("search");
+const searchCont = document.querySelector('.section-category');
+
+
+searchInput.addEventListener("input", function () {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+  
+    sectionMovies.style.display = searchTerm ? "none" : "block";
+    sectionSeries.style.display = searchTerm ? "none" : "block";
+  
+    searchCont.innerHTML = "";
+  
+    if (searchTerm === "") {
+      sectionMovies.style.display = "block";
+      sectionSeries.style.display = "block";
+    } else {
+
+      const filteredResults = searchMoviesAndSeries(searchTerm);
+  
+      if (filteredResults.length === 0) {
+        searchCont.innerHTML = "No se encontraron resultados.";
+      } else {
+        displayResultsUsingGenerateCard(filteredResults, searchCont);
+      }
+    }
+  });
+
+//   Funcion de busqueda de series y movies:
+  function searchMoviesAndSeries(searchTerm) {
+
+    const filteredMovies = moviesData.filter((movie) =>
+      movie.tittle.toLowerCase().includes(searchTerm)
+    );
+  
+
+    const filteredSeries = seriesData.filter((serie) =>
+      serie.tittle.toLowerCase().includes(searchTerm)
+    );
+  
+
+    const combinedResults = [...filteredMovies, ...filteredSeries];
+  
+    return combinedResults;
+  }
+// Función para mostrar las cards generadas en dodne yú desees:
+  function displayResultsUsingGenerateCard(results, container) {
+    for (const cardData of results) {
+      const card = generateCardFromData(cardData);
+      container.appendChild(card);
+    }
+  }
+
+
+//   Función que genera cards:
+  function generateCardFromData(cardData) {
+    const container_card_movie = document.createElement("div");
+    container_card_movie.classList.add("container-card");
+  
+    const cover = document.createElement("img");
+    cover.src = cardData.vertical_cover;
+  
+    const tittle = document.createElement("h2");
+    tittle.textContent = cardData.tittle;
+  
+    const information = document.createElement("p");
+    information.classList.add("description");
+    information.textContent = `Duration: ${cardData.duration}`;
+  
+    container_card_movie.appendChild(cover);
+    container_card_movie.appendChild(tittle);
+    container_card_movie.appendChild(information);
+  
+    return container_card_movie;
+  }
+
+  
+
 const moviesAdventure = document.querySelector('.moviesAdventure');
 
 
@@ -1061,3 +1139,4 @@ function createMovieCard(movie) {
      return container_card_serie;
  }
  
+
