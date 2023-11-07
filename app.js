@@ -563,6 +563,7 @@ buttonSerie.addEventListener("click", function () {
     sectionCategory.style.display = 'none';
     button_byCategory.textContent='By Category'
 
+    button_byDate.textContent='By Date'
     button_byDate.style.backgroundColor = ""
     button_byDate.style.borderRadius = " "
 
@@ -589,6 +590,7 @@ buttonMovie.addEventListener("click", function () {
     optionsCategory.style.display = 'none';
     sectionCategory.style.display = 'none';
     button_byCategory.textContent='By Category'
+    button_byDate.textContent='By Date'
 
     button_byDate.style.backgroundColor = ""
     button_byDate.style.borderRadius = " "
@@ -613,6 +615,10 @@ function optionCategory() {
 
     buttonSerie.style.borderRadius = ""
     buttonMovie.style.borderRadius = ""
+
+    button_byDate.textContent='By Date'
+    button_byDate.style.backgroundColor = ""
+    optionsDate.style.display = 'none';
 
     if(categorysVisible){
     optionsCategory.style.display = 'flex';
@@ -643,6 +649,11 @@ function optionDate() {
     
     buttonSerie.style.borderRadius = ""
     buttonMovie.style.borderRadius = ""
+
+    button_byCategory.textContent='By Category'
+    button_byCategory.style.backgroundColor= ""
+    optionsCategory.style.display = 'none';
+
     
     if(byDateVisible){
         optionsDate.style.display = 'flex';
@@ -1078,7 +1089,7 @@ function createMovieCard(movie) {
  
  
  });
- 
+
  
  function createSerieCard(serie) {
      const container_card_serie = document.createElement("div");
@@ -1093,6 +1104,7 @@ function createMovieCard(movie) {
      const information = document.createElement("p");
      information.classList.add("description");
      information.textContent = `Seasons: ${serie.seasons}`;
+     
  
      container_card_serie.appendChild(cover);
      container_card_serie.appendChild(tittle);
@@ -1100,4 +1112,580 @@ function createMovieCard(movie) {
  
      return container_card_serie;
  }
- 
+
+//  Filtrar por fecha
+
+function createCard(item) {
+    const containerCard = document.createElement('div');
+    containerCard.classList.add('container-card');
+
+    const cover = document.createElement('img');
+    cover.src = item.vertical_cover;
+   
+    const title = document.createElement('h2');
+    title.textContent = item.title;
+    
+  
+    const information = document.createElement('p');
+    information.classList.add('description');
+
+    const duration = item.duration;
+    const seasons = item.seasons;
+
+    if (duration !== undefined) {
+    information.textContent = `Duración: ${duration}`;
+    } else if (seasons !== undefined) {
+    information.textContent = `Temporadas: ${seasons}`;
+    }
+
+    containerCard.appendChild(cover);
+    containerCard.appendChild(title);
+    containerCard.appendChild(information);
+  
+    return containerCard;
+  }
+
+function filterByYear2019(data, year) {
+    return data.filter((item) => item.year === year);
+  }
+  const filteredItems = {
+    movies: filterByYear2019(moviesData, 2019),
+    series: filterByYear2019(seriesData, 2019),
+  };
+  
+  const movie2019 = document.querySelector('.m2019');
+  movie2019.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2019';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+    buttonSerie.style.borderRadius = "2rem"
+
+    for (const type in filteredItems) {
+      filteredItems[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2018(data, year) {
+    return data.filter((item) => item.year === year);
+  }
+  const filtered2018 = {
+    movies: filterByYear2018(moviesData, 2018),
+    series: filterByYear2018(seriesData, 2018),
+  };
+  
+  const movie2018 = document.querySelector('.m2018');
+  movie2018.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2018';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonMovie.style.borderRadius = "2rem"
+    buttonSerie.style.backgroundColor = "#03738C"
+    buttonMovie.style.backgroundColor = "#03738C"
+
+    for (const type in filtered2018) {
+      filtered2018[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2017(data, year) {
+    return data.filter((item) => item.year === year);
+  }
+  const filtered2017 = {
+    movies: filterByYear2017(moviesData, 2017),
+    series: filterByYear2017(seriesData, 2017),
+  };
+  
+  const movie2017 = document.querySelector('.m2017');
+  movie2017.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2017';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+
+    for (const type in filtered2017) {
+      filtered2017[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2016(data, year) {
+    return data.filter((item) => item.year === year);
+  }
+  const filtered2016 = {
+    movies: filterByYear2016(moviesData, 2016),
+    series: filterByYear2016(seriesData, 2016),
+  };
+  
+  const movie2016 = document.querySelector('.m2016');
+  movie2016.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2016';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+
+    for (const type in filtered2016) {
+      filtered2016[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2015(data, year) {
+    return data.filter((item) => item.year === year);
+  }
+  const filtered2015 = {
+    movies: filterByYear2016(moviesData, 2015),
+    series: filterByYear2016(seriesData, 2015),
+  };
+  
+  const movie2015 = document.querySelector('.m2015');
+  movie2015.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2015';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+
+    for (const type in filtered2015) {
+      filtered2015[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2013(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2013 = {
+    movies: filterByYear2013(moviesData, 2013),
+    series: filterByYear2013(seriesData, 2013),
+};
+  
+  const movie2013 = document.querySelector('.m2013');
+  movie2013.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2013';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+
+    for (const type in filtered2013) {
+      filtered2013[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2011(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2011 = {
+    movies: filterByYear2011(moviesData, 2011),
+    series: filterByYear2011(seriesData, 2011),
+};
+  
+  const movie2011 = document.querySelector('.m2011');
+  movie2011.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2011';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered2011) {
+      filtered2011[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2010(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2010 = {
+    movies: filterByYear2010(moviesData, 2010),
+    series: filterByYear2010(seriesData, 2010),
+};
+  
+  const movie2010 = document.querySelector('.m2010');
+  movie2010.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2010';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered2010) {
+      filtered2010[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2009(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2009 = {
+    movies: filterByYear2009(moviesData, 2009),
+    series: filterByYear2009(seriesData, 2009),
+};
+  
+  const movie2009 = document.querySelector('.m2009');
+  movie2009.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2009';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered2009) {
+      filtered2009[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2008(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2008 = {
+    movies: filterByYear2008(moviesData, 2008),
+    series: filterByYear2008(seriesData, 2008),
+};
+  
+  const movie2008 = document.querySelector('.m2008');
+  movie2008.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2008';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered2008) {
+      filtered2008[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2005(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2005 = {
+    movies: filterByYear2005(moviesData, 2005),
+    series: filterByYear2005(seriesData, 2005),
+};
+  
+  const movie2005 = document.querySelector('.m2005');
+  movie2005.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2005';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered2005) {
+      filtered2005[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2004(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2004 = {
+    movies: filterByYear2004(moviesData, 2004),
+    series: filterByYear2004(seriesData, 2004),
+};
+  
+  const movie2004 = document.querySelector('.m2004');
+  movie2004.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2004';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered2004) {
+      filtered2004[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear2001(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered2001 = {
+    movies: filterByYear2001(moviesData, 2001),
+    series: filterByYear2001(seriesData, 2001),
+};
+  
+  const movie2001 = document.querySelector('.m2001');
+  movie2001.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '2001';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered2001) {
+      filtered2001[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+function filterByYear1998(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered1998 = {
+    movies: filterByYear1998(moviesData, 1998),
+    series: filterByYear1998(seriesData, 1998),
+};
+  
+  const movie1998 = document.querySelector('.m1998');
+  movie1998.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '1998';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered1998) {
+      filtered1998[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+function filterByYear1997(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered1997 = {
+    movies: filterByYear1997(moviesData, 1997),
+    series: filterByYear1997(seriesData, 1997),
+};
+  
+  const movie1997 = document.querySelector('.m1997');
+  movie1997.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '1997';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered1997) {
+      filtered1997[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+function filterByYear1994(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered1994 = {
+    movies: filterByYear1994(moviesData, 1994),
+    series: filterByYear1994(seriesData, 1994),
+};
+  
+  const movie1994 = document.querySelector('.m1994');
+  movie1994.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '1994';
+    buttonSerie.style.borderRadius = '2rem';
+    buttonSerie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered1994) {
+      filtered1994[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+function filterByYear1993(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered1993 = {
+    movies: filterByYear1993(moviesData, 1993),
+    series: filterByYear1993(seriesData, 1993),
+};
+  
+  const movie1993 = document.querySelector('.m1993');
+  movie1993.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '1993';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered1993) {
+      filtered1993[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+function filterByYear1980(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered1980 = {
+    movies: filterByYear1980(moviesData, 1980),
+    series: filterByYear1980(seriesData, 1980),
+};
+  
+  const movie1980 = document.querySelector('.m1980');
+  movie1980.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '1980';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered1980) {
+      filtered1980[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+function filterByYear1973(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered1973 = {
+    movies: filterByYear1973(moviesData, 1973),
+    series: filterByYear1973(seriesData, 1973),
+};
+  
+  const movie1973 = document.querySelector('.m1973');
+  movie1973.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '1973';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered1973) {
+      filtered1973[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+function filterByYear1972(data, year) {
+    return data.filter((item) => item.year === year);
+}
+const filtered1972 = {
+    movies: filterByYear1972(moviesData, 1972),
+    series: filterByYear1972(seriesData, 1972),
+};
+  
+  const movie1972 = document.querySelector('.m1972');
+  movie1972.addEventListener('click', () => {
+    sectionCategory.innerHTML = '';
+    sectionCategory.style.display = 'flex';
+    sectionMovies.style.display = 'none';
+    sectionSeries.style.display = 'none';
+    optionsDate.style.display = 'none';
+    button_byDate.textContent = '1972';
+    buttonMovie.style.borderRadius = '2rem';
+    buttonMovie.style.backgroundColor = "#03738C"
+    
+    for (const type in filtered1972) {
+      filtered1972[type].forEach((item) => {
+        const card = createCard(item);
+        sectionCategory.appendChild(card);
+      });
+    }
+  });
+
+

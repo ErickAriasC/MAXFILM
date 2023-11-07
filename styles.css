@@ -13,7 +13,7 @@ body {
     background-color: #00010d;
 
 }
-body button{
+body button,a{
     cursor: pointer;
     text-align: center;
 
@@ -552,8 +552,8 @@ a{
 .container-byDate{
     position: absolute;
     background-color: #025373e8;
-    top: 38rem;
-    left: 48.3rem;
+    top: 44.6rem;
+    left: 46.3rem;
     width: 8rem;
     height:10.8rem;
     justify-content: center;
