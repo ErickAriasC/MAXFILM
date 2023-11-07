@@ -782,29 +782,59 @@ const filterMovieAction=moviesData.filter((moviesData)=>moviesData.category==='A
 
 
 const searchInput= document.getElementById("search");
-const resultSearch= document.getElementById("search-result");
+const searchCont = document.querySelector('.section-category');
 
 
 searchInput.addEventListener("input", function () {
-    const searchTerm = searchInput.value.toLowerCase();
+    const searchTerm = searchInput.value.trim().toLowerCase();
   
-    // Limpia el contenedor de resultados antes de mostrar nuevos resultados
-    sectionMovies.innerHTML = "";
+    sectionMovies.style.display = searchTerm ? "none" : "block";
+    sectionSeries.style.display = searchTerm ? "none" : "block";
   
-    // Muestra las cards que coinciden con el término de búsqueda en tiempo real
-    for (const cardData of moviesData && seriesData) {
-      if (cardData.tittle.toLowerCase().includes(searchTerm)) {
-        const card = generateCardFromData(cardData);
-        sectionMovies.appendChild(card);
+    searchCont.innerHTML = "";
+  
+    if (searchTerm === "") {
+      sectionMovies.style.display = "block";
+      sectionSeries.style.display = "block";
+    } else {
+
+      const filteredResults = searchMoviesAndSeries(searchTerm);
+  
+      if (filteredResults.length === 0) {
+        searchCont.innerHTML = "No se encontraron resultados.";
+      } else {
+        displayResultsUsingGenerateCard(filteredResults, searchCont);
       }
     }
-  
-    if (sectionMovies.children.length === 0) {
-      // Si no se encontraron resultados, muestra un mensaje
-      sectionMovies.innerHTML = "No se encontraron resultados.";
-    }
   });
+
+//   Funcion de busqueda de series y movies:
+  function searchMoviesAndSeries(searchTerm) {
+
+    const filteredMovies = moviesData.filter((movie) =>
+      movie.tittle.toLowerCase().includes(searchTerm)
+    );
   
+
+    const filteredSeries = seriesData.filter((serie) =>
+      serie.tittle.toLowerCase().includes(searchTerm)
+    );
+  
+
+    const combinedResults = [...filteredMovies, ...filteredSeries];
+  
+    return combinedResults;
+  }
+// Función para mostrar las cards generadas en dodne yú desees:
+  function displayResultsUsingGenerateCard(results, container) {
+    for (const cardData of results) {
+      const card = generateCardFromData(cardData);
+      container.appendChild(card);
+    }
+  }
+
+
+//   Función que genera cards:
   function generateCardFromData(cardData) {
     const container_card_movie = document.createElement("div");
     container_card_movie.classList.add("container-card");
