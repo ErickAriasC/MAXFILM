@@ -780,7 +780,7 @@ const filterMovieDrama=moviesData.filter((moviesData)=>moviesData.category==='Dr
 const filterMovieAction=moviesData.filter((moviesData)=>moviesData.category==='Action')
 
 
-<<<<<<< HEAD
+
 const searchInput= document.getElementById("search");
 const resultSearch= document.getElementById("search-result");
 
@@ -792,7 +792,7 @@ searchInput.addEventListener("input", function () {
     sectionMovies.innerHTML = "";
   
     // Muestra las cards que coinciden con el término de búsqueda en tiempo real
-    for (const cardData of moviesData) {
+    for (const cardData of moviesData && seriesData) {
       if (cardData.tittle.toLowerCase().includes(searchTerm)) {
         const card = generateCardFromData(cardData);
         sectionMovies.appendChild(card);
@@ -827,7 +827,7 @@ searchInput.addEventListener("input", function () {
   }
 
   
-=======
+
 const moviesAdventure = document.querySelector('.moviesAdventure');
 
 
@@ -1109,4 +1109,4 @@ function createMovieCard(movie) {
      return container_card_serie;
  }
  
->>>>>>> origin/develop
+
