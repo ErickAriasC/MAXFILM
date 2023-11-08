@@ -30,7 +30,7 @@ const moviesData = [
         category: "Adventure",
         year: 1993,
         duration: "2h",
-        url: "https://youtu.be/lc0UehYemQA?si=w3MNNxcoaO_z8oBt"
+        url: "https://www.youtube.com/embed/lc0UehYemQA"
     },
     {
         id: 2,
@@ -42,7 +42,7 @@ const moviesData = [
         category: "Adventure",
         year: 2008,
         duration: "2h",
-        url: "https://youtu.be/s942xnT-Lhs?si=lsQskM69t9iUJEgG"
+        url: "https://www.youtube.com/embed/s942xnT-Lhs"
     },
     {
         id: 3,
@@ -54,7 +54,7 @@ const moviesData = [
         category: "Adventure",
         year: 2001,
         duration: "2h 58min",
-        url: "https://youtu.be/1YjXoRqUgVk?si=8ry9wa9KG9fOFxFF"
+        url: "https://www.youtube.com/embed/1YjXoRqUgVk"
     },
     {
         id: 4,
@@ -66,7 +66,7 @@ const moviesData = [
         category: "Comedy",
         year: 2009,
         duration: "1h 40min",
-        url: "https://youtu.be/wnNgGp1KVWQ?si=SgeMFHFsbMREPxA7"
+        url: "https://www.youtube.com/embed/wnNgGp1KVWQ"
     },
     {
         id: 5,
@@ -78,7 +78,7 @@ const moviesData = [
         category: "Comedy",
         year: 2010,
         duration: "1h 42min",
-        url: "https://youtu.be/yMEDiKD7cyE?si=gC4Rqz3vCknFLDdC"
+        url: "https://www.youtube.com/embed/yMEDiKD7cyE"
     },
     {
         id: 6,
@@ -90,7 +90,7 @@ const moviesData = [
         category: "Comedy",
         year: 2004,
         duration: "1h 49min",
-        url: "https://youtu.be/UxER50XHW-I?si=MleGYXF8R_eF8cEH"
+        url: "https://www.youtube.com/embed/aeVkbNka9HM"
     },
     {
         id: 7,
@@ -102,7 +102,7 @@ const moviesData = [
         category: "Terror",
         year: 1973,
         duration: "2h",
-        url: "https://youtu.be/opBpPS-n30s?si=hL0ZtN0QeGqIcF_l"
+        url: "https://www.youtube.com/embed/opBpPS-n30s"
     },
     {
         id: 8,
@@ -114,7 +114,7 @@ const moviesData = [
         category: "Terror",
         year: 2018,
         duration: "1h 36min",
-        url: "https://youtu.be/eqVjGwYFVqQ?si=DsUAhUCQLGPC4tOg"
+        url: "https://www.youtube.com/embed/mTvNeafShH0"
     },
     {
         id: 9,
@@ -126,7 +126,7 @@ const moviesData = [
         category: "Terror",
         year: 1980,
         duration: "2h 26min",
-        url: "https://youtu.be/A3q03BBwMp4?si=zcK1vS0D2xvWob1a"
+        url: "https://www.youtube.com/embed/A3q03BBwMp4"
     },
     {
         id: 10,
@@ -138,7 +138,7 @@ const moviesData = [
         category: "Drama",
         year: 1998,
         duration: "1h 43min",
-        url: "https://youtu.be/U6jYmOnnImI?si=SGKpZB5hwYlCoxds"
+        url: "https://www.youtube.com/embed/U6jYmOnnImI"
     },
     {
         id: 11,
@@ -150,7 +150,7 @@ const moviesData = [
         category: "Drama",
         year: 1972,
         duration: "2h 55min",
-        url: "https://youtu.be/iOyQx7MXaz0?si=X5YTJIX_FaOcWJbW"
+        url: "https://www.youtube.com/embed/iOyQx7MXaz0"
     },
     {
         id: 12,
@@ -162,7 +162,7 @@ const moviesData = [
         category: "Drama",
         year: 1997,
         duration: "3h 15min",
-        url: "https://youtu.be/tA_qMdzvCvk?si=JxBKkdfKQKVTnbVI"
+        url: "https://www.youtube.com/embed/tA_qMdzvCvk"
     },
     {
         id: 13,
@@ -174,7 +174,7 @@ const moviesData = [
         category: "Action",
         year: 2013,
         duration: "2h 11min",
-        url: "https://youtu.be/PVw40p8ZLkw?si=MXdq1KSpb9C2zzp2"
+        url: "https://www.youtube.com/embed/PVw40p8ZLkw"
     },
     {
         id: 14,
@@ -186,7 +186,7 @@ const moviesData = [
         category: "Action",
         year: 2015,
         duration: "2h",
-        url: "https://youtu.be/8TyoKn5Kmbo?si=bhusQUXr3Ic_4-rA2"
+        url: "https://www.youtube.com/embed/8TyoKn5Kmbo"
     },
     {
         id: 15,
@@ -198,7 +198,7 @@ const moviesData = [
         category: "Action",
         year: 2008,
         duration: "2h 32min",
-        url: "https://youtu.be/emYLYfuZAbU?si=t-5ZEsIa9AeCANRN"
+        url: "https://www.youtube.com/embed/emYLYfuZAbU"
     }
 ]
 
@@ -222,6 +222,10 @@ function generateRandomMovieCard() {
     const container_card_movie = document.createElement("div");
     container_card_movie.classList.add("container-card");
 
+    const iframe= document.createElement('iframe')
+    iframe.src=randomMovie.url;
+    iframe.classList.add('video-iframe')
+
     const cover = document.createElement("img");
     cover.src = randomMovie.vertical_cover;
 
@@ -232,7 +236,7 @@ function generateRandomMovieCard() {
     information.classList.add("description");
     information.textContent = `Duration: ${randomMovie.duration}`;
 
-
+    container_card_movie.appendChild(iframe);
     container_card_movie.appendChild(cover);
     container_card_movie.appendChild(tittle);
     container_card_movie.appendChild(information);
@@ -282,7 +286,7 @@ let seriesData = [
         season_4: "6 capítulos",
         season_5: "3 capítulos",
         season_6: "5 capítulos",
-        url: "https://www.youtube.com/watch?v=C3Hg8qgU4ss"
+        url: "https://www.youtube.com/embed/C3Hg8qgU4ss"
     },
     {
         id: 2,
@@ -298,7 +302,7 @@ let seriesData = [
         season_2: "9 capítulos",
         season_3: "8 capítulos",
         season_4: "9 capítulos",
-        url: "https://www.youtube.com/watch?v=Wre1F5YyIlA"
+        url: "https://www.youtube.com/embed/Wre1F5YyIlA"
     },
     {
         id: 3,
@@ -313,7 +317,7 @@ let seriesData = [
         season_1: "8 capítulos",
         season_2: "8 capítulos",
         season_3: "8 capítulos",
-        url: "https://www.youtube.com/watch?v=aOC8E8z_ifw"
+        url: "https://www.youtube.com/embed/aOC8E8z_ifw"
     },
     {
         id: 4,
@@ -327,7 +331,7 @@ let seriesData = [
         seasons: 2,
         season_1: "10 capítulos",
         season_2: "9 capítulos",
-        url: "https://www.youtube.com/watch?v=Fz5au4VLZjo"
+        url: "https://www.youtube.com/embed/Fz5au4VLZjo"
     },
     {
         id: 5,
@@ -343,7 +347,7 @@ let seriesData = [
         season_2: "3 capítulos",
         season_3: "3 capítulos",
         season_4: "3 capítulos",
-        url: "https://www.youtube.com/watch?v=9UcR9iKArd0"
+        url: "https://www.youtube.com/embed/9UcR9iKArd0"
     },
     {
         id: 6,
@@ -361,7 +365,7 @@ let seriesData = [
         season_4: "6 capítulos",
         season_5: "6 capítulos",
         season_6: "6 capítulos",
-        url: "https://www.youtube.com/watch?v=ZHZG6UArE3I"
+        url: "https://www.youtube.com/embed/ZHZG6UArE3I"
     },
     {
         id: 7,
@@ -381,7 +385,7 @@ let seriesData = [
         season_6: "10 capítulos",
         season_7: "7 capítulos",
         season_8: "6 capítulos",
-        url: "https://www.youtube.com/watch?v=KPLWWIOCOOQ"
+        url: "https://www.youtube.com/embed/KPLWWIOCOOQ"
     },
     {
         id: 8,
@@ -398,7 +402,7 @@ let seriesData = [
         season_3: "13 capítulos",
         season_4: "13 capítulos",
         season_5: "16 capítulos",
-        url: "https://www.youtube.com/watch?v=Bi3mMWw_cJ4"
+        url: "https://www.youtube.com/embed/Bi3mMWw_cJ4"
     },
     {
         id: 9,
@@ -416,7 +420,7 @@ let seriesData = [
         season_4: "10 capítulos",
         season_5: "10 capítulos",
         season_6: "10 capítulos",
-        url: "https://www.youtube.com/watch?v=zzBjNG1GKu4"
+        url: "https://www.youtube.com/embed/zzBjNG1GKu4"
     },
     {
         id: 10,
@@ -438,7 +442,7 @@ let seriesData = [
         season_8: "24 capítulos",
         season_9: "24 capítulos",
         season_10: "18 capítulos",
-        url: "https://www.youtube.com/watch?v=LTpmw0Ac6Zs"
+        url: "https://www.youtube.com/embed/MfvvhM6IJS0"
     },
     {
         id: 11,
@@ -459,7 +463,7 @@ let seriesData = [
         season_7: "26 capítulos",
         season_8: "24 capítulos",
         season_9: "27 capítulos",
-        url: "https://www.youtube.com/watch?v=LHOtME2DL4g"
+        url: "https://www.youtube.com/embed/LHOtME2DL4g"
     },
     {
         id: 12,
@@ -479,7 +483,7 @@ let seriesData = [
         season_6: "18 capítulos",
         season_7: "13 capítulos",
         season_8: "10 capítulos",
-        url: "https://www.youtube.com/watch?v=l94tBy1XwbY"
+        url: "https://www.youtube.com/embed/l94tBy1XwbY"
     },
     {
         id: 13,
@@ -502,7 +506,7 @@ let seriesData = [
         season_9: "9 capítulos",
         season_10: "10 capítulos",
         season_11: "7 capítulos",
-        url: "https://www.youtube.com/watch?v=1clnzxy31d0"
+        url: "https://www.youtube.com/embed/reP8VFF3KHU"
     },
     {
         id: 14,
@@ -515,7 +519,7 @@ let seriesData = [
         category: "Terror",
         seasons: 1,
         season_1: "10 capítulos",
-        url: "https://www.youtube.com/watch?v=mTvNeafShH0"
+        url: "https://www.youtube.com/embed/mTvNeafShH0"
     },
     {
         id: 15,
@@ -538,7 +542,7 @@ let seriesData = [
         season_9: "15 capítulos",
         season_10: "22 capítulos",
         season_11: "24 capítulos",
-        url: "https://www.youtube.com/watch?v=kKYtY7CC1Gc"
+        url: "https://www.youtube.com/embed/kKYtY7CC1Gc"
     }
 ]
 
@@ -689,6 +693,10 @@ function generateRandomSerieCard() {
     const container_card_Serie = document.createElement("div");
     container_card_Serie.classList.add("container-card");
 
+    const iframe= document.createElement('iframe')
+    iframe.src=randomSerie.url;
+    iframe.classList.add('video-iframe')
+
     const cover = document.createElement("img");
     cover.src = randomSerie.vertical_cover;
 
@@ -698,6 +706,8 @@ function generateRandomSerieCard() {
     const information = document.createElement("p");
     information.classList.add("description");
     information.textContent = `Temporadas: ${randomSerie.seasons}`;
+
+    container_card_Serie.appendChild(iframe);
     container_card_Serie.appendChild(cover);
     container_card_Serie.appendChild(tittle);
     container_card_Serie.appendChild(information);

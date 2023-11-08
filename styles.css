@@ -296,7 +296,7 @@ button {
 }
 
 .sectionC-movies,
-.sectionC-series {
+.sectionC-series, .section-category {
     width: 100%;
     height: 100%;
     margin-top: 1rem;
@@ -306,6 +306,49 @@ button {
 
 }
 
+.sectionC-movies > div,.sectionC-series> div {
+    flex: 2;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .5s cubic-bezier(.2, .1, .1, .1);
+    
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.sectionC-movies > div:hover,.sectionC-series > div:hover {
+    flex: 4;
+    
+}
+
+.video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 525px;
+    display: none;
+}
+
+.sectionC-movies > div:hover .video-iframe,.sectionC-series > div:hover .video-iframe {
+    display: block;
+}
+
+.container_card_movie  {
+    width: 150px;
+    height: auto;
+   }
+.container_card_movie img {
+    width: 350px;
+    height: 525px;
+}
+
+.container_card_movie iframe {
+    width: 700px;
+    height: 525px;
+   }
+   
 .tittle-series,
 .tittle-movies,
 .left,
@@ -503,6 +546,7 @@ button {
     top: 44.5rem;
     left: 22.2rem;
     padding-top: 1.5rem;
+    z-index: 1;
 }
 
 .category_movies{
@@ -588,6 +632,7 @@ a{
     clip-path: inset(0px round 15px);
     overflow:auto;
     padding-top: 1.5rem;
+    z-index: 1;
 }
 /* Estilo del scroll */
 .container-byDate::-webkit-scrollbar{
