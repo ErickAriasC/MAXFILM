@@ -13,14 +13,14 @@ body {
     background-color: #00010d;
 
 }
-body button{
+body button,a{
     cursor: pointer;
     text-align: center;
 
 }
 
 .header {
-    width: 80px;
+    width: auto;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -42,19 +42,25 @@ body button{
 }
 
 .bar {
-    width: 25px;
     height: 3px;
+    width: 25px;
+    margin: 6px auto;
+    transition: 0.4s;
     background-color: #d9d8d7;
-    margin: 5px 0;
+}
+.content-nav-bar {
+    margin-top: 40rem;
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+.content-nav-bar.open {
+    display: block;
 }
 
 .content-nav-bar img {
     width: 35px;
     height: 35px;
-}
-
-.content-nav-bar {
-    margin-top: 40rem;
 }
 
 .content-nav-bar li {
@@ -235,8 +241,36 @@ button {
     color: #88B0BF;
     font-size: 30px;
     width: 18rem;
+    outline: none
 
 }
+
+.side2 > #search-result {
+    position: absolute;
+    max-height: 150px;
+    height: 80px;
+    width: 280px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #025373e8;
+    z-index: 1000; /* Valor alto para estar por encima de otros elementos */
+    border-radius: 28px;
+    font-size: 21px;
+    top: 38.5rem;
+    right: 7rem;
+  }
+  
+  
+   .side2 > #search-results::-webkit-scrollbar-thumb {
+    background-color: rgba(51, 51, 51, 0.8); /* Color semitransparente de la barra del scrollbar en navegadores WebKit */
+  }
+
+  .side2 > #search-results::-webkit-scrollbar-track {
+    background: rgba(238, 238, 238, 0.8); /* Fondo semitransparente del scrollbar en navegadores WebKit */
+  }
+  .hidden {
+    display: none;
+  }
 
 .side2>.lupa>img {
     width: 60px;
@@ -553,6 +587,37 @@ button {
 a{
     text-decoration: none;
 }
+
+/* options Date */
+
+.container-byDate{
+    position: absolute;
+    background-color: #025373e8;
+    top: 44.6rem;
+    left: 46.3rem;
+    width: 8rem;
+    height:10.8rem;
+    justify-content: center;
+    clip-path: inset(0px round 15px);
+    overflow:auto;
+    padding-top: 1.5rem;
+}
+/* Estilo del scroll */
+.container-byDate::-webkit-scrollbar{
+    width: 7px;
+     
+}
+/* Cambia el color del fondo del scroll */
+.container-byDate::-webkit-scrollbar-track {
+    background: #025373e8;
+}
+   
+/* Cambia el color de la barra de desplazamiento */
+.container-byDate::-webkit-scrollbar-thumb {
+    background: #88B0BF;
+    border-radius: 1rem;
+ }
+  
 
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
