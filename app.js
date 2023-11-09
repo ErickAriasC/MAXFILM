@@ -1769,12 +1769,22 @@ const filtered1972 = {
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.querySelector('.menu-button');
     const contentNavBar = document.querySelector('.content-nav-bar');
   
-    menuButton.addEventListener('click', function() {
-      contentNavBar.classList.toggle('open');
-      menuButton.classList.toggle('clicked');
+    // Ocultar etiquetas 'a' inicialmente
+    contentNavBar.querySelectorAll('a.header-menu').forEach(a => {
+      a.style.display = 'none';
+    });
+  
+    const menuButton = document.querySelector('.menu-button');
+  
+    menuButton.addEventListener('click', () => {
+      contentNavBar.classList.toggle('show-images');
+  
+      // Toggle de la visibilidad de las etiquetas 'a' al hacer clic en el botón
+      contentNavBar.querySelectorAll('a.header-menu').forEach(a => {
+        a.style.display = a.style.display === 'none' ? 'inline-block' : 'none';
+      });
     });
   });
 

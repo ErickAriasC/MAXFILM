@@ -52,15 +52,15 @@ body button,a{
     margin-top: 40rem;
     list-style: none;
     padding: 0;
-    display: none;
-}
-.content-nav-bar.open {
-    display: block;
 }
 
 .content-nav-bar img {
     width: 35px;
     height: 35px;
+    display: inline;
+}
+.content-nav-bar.show-images img {
+    display: inline-block; 
 }
 
 .content-nav-bar li {
@@ -68,8 +68,8 @@ body button,a{
 }
 
 .header-menu {
+    margin-top: 10px;
     padding-left: 1rem;
-    display: flex;
 }
 li {
     list-style: none;
