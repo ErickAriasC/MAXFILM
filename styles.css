@@ -20,7 +20,7 @@ body button,a{
 }
 
 .header {
-    width: 80px;
+    width: auto;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -42,22 +42,35 @@ body button,a{
 }
 
 .bar {
-    width: 25px;
     height: 3px;
+    width: 25px;
+    margin: 6px auto;
+    transition: 0.4s;
     background-color: #d9d8d7;
-    margin: 5px 0;
+}
+.content-nav-bar {
+    margin-top: 40rem;
+    list-style: none;
+    padding: 0;
 }
 
 .content-nav-bar img {
     width: 35px;
     height: 35px;
+    display: inline;
+}
+.content-nav-bar.show-images img {
+    display: inline-block; 
 }
 
-.content-nav-bar {
-    margin-top: 40rem;
+.content-nav-bar li {
+    display: flex;
 }
 
-
+.header-menu {
+    margin-top: 10px;
+    padding-left: 1rem;
+}
 li {
     list-style: none;
 }
