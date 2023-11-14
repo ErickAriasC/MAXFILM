@@ -548,6 +548,44 @@ let seriesData = [
 
 
 const buttonSerie = document.getElementById("buttonSerie");
+const iconmovies = document.getElementById("icon-movies");
+const iconseries = document.getElementById("icon-series");
+const mainMenu = document.getElementById("main-menu"); // Seleccionar el menú principal
+const contentNavBar = document.getElementById("contentNavBar"); // Obtener el contenedor de las etiquetas 'a'
+
+const menuItems = document.querySelectorAll('.header-menu');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    // menuItems.forEach(otherItem => {
+    //   if (otherItem !== item) {
+    //     otherItem.style.display = 'none';
+    //   }
+    // });
+
+    if (item === iconmovies) {
+      sectionMovies.style.display = "flex";
+      sectionSeries.style.display = 'none';
+    } else if (item === iconseries) {
+      sectionSeries.style.display = 'flex';
+      sectionMovies.style.display = "none";
+    }
+  });
+});
+
+// Mostrar el menú al hacer clic en el botón de menú
+const menuButton = document.querySelector('.menu-button');
+menuButton.addEventListener('click', function() {
+  mainMenu.style.display = 'block';
+
+  // Alternar la visibilidad de los elementos 'a.header-menu' dentro de contentNavBar
+  contentNavBar.querySelectorAll('a.header-menu').forEach(a => {
+    a.style.display = a.style.display === 'none' ? 'inline-block' : 'none';
+  });
+});
+
 
 buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
