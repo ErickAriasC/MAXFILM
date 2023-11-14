@@ -65,8 +65,16 @@ body button,a{
 
 .content-nav-bar li {
     display: flex;
+    margin-bottom: 4rem;
+    height: 3.5rem;
+    width: auto;
+    padding: 0.7rem;
+    border-radius: 26px;
 }
 
+.content-nav-bar li.active {
+    background-color: #88b0bf52;
+  }
 .header-menu {
     margin-top: 10px;
     padding-left: 1rem;

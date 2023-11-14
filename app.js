@@ -552,18 +552,19 @@ const iconmovies = document.getElementById("icon-movies");
 const iconseries = document.getElementById("icon-series");
 const mainMenu = document.getElementById("main-menu"); // Seleccionar el menú principal
 const contentNavBar = document.getElementById("contentNavBar"); // Obtener el contenedor de las etiquetas 'a'
-
 const menuItems = document.querySelectorAll('.header-menu');
 
 menuItems.forEach(item => {
   item.addEventListener('click', function(event) {
     event.preventDefault();
 
-    // menuItems.forEach(otherItem => {
-    //   if (otherItem !== item) {
-    //     otherItem.style.display = 'none';
-    //   }
-    // });
+    // Quita la clase 'active' de todos los elementos 'a'
+    menuItems.forEach(menuItem => {
+      menuItem.classList.remove('active');
+    });
+
+    // Agrega la clase 'active' solo al elemento clickeado
+    item.classList.add('active');
 
     if (item === iconmovies) {
       sectionMovies.style.display = "flex";
@@ -572,6 +573,21 @@ menuItems.forEach(item => {
       sectionSeries.style.display = 'flex';
       sectionMovies.style.display = "none";
     }
+  });
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const contentNavItems = document.querySelectorAll('.content-nav-bar li');
+
+  contentNavItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Quitamos la clase 'active' de todos los elementos 'li' de la barra de navegación
+      contentNavItems.forEach(navItem => {
+        navItem.classList.remove('active');
+      });
+
+      // Agregamos la clase 'active' solo al elemento clickeado
+      item.classList.add('active');
+    });
   });
 });
 
