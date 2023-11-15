@@ -1863,4 +1863,15 @@ const filtered1972 = {
     });
   });
 
-  
+  //Funcionalida Section about us:
+
+  const btnAboutUs= document.getElementById('about_us');
+  const sectionAbout= document.getElementById('cont-aboutus');
+
+  sectionAbout.style.display= 'none';
+
+  btnAboutUs.addEventListener('click', e =>{
+    e.preventDefault();
+
+    sectionAbout.style.display = sectionAbout.style.display === 'none' ? 'block' : 'none';
+  })
