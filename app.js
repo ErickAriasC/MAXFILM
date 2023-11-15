@@ -602,6 +602,17 @@ menuButton.addEventListener('click', function() {
   });
 });
 
+iconmovies.addEventListener("click", function() {
+  iconmovies.style.backgroundColor = "";
+  buttonMovie.style.backgroundColor = "rgb(3, 115, 140)"; // Cambia el color del otro botón si es necesario
+  buttonMovie.style.borderRadius = "2rem"
+});
+
+iconseries.addEventListener("click", function() {
+  iconseries.style.backgroundColor = "";
+  buttonSerie.style.backgroundColor = "rgb(3, 115, 140)"; // Cambia el color del otro botón si es necesario
+  buttonSerie.style.borderRadius = "2rem"
+});
 
 buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
