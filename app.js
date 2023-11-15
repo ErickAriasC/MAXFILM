@@ -550,20 +550,16 @@ let seriesData = [
 const buttonSerie = document.getElementById("buttonSerie");
 const iconmovies = document.getElementById("icon-movies");
 const iconseries = document.getElementById("icon-series");
-const mainMenu = document.getElementById("main-menu"); // Seleccionar el menú principal
-const contentNavBar = document.getElementById("contentNavBar"); // Obtener el contenedor de las etiquetas 'a'
+const mainMenu = document.getElementById("main-menu"); 
+const contentNavBar = document.getElementById("contentNavBar"); 
 const menuItems = document.querySelectorAll('.header-menu');
 
 menuItems.forEach(item => {
   item.addEventListener('click', function(event) {
     event.preventDefault();
-
-    // Quita la clase 'active' de todos los elementos 'a'
     menuItems.forEach(menuItem => {
       menuItem.classList.remove('active');
     });
-
-    // Agrega la clase 'active' solo al elemento clickeado
     item.classList.add('active');
 
     if (item === iconmovies) {
@@ -580,23 +576,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   contentNavItems.forEach(item => {
     item.addEventListener('click', function() {
-      // Quitamos la clase 'active' de todos los elementos 'li' de la barra de navegación
       contentNavItems.forEach(navItem => {
         navItem.classList.remove('active');
       });
-
-      // Agregamos la clase 'active' solo al elemento clickeado
       item.classList.add('active');
     });
   });
 });
 
-// Mostrar el menú al hacer clic en el botón de menú
+
 const menuButton = document.querySelector('.menu-button');
 menuButton.addEventListener('click', function() {
   mainMenu.style.display = 'block';
 
-  // Alternar la visibilidad de los elementos 'a.header-menu' dentro de contentNavBar
+
   contentNavBar.querySelectorAll('a.header-menu').forEach(a => {
     a.style.display = a.style.display === 'none' ? 'inline-block' : 'none';
   });
@@ -604,7 +597,7 @@ menuButton.addEventListener('click', function() {
 
 iconmovies.addEventListener("click", function() {
   iconmovies.style.backgroundColor = "";
-  buttonMovie.style.backgroundColor = "rgb(3, 115, 140)"; // Cambia el color del otro botón si es necesario
+  buttonMovie.style.backgroundColor = "rgb(3, 115, 140)"; 
   buttonMovie.style.borderRadius = "2rem"
   buttonSerie.style.backgroundColor = ""
   buttonSerie.style.borderRadius = ""
@@ -612,7 +605,7 @@ iconmovies.addEventListener("click", function() {
 
 iconseries.addEventListener("click", function() {
   iconseries.style.backgroundColor = "";
-  buttonSerie.style.backgroundColor = "rgb(3, 115, 140)"; // Cambia el color del otro botón si es necesario
+  buttonSerie.style.backgroundColor = "rgb(3, 115, 140)"; 
   buttonSerie.style.borderRadius = "2rem"
   buttonMovie.style.backgroundColor = ""
   buttonMovie.style.borderRadius = ""
