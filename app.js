@@ -114,7 +114,7 @@ const moviesData = [
         category: "Terror",
         year: 2018,
         duration: "1h 36min",
-        url: "https://www.youtube.com/embed/mTvNeafShH0"
+        url: "https://www.youtube.com/embed/eqVjGwYFVqQ?si=U_XDXfgnhiUE6sN2"
     },
     {
         id: 9,
@@ -546,7 +546,7 @@ let seriesData = [
     }
 ]
 
-
+/*Function hide and show the background to the buttons Movies and Series*/
 const buttonSerie = document.getElementById("buttonSerie");
 const iconmovies = document.getElementById("icon-movies");
 const iconseries = document.getElementById("icon-series");
