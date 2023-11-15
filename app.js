@@ -114,7 +114,7 @@ const moviesData = [
         category: "Terror",
         year: 2018,
         duration: "1h 36min",
-        url: "https://www.youtube.com/embed/mTvNeafShH0"
+        url: "https://www.youtube.com/embed/eqVjGwYFVqQ?si=U_XDXfgnhiUE6sN2"
     },
     {
         id: 9,
