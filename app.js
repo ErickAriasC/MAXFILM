@@ -546,7 +546,7 @@ let seriesData = [
     }
 ]
 
-
+/*Function hide and show the background to the buttons Movies and Series*/
 const buttonSerie = document.getElementById("buttonSerie");
 const iconmovies = document.getElementById("icon-movies");
 const iconseries = document.getElementById("icon-series");
