@@ -65,8 +65,16 @@ body button,a{
 
 .content-nav-bar li {
     display: flex;
+    margin-bottom: 4rem;
+    height: 3.5rem;
+    width: auto;
+    padding: 0.7rem;
+    border-radius: 26px;
 }
 
+.content-nav-bar li.active {
+    background-color: #88b0bf52;
+  }
 .header-menu {
     margin-top: 10px;
     padding-left: 1rem;
@@ -82,6 +90,64 @@ li {
 .content-page {
     display: flex;
     flex-direction: column;
+}
+
+.cont-aboutus{
+    z-index: 9999;
+    position: absolute;
+    width: 100rem;
+    height: 49rem;
+    background: rgba(2, 83, 115, 0.8);
+    border-radius: 40px;
+    left: 6rem;
+    top: 41.8rem;
+    padding-top: 4.3rem;
+}
+
+.cont-aboutus > img {
+    height: 41rem;
+    width: 6rem;
+    position: absolute;
+}
+
+.btns-about{
+    display: flex;
+    gap: 3rem;
+    padding-left: 10rem;
+}
+
+.btns-about > button {
+    color: rgba(217, 216, 215, 1);
+    font-size: 33px;
+    font-weight: 400;
+    border: none;
+}
+
+.btn-about1{
+    background: none;
+}
+
+.btn-about2{
+    background: rgba(136, 176, 191, 0.4);
+    border-radius: 18px;
+    padding: 0.7rem;
+}
+
+.content-about{
+    margin-top: 4rem;
+    padding-left: 10rem;
+}
+
+.content-about > h3{
+    color: rgba(217, 216, 215, 1);
+    font-size: 55px;
+    font-weight: 400;
+}
+.content-about > p{
+    color: rgba(217, 216, 215, 1);
+    font-size: 28px;
+    margin-top: 2rem;
+    font-weight: 400;
 }
 
 main {

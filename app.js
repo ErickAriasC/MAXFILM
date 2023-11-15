@@ -114,7 +114,7 @@ const moviesData = [
         category: "Terror",
         year: 2018,
         duration: "1h 36min",
-        url: "https://www.youtube.com/embed/mTvNeafShH0"
+        url: "https://www.youtube.com/embed/eqVjGwYFVqQ?si=U_XDXfgnhiUE6sN2"
     },
     {
         id: 9,
@@ -546,8 +546,70 @@ let seriesData = [
     }
 ]
 
-
+/*Function hide and show the background to the buttons Movies and Series*/
 const buttonSerie = document.getElementById("buttonSerie");
+const iconmovies = document.getElementById("icon-movies");
+const iconseries = document.getElementById("icon-series");
+const mainMenu = document.getElementById("main-menu"); 
+const contentNavBar = document.getElementById("contentNavBar"); 
+const menuItems = document.querySelectorAll('.header-menu');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', function(event) {
+    event.preventDefault();
+    menuItems.forEach(menuItem => {
+      menuItem.classList.remove('active');
+    });
+    item.classList.add('active');
+
+    if (item === iconmovies) {
+      sectionMovies.style.display = "flex";
+      sectionSeries.style.display = 'none';
+    } else if (item === iconseries) {
+      sectionSeries.style.display = 'flex';
+      sectionMovies.style.display = "none";
+    }
+  });
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const contentNavItems = document.querySelectorAll('.content-nav-bar li');
+
+  contentNavItems.forEach(item => {
+    item.addEventListener('click', function() {
+      contentNavItems.forEach(navItem => {
+        navItem.classList.remove('active');
+      });
+      item.classList.add('active');
+    });
+  });
+});
+
+
+const menuButton = document.querySelector('.menu-button');
+menuButton.addEventListener('click', function() {
+  mainMenu.style.display = 'block';
+
+
+  contentNavBar.querySelectorAll('a.header-menu').forEach(a => {
+    a.style.display = a.style.display === 'none' ? 'inline-block' : 'none';
+  });
+});
+
+iconmovies.addEventListener("click", function() {
+  iconmovies.style.backgroundColor = "";
+  buttonMovie.style.backgroundColor = "rgb(3, 115, 140)"; 
+  buttonMovie.style.borderRadius = "2rem"
+  buttonSerie.style.backgroundColor = ""
+  buttonSerie.style.borderRadius = ""
+});
+
+iconseries.addEventListener("click", function() {
+  iconseries.style.backgroundColor = "";
+  buttonSerie.style.backgroundColor = "rgb(3, 115, 140)"; 
+  buttonSerie.style.borderRadius = "2rem"
+  buttonMovie.style.backgroundColor = ""
+  buttonMovie.style.borderRadius = ""
+});
 
 buttonSerie.addEventListener("click", function () {
     sectionMovies.style.display = "none"
@@ -1811,4 +1873,15 @@ const filtered1972 = {
     });
   });
 
-  
+  //Funcionalida Section about us:
+
+  const btnAboutUs= document.getElementById('about_us');
+  const sectionAbout= document.getElementById('cont-aboutus');
+
+  sectionAbout.style.display= 'none';
+
+  btnAboutUs.addEventListener('click', e =>{
+    e.preventDefault();
+
+    sectionAbout.style.display = sectionAbout.style.display === 'none' ? 'block' : 'none';
+  })
