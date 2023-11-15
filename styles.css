@@ -306,6 +306,8 @@ button {
     padding: .6rem;
     margin: .4rem;
     font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
 }
 
 .sectionC-movies,
@@ -326,7 +328,8 @@ button {
     transition: all .5s cubic-bezier(.2, .1, .1, .1);
     
     position: relative;
-    overflow: hidden;
+    text-align: center;
+    
     
 }
 

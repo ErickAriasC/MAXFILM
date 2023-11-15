@@ -765,6 +765,10 @@ function validateIf() {
         showMoreSeries.style.display = "none";
         showMoreHome.style.display = "none";
         showMoreMovies.style.display = "flex";
+    }else{
+      showMoreSeries.style.display = "none"
+      showMoreHome.style.display = "block"
+      showMoreMovies.style.display = "none"
     }
 
 }
@@ -772,6 +776,15 @@ function validateIf() {
 
 let remainingSeries = seriesData.length;
 let remainingMovies = moviesData.length;
+
+// ButtonShowMoreHome
+showMoreHome.addEventListener('click', showMoreHomeContent)
+
+function showMoreHomeContent() {
+  showRandomSerieCards(11);
+  showRandomMovieCards(11);
+  showMoreHome.textContent = 'Show Less'
+}
 
 //BUTTON MOVIES
 showMoreMovies.addEventListener('click', btnShowMoreMovies)
