@@ -32,18 +32,37 @@
           <a class="movies" href="">
             <img src="img/iconos/cinta_blanco.png" alt="">
           </a>
-          <a href="" class="header-menu">Movies</a>
+          <a href="#sectionC-movies" class="header-menu" id="icon-movies">Movies</a>
         </li>
         <li>
           <a class="series" href="">
             <img src="img/iconos/movies_blanco.png" alt="">
           </a>
-          <a href="" class="header-menu">Series</a>
+          <a href="#sectionC-series" class="header-menu" id="icon-series">Series</a>
         </li>
         <li>
-          <a class="about_us" href="">
+          <a class="about_us" id="about_us" href="">
             <img src="img/iconos/information_blanco.png" alt="">
           </a>
+          <section id="cont-aboutus" class="cont-aboutus">
+            <img src="icons/barra lateral izquierda.png" alt="">
+            <div class="btns-about">
+              <button class="btn-about1" onclick="location.reload()">Home</button>
+              <button class="btn-about2"> About us</button>
+            </div>
+            <div class="content-about">
+              <h3>About Us</h3>
+              <p>We are MAXFILM, an intermediary platform that helps users find the best movies and series to watch.
+                We offer a wide selection of titles from the main streaming platforms, such as Prime Video, HBO, Netflix and Disney+, etc.
+                </p>
+              <p>Our goal is to make it easier for users to find something to watch by providing detailed information about each title, such as trailers, synopsis, duration, etc.
+                If you decide to watch a movie or series, MAXFILM will redirect you to the platform where you can find it.
+                </p>
+              <p>At MAXFILM, we believe everyone deserves to find something to watch that they love. That's why we strive to offer a platform that is easy to use and provides all the information users need to make an informed decision.
+              </p>
+              <p>If you are looking for a new movie or series to watch, we invite you to visit MAXFILM.</p>
+            </div>
+          </section>
           <a href="" class="header-menu">About Us</a>
         </li>
       </ul>
@@ -150,14 +169,14 @@
       <h3 class="tittle-movies">Movies</h3>
       <button id="next-button-moviesRight"><img class="right" src="icons/abajo_blancopng.png" alt=""></button>
       <button id="next-button-moviesLeft"><img class="left" src="icons/abajo_blancopng.png" alt=""></button>
-      <section class="sectionC-movies">
+      <section class="sectionC-movies" id="sectionC-movies">
         <!-- EL CONTENIDO ESTA EN APP.JS -->
       </section>
 
       <h3 class="tittle-series">Series</h3>
       <button id="next-button-seriesRight"><img class="right" src="icons/abajo_blancopng.png" alt=""></button>
       <button id="next-button-seriesLeft"><img class="left" src="icons/abajo_blancopng.png" alt=""></button>
-      <section class="sectionC-series">
+      <section class="sectionC-series" id="sectionC-series">
       </section>
       <section class="section-category">
         <!-- EL CONTENIDO ESTA EN APP.JS -->
