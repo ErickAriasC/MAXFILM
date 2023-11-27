@@ -658,6 +658,7 @@ const iconseries = document.getElementById("icon-series");
 const mainMenu = document.getElementById("main-menu");
 const contentNavBar = document.getElementById("contentNavBar");
 const menuItems = document.querySelectorAll('.header-menu');
+const iconHome = document.getElementById('icon-home');
 
 menuItems.forEach(item => {
   item.addEventListener('click', function (event) {
@@ -701,19 +702,69 @@ menuButton.addEventListener('click', function () {
 });
 
 iconmovies.addEventListener("click", function () {
-  iconmovies.style.backgroundColor = "";
+  iconmovies.style.backgroundColor = "#88b0bf52";
   buttonMovie.style.backgroundColor = "rgb(3, 115, 140)";
   buttonMovie.style.borderRadius = "2rem"
   buttonSerie.style.backgroundColor = ""
   buttonSerie.style.borderRadius = ""
+  sectionSeries.style.display = "none"
+  sectionMovies.style.display = "flex"
+
+  buttonMovie.style.backgroundColor = "#03738C"
+  buttonMovie.style.borderRadius = "2rem"
+ 
+  button_byCategory.style.backgroundColor = ""
+  button_byCategory.style.borderRadius = " "
+
+  optionsCategory.style.display = 'none';
+  sectionCategory.style.display = 'none';
+  button_byCategory.textContent = 'By Category'
+  button_byDate.textContent = 'By Date'
+
+  button_byDate.style.backgroundColor = ""
+  button_byDate.style.borderRadius = " "
+
+  optionsDate.style.display = 'none';
+  iconseries.style.backgroundColor = ""
+  
+  sectionAbout.style.display = "none"
+  iconHome.style.backgroundColor = ""
+  btnAboutUs.style.backgroundColor = "";
 });
 
 iconseries.addEventListener("click", function () {
-  iconseries.style.backgroundColor = "";
+  iconseries.style.backgroundColor = "#88b0bf52";
   buttonSerie.style.backgroundColor = "rgb(3, 115, 140)";
   buttonSerie.style.borderRadius = "2rem"
   buttonMovie.style.backgroundColor = ""
   buttonMovie.style.borderRadius = ""
+  sectionSeries.style.display = "flex";
+  sectionMovies.style.display = "none";
+
+  buttonMovie.style.backgroundColor = "";
+  buttonSerie.style.backgroundColor = "#03738C";
+
+  buttonMovie.style.borderRadius = "";
+  buttonSerie.style.borderRadius = "2rem"
+
+  button_byCategory.style.backgroundColor = "";
+  button_byCategory.style.borderRadius = " ";
+
+  optionsCategory.style.display = 'none';
+  sectionCategory.style.display = 'none';
+  button_byCategory.textContent = 'By Category';
+  button_byDate.textContent = 'By Date';
+
+  button_byDate.style.backgroundColor = "";
+  button_byDate.style.borderRadius = " ";
+
+  optionsDate.style.display = 'none';
+  iconmovies.style.backgroundColor = "";
+  buttonMovie.style.backgroundColor = "";
+  sectionAbout.style.display = "none";
+  iconHome.style.backgroundColor = "";
+  btnAboutUs.style.backgroundColor = "";
+
 });
 
 buttonSerie.addEventListener("click", function () {
@@ -739,6 +790,11 @@ buttonSerie.addEventListener("click", function () {
   button_byDate.style.borderRadius = " "
 
   optionsDate.style.display = 'none';
+  iconseries.style.backgroundColor = "#88b0bf52";
+  iconmovies.style.backgroundColor =""
+  buttonMovie.style.backgroundColor = ""
+  sectionAbout.style.display = "none"
+  iconHome.style.backgroundColor = ""
 })
 
 const buttonMovie = document.getElementById("button-Movies");
@@ -767,6 +823,32 @@ buttonMovie.addEventListener("click", function () {
   button_byDate.style.borderRadius = " "
 
   optionsDate.style.display = 'none';
+  iconmovies.style.backgroundColor = "#88b0bf52";
+  iconseries.style.backgroundColor ="";
+  buttonSerie.style.backgroundColor = "";
+  sectionAbout.style.display = "none"
+  iconHome.style.backgroundColor = "";
+  btnAboutUs.style.backgroundColor ="";
+ 
+})
+
+iconHome.addEventListener('click', () =>{
+  iconHome.style.backgroundColor = "#88b0bf52";
+  sectionMovies.style.display ="flex"
+  sectionSeries.style.display ="flex";
+  buttonMovie.style.backgroundColor = "";
+  buttonSerie.style.backgroundColor = "";
+  iconmovies.style.backgroundColor = "";
+  iconseries.style.backgroundColor = "";
+  btnAboutUs.style.backgroundColor = "";
+  sectionAbout.style.display = "none";
+  button_byDate.style.backgroundColor = "";
+  button_byDate.textContent = "By Date"
+  optionsDate.style.display = "none"
+  optionsCategory.style.display = "none";
+  button_byCategory.textContent = "By Category"
+  button_byCategory.style.backgroundColor = "";
+
 })
 
 const optionsCategory = document.querySelector('.container_categories')
@@ -790,6 +872,10 @@ function optionCategory() {
   button_byDate.textContent = 'By Date'
   button_byDate.style.backgroundColor = ""
   optionsDate.style.display = 'none';
+  iconHome.style.backgroundColor = "";
+  iconmovies.style.backgroundColor = "";
+  iconseries.style.backgroundColor = "";
+  btnAboutUs.style.backgroundColor = "";
 
   if (categorysVisible) {
     optionsCategory.style.display = 'flex';
@@ -824,6 +910,11 @@ function optionDate() {
   button_byCategory.textContent = 'By Category'
   button_byCategory.style.backgroundColor = ""
   optionsCategory.style.display = 'none';
+  iconHome.style.backgroundColor = "";
+  iconmovies.style.backgroundColor = "";
+  iconseries.style.backgroundColor = "";
+  btnAboutUs.style.backgroundColor = "";
+
 
 
   if (byDateVisible) {
@@ -1218,6 +1309,7 @@ moviesAdventure.addEventListener('click', () => {
   optionsCategory.style.display = 'none';
   button_byCategory.textContent = 'Adventure'
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
   buttonMovie.style.borderRadius = "2rem"
   line_1.style.width = '87%'
   const filteredMovies = filterMovieAdventure;
@@ -1241,6 +1333,7 @@ moviesComedy.addEventListener('click', () => {
   button_byCategory.textContent = 'Comedy'
   buttonMovie.style.backgroundColor = "#03738C"
   buttonMovie.style.borderRadius = "2rem"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   const filteredMovies = filterMovieComedy;
 
@@ -1262,6 +1355,7 @@ moviesTerror.addEventListener('click', () => {
   button_byCategory.textContent = 'Terror'
   buttonMovie.style.backgroundColor = "#03738C"
   buttonMovie.style.borderRadius = "2rem"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   const filteredMovies = filterMovieTerror;
 
@@ -1283,6 +1377,7 @@ moviesDrama.addEventListener('click', () => {
   button_byCategory.textContent = 'Drama'
   buttonMovie.style.backgroundColor = "#03738C"
   buttonMovie.style.borderRadius = "2rem"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   const filteredMovies = filterMovieDrama;
 
@@ -1304,6 +1399,7 @@ moviesAction.addEventListener('click', () => {
   button_byCategory.textContent = 'Action'
   buttonMovie.style.backgroundColor = "#03738C"
   buttonMovie.style.borderRadius = "2rem"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   const filteredMovies = filterMovieAction;
 
@@ -1358,6 +1454,7 @@ seriesScienceFiction.addEventListener('click', () => {
   buttonSerie.style.backgroundColor = "#03738C"
   buttonSerie.style.borderRadius = "2rem"
   line_1.style.width = '87%'
+  iconseries.style.backgroundColor = "#88b0bf52";
 
 
   const filteredSeries = filterSeriesScienceFiction;
@@ -1382,6 +1479,7 @@ seriesMystery.addEventListener('click', () => {
   button_byCategory.textContent = 'Mystery'
   buttonSerie.style.backgroundColor = "#03738C"
   buttonSerie.style.borderRadius = "2rem"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
 
   const filteredSeries = filterSeriesMystery;
@@ -1406,6 +1504,7 @@ seriesDrama.addEventListener('click', () => {
   button_byCategory.textContent = 'Drama'
   buttonSerie.style.backgroundColor = "#03738C"
   buttonSerie.style.borderRadius = "2rem"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
 
   const filteredSeries = filterSeriesDrama;
@@ -1430,6 +1529,7 @@ seriesComedy.addEventListener('click', () => {
   button_byCategory.textContent = 'Comedy'
   buttonSerie.style.backgroundColor = "#03738C"
   buttonSerie.style.borderRadius = "2rem"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
 
   const filteredSeries = filterSeriesComedy;
@@ -1454,6 +1554,7 @@ seriesTerror.addEventListener('click', () => {
   button_byCategory.textContent = 'Terror'
   buttonSerie.style.backgroundColor = "#03738C"
   buttonSerie.style.borderRadius = "2rem"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
 
   const filteredSeries = filterSeriesTerror;
@@ -1542,6 +1643,7 @@ movie2019.addEventListener('click', () => {
   buttonSerie.style.borderRadius = '2rem';
   buttonSerie.style.backgroundColor = "#03738C"
   buttonSerie.style.borderRadius = "2rem"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
   for (const type in filteredItems) {
     filteredItems[type].forEach((item) => {
@@ -1571,6 +1673,8 @@ movie2018.addEventListener('click', () => {
   buttonMovie.style.borderRadius = "2rem"
   buttonSerie.style.backgroundColor = "#03738C"
   buttonMovie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2018) {
     filtered2018[type].forEach((item) => {
@@ -1598,6 +1702,7 @@ movie2017.addEventListener('click', () => {
   button_byDate.textContent = '2017';
   buttonSerie.style.borderRadius = '2rem';
   buttonSerie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2017) {
     filtered2017[type].forEach((item) => {
@@ -1625,6 +1730,7 @@ movie2016.addEventListener('click', () => {
   button_byDate.textContent = '2016';
   buttonSerie.style.borderRadius = '2rem';
   buttonSerie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2016) {
     filtered2016[type].forEach((item) => {
@@ -1652,6 +1758,7 @@ movie2015.addEventListener('click', () => {
   button_byDate.textContent = '2015';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2015) {
     filtered2015[type].forEach((item) => {
@@ -1681,6 +1788,8 @@ movie2013.addEventListener('click', () => {
   buttonSerie.style.backgroundColor = "#03738C"
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2013) {
     filtered2013[type].forEach((item) => {
@@ -1708,6 +1817,7 @@ movie2011.addEventListener('click', () => {
   button_byDate.textContent = '2011';
   buttonSerie.style.borderRadius = '2rem';
   buttonSerie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2011) {
     filtered2011[type].forEach((item) => {
@@ -1737,6 +1847,8 @@ movie2010.addEventListener('click', () => {
   buttonSerie.style.backgroundColor = "#03738C"
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2010) {
     filtered2010[type].forEach((item) => {
@@ -1764,6 +1876,7 @@ movie2009.addEventListener('click', () => {
   button_byDate.textContent = '2009';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2009) {
     filtered2009[type].forEach((item) => {
@@ -1793,6 +1906,8 @@ movie2008.addEventListener('click', () => {
   buttonMovie.style.backgroundColor = "#03738C"
   buttonSerie.style.borderRadius = '2rem';
   buttonSerie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2008) {
     filtered2008[type].forEach((item) => {
@@ -1820,6 +1935,7 @@ movie2005.addEventListener('click', () => {
   button_byDate.textContent = '2005';
   buttonSerie.style.borderRadius = '2rem';
   buttonSerie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2005) {
     filtered2005[type].forEach((item) => {
@@ -1847,6 +1963,7 @@ movie2004.addEventListener('click', () => {
   button_byDate.textContent = '2004';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2004) {
     filtered2004[type].forEach((item) => {
@@ -1874,6 +1991,7 @@ movie2001.addEventListener('click', () => {
   button_byDate.textContent = '2001';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered2001) {
     filtered2001[type].forEach((item) => {
@@ -1901,6 +2019,7 @@ movie1998.addEventListener('click', () => {
   button_byDate.textContent = '1998';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered1998) {
     filtered1998[type].forEach((item) => {
@@ -1927,6 +2046,7 @@ movie1997.addEventListener('click', () => {
   button_byDate.textContent = '1997';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered1997) {
     filtered1997[type].forEach((item) => {
@@ -1953,6 +2073,7 @@ movie1994.addEventListener('click', () => {
   button_byDate.textContent = '1994';
   buttonSerie.style.borderRadius = '2rem';
   buttonSerie.style.backgroundColor = "#03738C"
+  iconseries.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered1994) {
     filtered1994[type].forEach((item) => {
@@ -1979,6 +2100,7 @@ movie1993.addEventListener('click', () => {
   button_byDate.textContent = '1993';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered1993) {
     filtered1993[type].forEach((item) => {
@@ -2005,6 +2127,7 @@ movie1980.addEventListener('click', () => {
   button_byDate.textContent = '1980';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered1980) {
     filtered1980[type].forEach((item) => {
@@ -2031,6 +2154,7 @@ movie1973.addEventListener('click', () => {
   button_byDate.textContent = '1973';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered1973) {
     filtered1973[type].forEach((item) => {
@@ -2057,6 +2181,7 @@ movie1972.addEventListener('click', () => {
   button_byDate.textContent = '1972';
   buttonMovie.style.borderRadius = '2rem';
   buttonMovie.style.backgroundColor = "#03738C"
+  iconmovies.style.backgroundColor = "#88b0bf52";
 
   for (const type in filtered1972) {
     filtered1972[type].forEach((item) => {
@@ -2095,6 +2220,17 @@ sectionAbout.style.display = 'none';
 
 btnAboutUs.addEventListener('click', e => {
   e.preventDefault();
+  btnAboutUs.style.backgroundColor = "#88b0bf52"
+  buttonSerie.style.backgroundColor = "";
+  iconseries.style.backgroundColor = "";
+  buttonMovie.style.backgroundColor = "";
+  iconmovies.style.backgroundColor = "";
+  iconHome.style.backgroundColor = "";
+  button_byDate.style.backgroundColor = "";
+  optionsDate.style.display = "none"
+
+
 
   sectionAbout.style.display = sectionAbout.style.display === 'none' ? 'block' : 'none';
+
 })
