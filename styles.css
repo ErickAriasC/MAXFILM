@@ -732,6 +732,114 @@ a{
     border-radius: 1rem;
  }
   
+/* trailer grande */
+.trailer-grande{
+    z-index: 1;
+    width: 90rem;
+    height: 50rem;
+    background-color: #025373ef;
+    border-radius: 3rem;
+    opacity: 98%;
+    color: #D9D8D7;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.home-trailer{
+    width: 15rem;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 2rem;
+    left: 5rem;
+    z-index: 1;
+    font-size: 2rem;
+}
+
+.information{
+    width: 38rem;
+    position: relative;
+    top: 12rem;
+    left: 5rem;
+    font-size: 2rem;
+}
+
+.description_content{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+.see_movie{
+    position: relative;
+    top: 13rem;
+    left: 5rem;
+    background-color: #03738C;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    padding: 0.6rem;
+}
+.duration,.date,.director,.category{
+    font-size: 1.2rem;
+    color: #d9d8d7be;
+
+}
+
+.icon{
+    position: relative;
+    top: 3rem;
+    left: 78rem;
+    width: 80px;
+    height: auto;
+    opacity: 70%;   
+}
+
+.line_blue{
+    height: 45rem;
+    position: relative;
+    top: 3rem;
+    left: 2rem;
+}
+.ancla_trailer{
+    background-color: #03738C;
+    padding: 0.8rem;
+    border-radius: 30px;
+}
+
+.ancla_home{
+    padding: 0.8rem;
+
+}
+ .trailer_serie {
+    position: absolute;
+    top: 12rem;
+    left: 50rem;
+    width: 38rem;
+    height: 25rem;
+    z-index: -1;
+    border: none;
+  }
+
+.exit{
+    width: auto;
+    height: auto;
+    background-color: transparent   ;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    left: 85rem;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
 
 /* MEDIA PARA VERSION MOBILE */
 @media (max-width:1279px) {
