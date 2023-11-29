@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="fuente/Baskerv2.ttf" rel="stylesheet">
+
+  <link rel="icon" href="icons/favicon_sinFondoPequeña.png">
+
+  <title>MAXFILM</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav-bar">
+      <div class="menu-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul class="content-nav-bar show-images">
+        <li id="icon-home" href="#">
+          <a class="home">
+            <img src="img/iconos/home_blanco.png" alt="">
+          </a>
+          <a class="header-menu">Home</a>
+        </li>
+        <li id="icon-movies">
+          <a class="movies">
+            <img src="img/iconos/cinta_blanco.png" alt="">
+          </a>
+          <a href="#sectionC-movies" class="header-menu" >Movies</a>
+        </li>
+        <li id="icon-series">
+          <a class="series">
+            <img src="img/iconos/movies_blanco.png" alt="">
+          </a>
+          <a href="#sectionC-series" class="header-menu">Series</a>
+        </li>
+        <li id="about_us">
+          <a class="about_us">
+            <img src="img/iconos/information_blanco.png" alt="">
+          </a>
+          <section id="cont-aboutus" class="cont-aboutus">
+            <img src="icons/barra lateral izquierda.png" alt="">
+            <div class="btns-about">
+              <button class="btn-about1" onclick="location.reload()">Home</button>
+              <button class="btn-about2"> About us</button>
+            </div>
+            <div class="content-about">
+              <h3>About Us</h3>
+              <p>We are MAXFILM, an intermediary platform that helps users find the best movies and series to watch.
+                We offer a wide selection of titles from the main streaming platforms, such as Prime Video, HBO, Netflix and Disney+, etc.
+                </p>
+              <p>Our goal is to make it easier for users to find something to watch by providing detailed information about each title, such as trailers, synopsis, duration, etc.
+                If you decide to watch a movie or series, MAXFILM will redirect you to the platform where you can find it.
+                </p>
+              <p>At MAXFILM, we believe everyone deserves to find something to watch that they love. That's why we strive to offer a platform that is easy to use and provides all the information users need to make an informed decision.
+              </p>
+              <p>If you are looking for a new movie or series to watch, we invite you to visit MAXFILM.</p>
+            </div>
+          </section>
+          <a href="" class="header-menu">About Us</a>
+        </li>
+      </ul>
+      <img src="img/logo.png" alt="">
+
+    </nav>
+  </header>
+  <section class="content-page">
+    <main>
+      <section class="sectionA">
+        <img class="logo" src="IMG/logo.png" alt="">
+
+        <div class="carousel-container">
+          <div class="carousel-content" id="carouselContent">
+            <!-- Aquí se llenarán las imágenes desde JavaScript -->
+          </div>
+          <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+        <div class="text-iconsA">
+          <h2 class="Titles"></h2>
+          <div class="div-A"></div>
+          <h5 class="Director"></h5>
+        </div>
+        <button class="play"><img class="icon-play" src="/icons/play_blue3.png" alt=""></button>
+
+      </section>
+
+      <section class="sectionB">
+        <div class="side1">
+          <ul>
+            <li><button class="ancla1" id="button-Movies">Movie</button></li>
+            <li><button id="buttonSerie" class="ancla1">Serie</button></li>
+
+            <li><button class="ancla2" href="">By Category</button></li>
+            <li><button id="button-byDate" class="ancla2" href="">By Date</button></li>
+          </ul>
+        </div>
+        <div class="side2">
+          <input id="search" class="inputSearch" type="text" placeholder="Search by name">
+          <button class="lupa"><img src="icons/lupa_blanco.png" alt=""></button>
+          <!-- se añade result -->
+          <div class="hidden" id="search-result" ></div>
+        </div>
+
+        <!-- OPTIONS CATEGORY -->
+        <div class="container_categories">
+          <div class="category_movies">
+            <div class="icon_movie">
+              <img src="IMG/iconos/cinta_blanco.png" alt="">
+              <h4>Movies</h4>
+            </div>
+            <ul>
+              <li><a class="moviesAdventure">Adventure</a></li>
+              <li><a class="moviesComedy">Comedy</a></li>
+              <li><a class="moviesTerror">Terror</a></li>
+              <li><a class="moviesDrama">Drama</a></li>
+              <li><a class="moviesAction">Action</a></li>
+            </ul>
+          </div>
+          <div class="category_series">
+            <div class="icon_serie">
+              <img src="IMG/iconos/movies_blanco.png" alt="">
+              <h4>Series</h4>
+            </div>
+            <ul>
+              <li><a class="seriesScienceFiction">Science Fiction</a></li>
+              <li><a class="seriesMystery">Mystery</a></li>
+              <li><a class="seriesDrama">Drama</a></li>
+              <li><a class="seriesComedy">Comedy</a></li>
+              <li><a class="seriesTerror">Terror</a></li>
+            </ul>
+          </div>
+        </div>
+
+         <!-- OPTIONS DATE -->
+         <div class="container-byDate">
+          <ul class="sectionDate">
+            <li><a class="m2019">2019</a></li>
+            <li><a class="m2018">2018</a></li>
+            <li><a class="m2017">2017</a></li>
+            <li><a class="m2016">2016</a></li>
+            <li><a class="m2015">2015</a></li>
+            <li><a class="m2013">2013</a></li>
+            <li><a class="m2011">2011</a></li>
+            <li><a class="m2010">2010</a></li>
+            <li><a class="m2009">2009</a></li>
+            <li><a class="m2008">2008</a></li>
+            <li><a class="m2005">2005</a></li>
+            <li><a class="m2004">2004</a></li>
+            <li><a class="m2001">2001</a></li>
+            <li><a class="m1998">1998</a></li>
+            <li><a class="m1997">1997</a></li>
+            <li><a class="m1994">1994</a></li>
+            <li><a class="m1993">1993</a></li>
+            <li><a class="m1980">1980</a></li>
+            <li><a class="m1973">1973</a></li>
+            <li><a class="m1972">1972</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <h3 class="tittle-movies">Movies</h3>
+      <button id="next-button-moviesRight"><img class="right" src="icons/abajo_blancopng.png" alt=""></button>
+      <button id="next-button-moviesLeft"><img class="left" src="icons/abajo_blancopng.png" alt=""></button>
+      <section class="sectionC-movies" id="sectionC-movies">
+        <!-- EL CONTENIDO ESTA EN APP.JS -->
+      </section>
+
+      <h3 class="tittle-series">Series</h3>
+      <button id="next-button-seriesRight"><img class="right" src="icons/abajo_blancopng.png" alt=""></button>
+      <button id="next-button-seriesLeft"><img class="left" src="icons/abajo_blancopng.png" alt=""></button>
+      <section class="sectionC-series" id="sectionC-series">
+      </section>
+      <section class="section-category">
+        <!-- EL CONTENIDO ESTA EN APP.JS -->
+      </section>
+
+      <section class="section-search">
+        <!-- EL CONTENIDO ESTA EN APP.JS -->
+      </section>
+      <section class="section-D">
+        <!-- show more home -->
+        <div class="line-1"></div>
+        <button class="show-more-home">Show More</button>
+
+        <!-- show more movies -->
+        <button class="show-more-movies">Show More</button>
+
+        <!-- show more series -->
+        <button class="show-more-series">Show More</button>
+        <div class="line-2"></div>
+      </section>
+
+      <section class="trailer-grande">
+
+
+      </section>
+    </main>
+    <footer class="footer">
+      <img class="img-logo-m" src="IMG/M.png" alt="">
+      <img class="img-logo" src="IMG/logo.png" alt="">
+      <div>
+        <div class="content-footer">
+          <div class="language">
+            <img src="IMG/idioma blanco.png" alt="">
+            <div class="options-language">
+              <h4>English</h4>
+              <img src="icons/abajo_blancopng.png" alt="">
+            </div>
+          </div>
+          <h3>About Us</h3>
+        </div>
+        <h3>©2023, The Anonymus</h3>
+      </div>
+    </footer>
+  </section>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
