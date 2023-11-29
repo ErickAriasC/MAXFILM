@@ -1059,24 +1059,75 @@ function showMoreHomeContent() {
   showRandomSerieCards(11);
   showRandomMovieCards(11);
   showMoreHome.textContent = 'Show Less'
+  
+  showMoreHome.addEventListener('click', showLessHomeContent)
+
+  function showLessHomeContent() {
+    
+    if (showMoreHome.textContent == 'Show Less'){
+      sectionMovies.innerHTML='';
+      sectionSeries.innerHTML='';
+      showMoreHome.textContent = 'Show More'
+
+      selectedMovies.length=selectedMovies.length-15
+      showRandomMovieCards(4);
+
+      selectedSeries.length=selectedSeries.length-15
+      showRandomSerieCards(4);
+
+
+    }
+  }
 }
 
 //BUTTON MOVIES
 showMoreMovies.addEventListener('click', btnShowMoreMovies)
 
 function btnShowMoreMovies() {
-  remainingMovies = moviesData.length - selectedMovies.length;
-  showRandomMovieCards(remainingMovies);
-  showMoreMovies.textContent = 'Show Less'
+
+    remainingMovies = moviesData.length - selectedMovies.length;
+    showRandomMovieCards(remainingMovies);
+    showMoreMovies.textContent = 'Show Less'
+    
+  showMoreMovies.addEventListener('click', showLessMovies)
+
+  function showLessMovies() {
+    
+    if (showMoreMovies.textContent == 'Show Less'){
+      sectionMovies.innerHTML='';
+      showMoreHome.textContent = 'Show More'
+
+      selectedMovies.length=selectedMovies.length-15
+      showRandomMovieCards(4);
+
+    }
+  }
+
 }
 
 //BUTTON SERIES
 showMoreSeries.addEventListener('click', btnShowMoreSeries)
 
 function btnShowMoreSeries() {
-  remainingSeries = seriesData.length - selectedSeries.length;
-  showRandomSerieCards(remainingSeries);
-  showMoreSeries.textContent = 'Show Less'
+
+    remainingSeries = seriesData.length - selectedSeries.length;
+    showRandomSerieCards(remainingSeries);
+    showMoreSeries.textContent = 'Show Less'
+    
+  showMoreSeries.addEventListener('click', showLessSeries)
+
+  function showLessSeries() {
+    
+    if (showMoreSeries.textContent == 'Show Less'){
+      sectionSeries.innerHTML='';
+      showMoreSeries.textContent = 'Show More'
+
+      selectedSeries.length=selectedSeries.length-15
+      showRandomSerieCards(4);
+
+    }
+  }
+
 }
 
 //Funcionalidad Carrusell//
