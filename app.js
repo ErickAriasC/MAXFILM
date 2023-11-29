@@ -2345,3 +2345,18 @@ btnAboutUs.addEventListener('click', e => {
   sectionAbout.style.display = sectionAbout.style.display === 'none' ? 'block' : 'none';
 
 })
+
+// Se mueve la posición del LOGO de la página:
+const logo= document.querySelector('.logo')
+let moved= false
+
+function moveLogo(){
+  if (!moved){
+    logo.style.transform= 'translateX(64px)';
+  } else {
+    logo.style.transform= 'translateX(0)';
+  }
+  moved= !moved
+}
+
+menuButton.addEventListener('click', moveLogo)

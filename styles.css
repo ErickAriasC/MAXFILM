@@ -173,6 +173,7 @@ main {
     top: 1rem;
     left: 4rem;
     z-index: 1;
+    transition: 0.1s;
 }
 
 .sectionA>img {
