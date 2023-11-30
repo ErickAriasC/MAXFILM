@@ -2403,7 +2403,7 @@ let moved= false
 
 function moveLogo(){
   if (!moved){
-    logo.style.transform= 'translateX(64px)';
+    logo.style.transform= 'translateX(74px)';
   } else {
     logo.style.transform= 'translateX(0)';
   }
