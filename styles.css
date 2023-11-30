@@ -1142,9 +1142,7 @@ margin-left: 1.5rem;
         display: flex;
         flex-direction: column;
     }
-    .home{
-        margin-top: 20rem;
-    }
+
     .content-nav-bar>li>a>img {
         margin-bottom: 7rem;
     }
@@ -1166,13 +1164,14 @@ margin-left: 1.5rem;
     }
     .text-iconsA {
         top: 5rem;
-        left: 4rem;
-        line-height: 1.3rem;
+        left: 9rem;
+        line-height: 1.5rem;
     }
 
     .text-iconsA>h2 {
-        font-size: 0.8rem;
+        font-size: 2rem;
     }
+    
 
     .sectionA .div-A {
         width: 4rem;
@@ -1180,7 +1179,7 @@ margin-left: 1.5rem;
     }
 
     .sectionA h5 {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     .sectionA 
@@ -1201,6 +1200,63 @@ margin-left: 1.5rem;
         height: 0.5rem;
         border: 1px solid #D9D8D7;
     } 
+    .container_categories{
+        top: 46rem;
+        left: 11rem;
+        width: 21rem;
+        height: auto;
+        
+    }
+    .category_movies>ul>li>a{
+        font-size: 21px;
+    }
+    .category_series>ul>li>a{
+        font-size: 21px;
+    }
+    .icon_movie h4{
+        font-size: 28px;
+    }
+    .icon_serie{
+       margin-bottom: .6rem ;
+    }
+    .icon_serie h4{
+        font-size: 28px;
+    }
+    .carousel-indicators{
+        left: 19rem;
+       
+    }
+    .container-byDate{
+        left: 25.5rem;
+        top: 46rem;
+        width: 6rem;
+        padding-top: 1rem;
+    }
+    .sectionDate a{
+        font-size: 1.5rem;
+    }
+    .sectionA .icon-play{
+        top: 13rem;
+        left: 6.5rem;
+        width:3rem;
+    }
+    .video-iframe{
+        width: 16rem;
+        height: 11rem;
+        
+
+    }
+    .show-more-home, .show-more-movies, .show-more-series {
+        width: 15%;
+    }
+    .container-card{
+        flex-wrap: wrap;
+    }
+    .carousel-item img{
+        height: 500px;
+    }
+    
+
 
     /* SECTION B  santiago aguirre*/
 
@@ -1258,6 +1314,10 @@ margin-left: 1.5rem;
         height: 33px;
 
     }
+    .side2 .lupa{
+        padding-bottom: 2.3rem;
+    }
+    
 
     input:focus {
         outline: none;
@@ -1282,6 +1342,39 @@ margin-left: 1.5rem;
         text-align: center;
         color: rgba(217, 216, 215, 0.5);
         font-family: Baskerv1;
+    }
+    .cont-aboutus{
+        width: 39.5rem;
+        left: 17%;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    .content-nav-bar .cont-aboutus img{
+        height: 40rem;
+    }
+    .trailer-grande{
+        width: 40rem;
+        height: 43rem;
+    }
+    .exit{
+        left: 36rem;
+    }
+    .trailer_serie{
+        left: 5rem;
+        top: 30rem;
+        width: 25rem;
+        height: 12rem;
+    }
+    .home-trailer{
+        font-size: 1rem;
+        left: 1.7rem;
+    }
+    .information h2{
+        font-size: 1.7rem;
+    }
+    .description_content{
+        font-size: 1.2rem;
+        padding-right: 5rem;
     }
 
 
