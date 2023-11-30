@@ -1745,6 +1745,26 @@ margin-left: 1.5rem;
     .content-nav-bar>li>a>img {
         margin-bottom: 0;
     }
+    .btns-about{
+       padding-left: 3rem;
+    }
+    .cont-aboutus{
+        width: 20rem;
+        left: 10%;
+        z-index: 999;
+        
+    }
+    .btns-about > button{
+        font-size: 1.5rem;
+    }
+    .content-about > h3{
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
+    .content-about > p{
+        padding-right: 30rem;
+        font-size: 1rem;
+    }
 
     .content-nav-bar.active {
         background-color: #03738cee;
@@ -1892,6 +1912,9 @@ margin-left: 1.5rem;
     .side2>.lupa>img {
         width: 40px;
         height: auto;
+    }
+    .side2 .lupa{
+        padding: 0;
     }
 
     .side2>button {
