@@ -1918,8 +1918,7 @@ margin-left: 1.5rem;
         padding-left: 0;
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
+        flex-direction: column;        flex-wrap: nowrap;
         overflow: hidden;
         margin: 0;
         margin-top: 0.5rem;
@@ -2065,12 +2064,12 @@ margin-left: 1.5rem;
   
 
     .container-card {
-        width: 90px;
+        width: auto;
         margin: 3%;
     }
 
     .container-card img {
-        width: 90px;
+        width: 170px;
         height: auto;
     }
 
