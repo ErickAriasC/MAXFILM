@@ -973,8 +973,9 @@ margin-left: 1.5rem;
 
     /* SECTION A  andres facundo*/
     .sectionA button, .icon-play {
-        top: 4rem;
+        top: 9rem;
         width: 3rem;
+        left: 15.3rem;
     }
 
     .sectionA .container-circle {
@@ -984,15 +985,173 @@ margin-left: 1.5rem;
         width: 8rem;
     }
     .sectionA h5 {
-        font-size: 0.8rem;
         width: auto;
         height: auto;
     }
 
+    .carousel-indicators {
+        text-align: center;
+        margin-top: 10px;
+        position: absolute;
+        top: 34rem;
+        left: 24rem;
+    }
+
+    .carousel-item img {
+        width: 99%;
+        height: 600px;
+        margin: 4px;
+        opacity: 35%;
+    }
+    
+    .show-more-home, .show-more-movies, .show-more-series {
+        width: 15.2%;
+        background-color: #025373;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.6rem;
+        margin: 0.4rem;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-D {
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sectionC-movies, .sectionC-series, .section-category {
+        width: 80%;
+        height: 100%;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .icon_serie {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+    .container_categories {
+        background-color: #025373e8;
+        width: 20rem;
+        height: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        position: absolute;
+        top: 42.5rem;
+        left: 9.2rem;
+        padding-top: 1.5rem;
+        z-index: 1;
+    }
+
+    .container-byDate {
+        position: absolute;
+        background-color: #025373e8;
+        top: 41.9rem;
+        left: 22.3rem;
+        width: 7rem;
+        height:8.8rem;
+        flex-direction: column;
+        clip-path: inset(0px round 15px);
+        overflow:auto;
+        padding-top: 1.5rem;
+        z-index: 1;
+    }
+
+    .category_series>ul>li>a {
+        font-size: 22px;
+    }
+
+    .category_movies>ul>li>a {
+        font-size: 22px;
+    }
+
+    .icon_serie h4 {
+        font-size: 30px;
+    }
+
+    .icon_movie h4 {
+        font-size: 30px;
+    }
+
+    .sectionDate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category_series ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+    }
+
+    .category_movies ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+    }
+
+    .sectionB {
+        width: 95%;
+        height: auto;
+        font-size: 30px;
+        display: flex;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        border-bottom: 4px solid #88B0BF;
+    }
+
+    .header-menu {
+        width: 71px;
+        font-size: 1rem;
+        margin-top: 5px;
+        padding-left: 0.5rem;
+    }
+
+    .content-about > p {
+        color: rgba(217, 216, 215, 1);
+        font-size: 21px;
+        margin-top: 2rem;
+        font-weight: 400;
+    }
+
+    .cont-aboutus {
+        z-index: 9999;
+        position: fixed;
+        width: 51rem;
+        height: 42rem;
+        background-color: #025373ef;
+        opacity: 98%;
+        border-radius: 40px;
+        left: 9.1%;
+        top: 0.5%;
+        padding-top: 4.3rem;
+    }
+
+    .content-about {
+        width: 50rem;
+        margin-top: 3rem;
+        padding-left: 3rem;
+    }
+    
     .text-iconsA {
         font-size: 1.2rem;
         top: 8rem;
-        left: 6.5rem;
+        left: 9.5rem;
         line-height: 2.5rem;
     }
     .play{
@@ -1015,7 +1174,7 @@ margin-left: 1.5rem;
 
    
     .side1>ul, button {
-margin-right: 1.8rem;
+        margin-right: 0.8rem;
     }
     .side1>ul img {
         width: 25px;
