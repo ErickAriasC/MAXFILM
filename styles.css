@@ -847,6 +847,72 @@ a{
         flex-direction: column;
     }
    
+    .header-menu{
+        font-size: 1rem;
+        margin-top: 6px;
+    }
+    .cont-aboutus{
+        width: 60rem;
+        height: 38rem;
+        padding-top: 3.5rem;
+    }
+    .btns-about{
+        gap: 0;
+        padding-left: 8rem;
+    }
+    .btns-about > button{
+        font-size: 1.7rem;
+    }
+    .btn-about2{
+        padding: 0 .5rem 0 .5rem;
+        align-items: center;
+    }
+    .content-about > h3{
+        font-size: 30px;
+    }
+    .content-about > p {
+        font-size: 21.3px;
+        padding-right: 4rem;
+    }
+    .content-about{
+        margin-top: 2.5rem;
+    }
+    .content-nav-bar .cont-aboutus img{
+        width: 5rem;
+        height: 32rem;
+    }
+    
+    .trailer-grande{
+        width: 59.5rem;
+        height: 43rem;
+        left: 56%;
+    }
+    .home-trailer{
+        font-size: 1.6rem;
+        left: 2.8rem;
+    }
+    .exit{
+        left: 54rem;
+    }
+    .information{
+        top: 5rem;
+        left: 4rem;
+    }
+    .information h2{
+        font-size: 2rem;  
+        padding-bottom: 1rem;
+    }
+    .description_content{
+        font-size: 1.2rem;
+    }
+    .see_movie{
+        top: 7rem;
+        left: 4rem;
+        font-size: 1.3rem;
+    }
+    .line_blue{
+        height: 38rem;
+    }
     .menu-button {
         margin-left: 0;
     }
@@ -881,6 +947,7 @@ a{
     }
     
     /* SECTION B  santiago aguirre*/
+    
     .sectionB{
         display: flex;
     }
@@ -896,16 +963,17 @@ a{
         display: flex;
         justify-content: flex-start;
         padding-left: 20px;
+        
+    }
+    .sectionB button{
+        font-size: 1.4rem;
+
     }
 
-    .side1, ul,
-    button{
-        font-size: 23px;
-        display: flex;
-        list-style: none;
-        text-decoration: none;
-        color: #D9D8D7;
-    }
+    .side1>ul, button {
+        margin-right: 1.8rem;
+        }
+   
     .ancla2{
         margin-right: 1rem;
     }
@@ -951,8 +1019,10 @@ a{
     .line-1{
         width:68.8%;
     }
-    .show-more{ 
-        width:10.2%;  
+    .show-more-home,.show-more-movies,.show-more-series{
+        font-size: 1.2rem;
+        padding: .5rem 0rem .5rem 0rem;
+        width: 10%;
     }
     .line-2{
         width: 11%;
@@ -1015,7 +1085,7 @@ margin-left: 1.5rem;
 
    
     .side1>ul, button {
-margin-right: 1.8rem;
+    margin-right: 1.8rem;
     }
     .side1>ul img {
         width: 25px;
