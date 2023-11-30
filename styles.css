@@ -198,6 +198,7 @@ main {
     line-height: 4rem;
     width: auto;
     z-index: 1;
+    transition: 0.1s ease;
 }
 
 .sectionA .div-A {
@@ -881,25 +882,28 @@ a{
         width: 5rem;
         height: 32rem;
     }
+
+    /* Trailer grande: */
     
     .trailer-grande{
-        width: 59.5rem;
-        height: 43rem;
-        left: 56%;
+        width: 68rem;
+        height: 33rem;
+        left: 53%;
     }
     .home-trailer{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         left: 2.8rem;
     }
     .exit{
-        left: 54rem;
+        left: 63rem;
     }
     .information{
         top: 5rem;
-        left: 4rem;
+        left: 1rem;
+        width: 33rem;
     }
     .information h2{
-        font-size: 2rem;  
+        font-size: 2.3rem;  
         padding-bottom: 1rem;
     }
     .description_content{
@@ -908,11 +912,29 @@ a{
     .see_movie{
         top: 7rem;
         left: 4rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
+
     .line_blue{
-        height: 38rem;
+        height: 30rem;
+        position: relative;
+        top: 2rem;
+        left: 0.5rem;
+        width: 4rem;
     }
+
+    .trailer_serie {
+        position: absolute;
+        top: 7.5rem;
+        left: 40rem;
+        width: 25rem;
+        height: 20rem;
+        z-index: -1;
+        border: none;
+      }
+
+    /* // */
+
     .menu-button {
         margin-left: 0;
     }
@@ -924,13 +946,18 @@ a{
 
     /* SECTION A  andres facundo*/
     .sectionA>.logo {
-    
+        width: 240px;
         left: 2rem;
+        left: 3rem;
     }
     .text-iconsA{
         font-size: 1.5rem;
         top:12rem;
         left: 6.5rem;
+    }
+
+    .text-iconsA.moved{
+        transform: translateX(4rem);
     }
     .sectionA .container-circle{
         margin-top: 23rem;
@@ -945,6 +972,14 @@ a{
         position: absolute;
         left: 39.5rem;
     }
+    
+    .carousel-indicators {
+        text-align: center;
+        margin-top: 10px;
+        position: absolute;
+        top: 34rem;
+        left: 34rem;
+    } 
     
     /* SECTION B  santiago aguirre*/
     
@@ -1008,10 +1043,23 @@ a{
     width: 50px;
     }
 
+    .container_categories{
+        left: 10rem;
+    }
+
+    .container-byDate{
+        left: 26.5rem;
+    }
+
     /* SECTION C  david gaona*/
     .container-card img {
         width: 225px;
         height: auto;
+    }
+
+    .video-iframe {
+        width: 20rem;   
+        height: 22rem;
     }
 
   
@@ -1033,6 +1081,13 @@ a{
     .content-footer>h3 {
 margin-left: 1.5rem;
     }
+
+    /* Trailer grande: */
+
+
+
+
+    
 }
 
 @media (max-width:920px) {
@@ -1244,11 +1299,8 @@ margin-left: 1.5rem;
 
    
     .side1>ul, button {
-<<<<<<< HEAD
-        margin-right: 0.8rem;
-=======
+    margin-right: 0.8rem;
     margin-right: 1.8rem;
->>>>>>> 98e5e786d1bd9cafe8d34fcb59c3f1eb56dee4a1
     }
     .side1>ul img {
         width: 25px;

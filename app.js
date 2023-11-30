@@ -2399,6 +2399,7 @@ btnAboutUs.addEventListener('click', e => {
 
 // Se mueve la posición del LOGO de la página:
 const logo= document.querySelector('.logo')
+const contTittles= document.querySelector('.text-iconsA')
 let moved= false
 
 function moveLogo(){
@@ -2411,3 +2412,7 @@ function moveLogo(){
 }
 
 menuButton.addEventListener('click', moveLogo)
+
+menuButton.addEventListener('click', ()=>{
+  contTittles.classList.toggle('moved')
+})
