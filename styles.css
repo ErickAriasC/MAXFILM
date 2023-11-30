@@ -2148,7 +2148,12 @@ margin-left: 1.5rem;
     /* SECTION D */
     .line-1 {
         outline: 1px solid #88B0BF;
-        width: 90%;
+        width: 60%;
+    }
+    .show-more-home, .show-more-movies, .show-more-series {
+        width: 36%;
+        font-size: 1rem;
+        padding: .5rem  .6rem .5rem .6rem;
     }
 
     .show-more {
@@ -2156,7 +2161,7 @@ margin-left: 1.5rem;
     }
 
     .line-2 {
-        display: none;
+        display: none;  
     }
 
     /* FOOTER */
