@@ -198,6 +198,7 @@ main {
     line-height: 4rem;
     width: auto;
     z-index: 1;
+    transition: 0.1s ease;
 }
 
 .sectionA .div-A {
@@ -847,6 +848,93 @@ a{
         flex-direction: column;
     }
    
+    .header-menu{
+        font-size: 1rem;
+        margin-top: 6px;
+    }
+    .cont-aboutus{
+        width: 60rem;
+        height: 38rem;
+        padding-top: 3.5rem;
+    }
+    .btns-about{
+        gap: 0;
+        padding-left: 8rem;
+    }
+    .btns-about > button{
+        font-size: 1.7rem;
+    }
+    .btn-about2{
+        padding: 0 .5rem 0 .5rem;
+        align-items: center;
+    }
+    .content-about > h3{
+        font-size: 30px;
+    }
+    .content-about > p {
+        font-size: 21.3px;
+        padding-right: 4rem;
+    }
+    .content-about{
+        margin-top: 2.5rem;
+    }
+    .content-nav-bar .cont-aboutus img{
+        width: 5rem;
+        height: 32rem;
+    }
+
+    /* Trailer grande: */
+    
+    .trailer-grande{
+        width: 68rem;
+        height: 33rem;
+        left: 53%;
+    }
+    .home-trailer{
+        font-size: 1.3rem;
+        left: 2.8rem;
+    }
+    .exit{
+        left: 63rem;
+    }
+    .information{
+        top: 5rem;
+        left: 1rem;
+        width: 33rem;
+    }
+    .information h2{
+        font-size: 2.3rem;  
+        padding-bottom: 1rem;
+    }
+    .description_content{
+        font-size: 1.2rem;
+    }
+    .see_movie{
+        top: 7rem;
+        left: 4rem;
+        font-size: 1.2rem;
+    }
+
+    .line_blue{
+        height: 30rem;
+        position: relative;
+        top: 2rem;
+        left: 0.5rem;
+        width: 4rem;
+    }
+
+    .trailer_serie {
+        position: absolute;
+        top: 7.5rem;
+        left: 40rem;
+        width: 25rem;
+        height: 20rem;
+        z-index: -1;
+        border: none;
+      }
+
+    /* // */
+
     .menu-button {
         margin-left: 0;
     }
@@ -858,13 +946,18 @@ a{
 
     /* SECTION A  andres facundo*/
     .sectionA>.logo {
-    
+        width: 240px;
         left: 2rem;
+        left: 3rem;
     }
     .text-iconsA{
         font-size: 1.5rem;
         top:12rem;
         left: 6.5rem;
+    }
+
+    .text-iconsA.moved{
+        transform: translateX(4rem);
     }
     .sectionA .container-circle{
         margin-top: 23rem;
@@ -880,7 +973,16 @@ a{
         left: 39.5rem;
     }
     
+    .carousel-indicators {
+        text-align: center;
+        margin-top: 10px;
+        position: absolute;
+        top: 34rem;
+        left: 34rem;
+    } 
+    
     /* SECTION B  santiago aguirre*/
+    
     .sectionB{
         display: flex;
     }
@@ -896,16 +998,17 @@ a{
         display: flex;
         justify-content: flex-start;
         padding-left: 20px;
+        
+    }
+    .sectionB button{
+        font-size: 1.4rem;
+
     }
 
-    .side1, ul,
-    button{
-        font-size: 23px;
-        display: flex;
-        list-style: none;
-        text-decoration: none;
-        color: #D9D8D7;
-    }
+    .side1>ul, button {
+        margin-right: 1.8rem;
+        }
+   
     .ancla2{
         margin-right: 1rem;
     }
@@ -940,10 +1043,23 @@ a{
     width: 50px;
     }
 
+    .container_categories{
+        left: 10rem;
+    }
+
+    .container-byDate{
+        left: 26.5rem;
+    }
+
     /* SECTION C  david gaona*/
     .container-card img {
         width: 225px;
         height: auto;
+    }
+
+    .video-iframe {
+        width: 20rem;   
+        height: 22rem;
     }
 
   
@@ -951,8 +1067,10 @@ a{
     .line-1{
         width:68.8%;
     }
-    .show-more{ 
-        width:10.2%;  
+    .show-more-home,.show-more-movies,.show-more-series{
+        font-size: 1.2rem;
+        padding: .5rem 0rem .5rem 0rem;
+        width: 10%;
     }
     .line-2{
         width: 11%;
@@ -963,6 +1081,13 @@ a{
     .content-footer>h3 {
 margin-left: 1.5rem;
     }
+
+    /* Trailer grande: */
+
+
+
+
+    
 }
 
 @media (max-width:920px) {
@@ -973,8 +1098,9 @@ margin-left: 1.5rem;
 
     /* SECTION A  andres facundo*/
     .sectionA button, .icon-play {
-        top: 4rem;
+        top: 9rem;
         width: 3rem;
+        left: 15.3rem;
     }
 
     .sectionA .container-circle {
@@ -984,15 +1110,173 @@ margin-left: 1.5rem;
         width: 8rem;
     }
     .sectionA h5 {
-        font-size: 0.8rem;
         width: auto;
         height: auto;
     }
 
+    .carousel-indicators {
+        text-align: center;
+        margin-top: 10px;
+        position: absolute;
+        top: 34rem;
+        left: 24rem;
+    }
+
+    .carousel-item img {
+        width: 99%;
+        height: 600px;
+        margin: 4px;
+        opacity: 35%;
+    }
+    
+    .show-more-home, .show-more-movies, .show-more-series {
+        width: 15.2%;
+        background-color: #025373;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.6rem;
+        margin: 0.4rem;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-D {
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sectionC-movies, .sectionC-series, .section-category {
+        width: 80%;
+        height: 100%;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .icon_serie {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+    .container_categories {
+        background-color: #025373e8;
+        width: 20rem;
+        height: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        position: absolute;
+        top: 42.5rem;
+        left: 9.2rem;
+        padding-top: 1.5rem;
+        z-index: 1;
+    }
+
+    .container-byDate {
+        position: absolute;
+        background-color: #025373e8;
+        top: 41.9rem;
+        left: 22.3rem;
+        width: 7rem;
+        height:8.8rem;
+        flex-direction: column;
+        clip-path: inset(0px round 15px);
+        overflow:auto;
+        padding-top: 1.5rem;
+        z-index: 1;
+    }
+
+    .category_series>ul>li>a {
+        font-size: 22px;
+    }
+
+    .category_movies>ul>li>a {
+        font-size: 22px;
+    }
+
+    .icon_serie h4 {
+        font-size: 30px;
+    }
+
+    .icon_movie h4 {
+        font-size: 30px;
+    }
+
+    .sectionDate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category_series ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+    }
+
+    .category_movies ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+    }
+
+    .sectionB {
+        width: 95%;
+        height: auto;
+        font-size: 30px;
+        display: flex;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        border-bottom: 4px solid #88B0BF;
+    }
+
+    .header-menu {
+        width: 71px;
+        font-size: 1rem;
+        margin-top: 5px;
+        padding-left: 0.5rem;
+    }
+
+    .content-about > p {
+        color: rgba(217, 216, 215, 1);
+        font-size: 21px;
+        margin-top: 2rem;
+        font-weight: 400;
+    }
+
+    .cont-aboutus {
+        z-index: 9999;
+        position: fixed;
+        width: 51rem;
+        height: 42rem;
+        background-color: #025373ef;
+        opacity: 98%;
+        border-radius: 40px;
+        left: 9.1%;
+        top: 0.5%;
+        padding-top: 4.3rem;
+    }
+
+    .content-about {
+        width: 50rem;
+        margin-top: 3rem;
+        padding-left: 3rem;
+    }
+    
     .text-iconsA {
         font-size: 1.2rem;
         top: 8rem;
-        left: 6.5rem;
+        left: 9.5rem;
         line-height: 2.5rem;
     }
     .play{
@@ -1015,7 +1299,8 @@ margin-left: 1.5rem;
 
    
     .side1>ul, button {
-margin-right: 1.8rem;
+    margin-right: 0.8rem;
+    margin-right: 1.8rem;
     }
     .side1>ul img {
         width: 25px;
@@ -1072,9 +1357,7 @@ margin-right: 1.8rem;
         display: flex;
         flex-direction: column;
     }
-    .home{
-        margin-top: 20rem;
-    }
+
     .content-nav-bar>li>a>img {
         margin-bottom: 7rem;
     }
@@ -1096,13 +1379,14 @@ margin-right: 1.8rem;
     }
     .text-iconsA {
         top: 5rem;
-        left: 4rem;
-        line-height: 1.3rem;
+        left: 9rem;
+        line-height: 1.5rem;
     }
 
     .text-iconsA>h2 {
-        font-size: 0.8rem;
+        font-size: 2rem;
     }
+    
 
     .sectionA .div-A {
         width: 4rem;
@@ -1110,7 +1394,7 @@ margin-right: 1.8rem;
     }
 
     .sectionA h5 {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     .sectionA 
@@ -1131,6 +1415,63 @@ margin-right: 1.8rem;
         height: 0.5rem;
         border: 1px solid #D9D8D7;
     } 
+    .container_categories{
+        top: 46rem;
+        left: 11rem;
+        width: 21rem;
+        height: auto;
+        
+    }
+    .category_movies>ul>li>a{
+        font-size: 21px;
+    }
+    .category_series>ul>li>a{
+        font-size: 21px;
+    }
+    .icon_movie h4{
+        font-size: 28px;
+    }
+    .icon_serie{
+       margin-bottom: .6rem ;
+    }
+    .icon_serie h4{
+        font-size: 28px;
+    }
+    .carousel-indicators{
+        left: 19rem;
+       
+    }
+    .container-byDate{
+        left: 25.5rem;
+        top: 46rem;
+        width: 6rem;
+        padding-top: 1rem;
+    }
+    .sectionDate a{
+        font-size: 1.5rem;
+    }
+    .sectionA .icon-play{
+        top: 13rem;
+        left: 6.5rem;
+        width:3rem;
+    }
+    .video-iframe{
+        width: 16rem;
+        height: 11rem;
+        
+
+    }
+    .show-more-home, .show-more-movies, .show-more-series {
+        width: 15%;
+    }
+    .container-card{
+        flex-wrap: wrap;
+    }
+    .carousel-item img{
+        height: 500px;
+    }
+    
+
 
     /* SECTION B  santiago aguirre*/
 
@@ -1188,6 +1529,10 @@ margin-right: 1.8rem;
         height: 33px;
 
     }
+    .side2 .lupa{
+        padding-bottom: 2.3rem;
+    }
+    
 
     input:focus {
         outline: none;
@@ -1212,6 +1557,39 @@ margin-right: 1.8rem;
         text-align: center;
         color: rgba(217, 216, 215, 0.5);
         font-family: Baskerv1;
+    }
+    .cont-aboutus{
+        width: 39.5rem;
+        left: 17%;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    .content-nav-bar .cont-aboutus img{
+        height: 40rem;
+    }
+    .trailer-grande{
+        width: 40rem;
+        height: 43rem;
+    }
+    .exit{
+        left: 36rem;
+    }
+    .trailer_serie{
+        left: 5rem;
+        top: 30rem;
+        width: 25rem;
+        height: 12rem;
+    }
+    .home-trailer{
+        font-size: 1rem;
+        left: 1.7rem;
+    }
+    .information h2{
+        font-size: 1.7rem;
+    }
+    .description_content{
+        font-size: 1.2rem;
+        padding-right: 5rem;
     }
 
 
@@ -1317,7 +1695,7 @@ margin-right: 1.8rem;
     }
 
     .menu-button {
-        margin-left: 4px;
+        margin-left: 1.7rem;
         margin-top: 0;
         margin-right: 2rem;
         padding-left: 0.7rem;
@@ -1336,8 +1714,8 @@ margin-right: 1.8rem;
         display: none;
         background-color: #333;
         position: absolute;
-        top: 2.3rem;
-        right: 19rem;
+        top: 2.5rem;
+        right: 16.3rem;
         width: 200px;
         padding: 10px;
     }
@@ -1348,15 +1726,44 @@ margin-right: 1.8rem;
 
     .content-nav-bar li {
         padding: 10px 0;
+        flex-direction: column;
+        margin-bottom: 2rem;
     }
 
     .content-nav-bar img {
         width: 25px;
         height: 25px;
     }
+    .carousel-container{
+        height: 200px;
+    }
 
+    .carousel-indicators{
+        top: 10rem;
+        left: 7.6rem;
+    }
     .content-nav-bar>li>a>img {
-        margin-bottom: 2rem;
+        margin-bottom: 0;
+    }
+    .btns-about{
+       padding-left: 3rem;
+    }
+    .cont-aboutus{
+        width: 20rem;
+        left: 10%;
+        z-index: 999;
+        
+    }
+    .btns-about > button{
+        font-size: 1.5rem;
+    }
+    .content-about > h3{
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
+    .content-about > p{
+        padding-right: 30rem;
+        font-size: 1rem;
     }
 
     .content-nav-bar.active {
@@ -1373,9 +1780,10 @@ margin-right: 1.8rem;
 
     }
 
-    .home {
-        margin-top: 2rem;
+    .carousel-item img{
+        height: 200px;
     }
+    
 
     main {
         margin-top: 4rem;
@@ -1412,9 +1820,10 @@ margin-right: 1.8rem;
     }
 
     .sectionA .icon-play {
-        top: 3rem;
+        top: 0;
         width: 1.5rem;
         height: auto;
+        left: -4.5rem;
     }
 
     .sectionA .container-circle {
@@ -1504,6 +1913,9 @@ margin-right: 1.8rem;
         width: 40px;
         height: auto;
     }
+    .side2 .lupa{
+        padding: 0;
+    }
 
     .side2>button {
         height: auto;
@@ -1529,8 +1941,7 @@ margin-right: 1.8rem;
         padding-left: 0;
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
+        flex-direction: column;        flex-wrap: nowrap;
         overflow: hidden;
         margin: 0;
         margin-top: 0.5rem;
@@ -1560,7 +1971,7 @@ margin-right: 1.8rem;
         position: absolute;
         top: 26rem;
         right: -0.5rem;
-        display: block;
+        /* display: block; */
         background-color: #03738cc7;
         border-style: none;
         border-radius: 50%;
@@ -1572,7 +1983,7 @@ margin-right: 1.8rem;
         position: absolute;
         top: 26rem;
         right: 18.8rem;
-        display: block;
+        /* display: block; */
         background-color: #03738cc7;
         border-style: none;
         border-radius: 50%;
@@ -1583,7 +1994,7 @@ margin-right: 1.8rem;
         position: absolute;
         top: 40rem;
         right: -0.5rem;
-        display: block;
+        /* display: block; */
         background-color: #03738cc7;
         border-style: none;
         border-radius: 50%;
@@ -1594,14 +2005,69 @@ margin-right: 1.8rem;
         position: absolute;
         top: 40rem;
         right: 18.8rem;
-        display: block;
+        /* display: block; */
         background-color: #03738cc7;
         border-style: none;
         border-radius: 50%;
 
     }
 
+    .show-more-series{
+        width: 40%;
+        font-size:15px;
+    }
 
+    .container_categories{
+        flex-direction: column;
+        top: 25.2rem;
+        left: 2.7rem;
+        width: 12rem;
+        height: 31rem;
+    }
+
+    .icon_movie h4 {
+        font-size: 18px;
+    }
+
+    .icon_serie h4{
+        font-size: 18px;
+
+    }
+
+    .icon_movie img {
+        width: 25px;
+        
+    }
+    .container-byDate {
+        left: 11.6rem;
+        top: 25.2rem;
+        width: 6rem;
+        padding-top: 1rem;
+    }
+    
+    .category_movies>ul>li>a {
+        font-size: 13px;
+    }
+    .category_series>ul>li>a {
+        font-size: 13px;
+    }
+
+    .category_movies ul{
+        gap: 0;
+    }
+
+    .category_series ul{
+        gap: 0;
+    }
+
+
+    .icon_serie img {
+        width: 25px;
+        
+    }
+    .icon_serie{
+        margin-top: -1rem;
+    }
     button>.right {
         transform: rotate(-90deg);
         width: 1.5rem;
@@ -1621,12 +2087,12 @@ margin-right: 1.8rem;
   
 
     .container-card {
-        width: 90px;
+        width: auto;
         margin: 3%;
     }
 
     .container-card img {
-        width: 90px;
+        width: 170px;
         height: auto;
     }
 
@@ -1652,12 +2118,64 @@ margin-right: 1.8rem;
 
     }
  
+    .trailer-grande {
+        z-index: 1;
+        width: 20rem;
+        height: 43rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
+    .duration, .date, .director, .category {
+        font-size: 0.8rem;
+        color: #d9d8d7be;
+    }
+
+   
+    .see_movie {
+        position: relative;
+        top: 5.5rem;
+        left: 1rem;
+        background-color: #03738C;
+        border: none;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .trailer_serie {
+        width: 14rem;
+        height: 8rem;
+        top: 32.5rem;
+        left: 3.5rem;
+
+    }
+
+    .exit{
+        left: 3rem;
+    }
+    .information h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .description_content {
+        font-size: 1rem;
+        width: 18rem;
+        padding-right: 5rem;
+    }
 
     /* SECTION D */
     .line-1 {
         outline: 1px solid #88B0BF;
-        width: 90%;
+        width: 60%;
+    }
+    .show-more-home, .show-more-movies, .show-more-series {
+        width: 36%;
+        font-size: 1rem;
+        padding: .5rem  .6rem .5rem .6rem;
     }
 
     .show-more {
@@ -1665,7 +2183,7 @@ margin-right: 1.8rem;
     }
 
     .line-2 {
-        display: none;
+        display: none;  
     }
 
     /* FOOTER */
