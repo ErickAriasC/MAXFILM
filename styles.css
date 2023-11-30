@@ -2099,7 +2099,7 @@ margin-left: 1.5rem;
     .trailer-grande {
         z-index: 1;
         width: 20rem;
-        height: 40rem;
+        height: 43rem;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -2111,6 +2111,7 @@ margin-left: 1.5rem;
         color: #d9d8d7be;
     }
 
+   
     .see_movie {
         position: relative;
         top: 5.5rem;
@@ -2123,10 +2124,20 @@ margin-left: 1.5rem;
     }
 
     .trailer_serie {
-        width: 12rem;
-        height: 7rem;
-        
+        width: 14rem;
+        height: 8rem;
+        top: 32.5rem;
+        left: 3.5rem;
+
     }
+
+    .exit{
+        left: 3rem;
+    }
+    .information h2 {
+        font-size: 1.5rem;
+    }
+
 
     .description_content {
         font-size: 1rem;
